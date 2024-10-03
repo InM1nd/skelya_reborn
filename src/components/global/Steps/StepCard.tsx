@@ -28,13 +28,17 @@
 
 interface StepCardProps {
   title: string;
-  image: string;
+  imageDesktop: string;
+  imageMobile: string;
 }
 
-export const StepCard: React.FC<StepCardProps> = ({image, title}) => {
+export const StepCard: React.FC<StepCardProps> = ({imageDesktop, imageMobile, title}) => {
   return (
     <div className="relative w-full">
-     <img src={image} alt={title} className="w-full object-cover"/>
+     <picture >
+        <source media="(max-width: 640px)" srcSet={imageMobile} />
+        <img src={imageDesktop} alt={title} className="w-full object-cover"/>
+      </picture>
     </div>
   );
 };
