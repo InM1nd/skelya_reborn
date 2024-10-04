@@ -36,7 +36,7 @@ const Header = ({ }) => {
     <div
         className={`fixed top-0 right-0 h-full bg-gray text-white transition-transform duration-300 z-40 ${
           isOpen ? "translate-x-0" : "translate-x-full"
-        } w-[30vw]`}
+        } w-full md:w-[30vw] `}
       >
         <div className="py-10 relative">
           <div className="flex w-full px-10 justify-between">
