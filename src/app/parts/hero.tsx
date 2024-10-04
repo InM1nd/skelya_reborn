@@ -1,13 +1,16 @@
+import Header from "@/components/global/header"
 
 
 export const Hero = () => {
   return (
-    <section className="h-svh w-full flex flex-col items-center pt-14 2xl:px-[50px] 2xl:pt-[50px] lg:h-screen">
-      <div className="container">
+    <>
+    <Header/>
+    <section className="h-svh w-full flex flex-col items-center pt-[88px] 2xl:px-[50px] 2xl:pt-[50px] lg:h-screen">
+      <div className="container relative">
         <div className="w-full relative mb-6">
           <picture>
             <source media="(max-width: 640px)" srcSet={'/svg/Hero_Pic_Mob.svg'} />
-            <img src={'/svg/Hero_Pic.svg'} alt={"23"} className="w-full"/>
+            <img src={'/svg/Hero_Pic.svg'} alt={"skelya_logo"} className="w-full"/>
           </picture>
         </div>
         <div className="flex flex-col justify-start items-start relative px-4">
@@ -20,7 +23,7 @@ export const Hero = () => {
           </p>
         </div>
       </div>
-
       </section>
+      </>
   )
 }

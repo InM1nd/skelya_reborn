@@ -17,7 +17,7 @@ export const Footer = () => {
           <div className="w-full flex flex-row-reverse justify-between md:gap-[50px] lg:flex-row lg:justify-end xl:gap-[120px] 2xl:gap-[164px]">
             <div className="text-[13px] xl:text-[26px]">
               <h4 className="pb-7 font-semibold xl:text-[26px]">ми у соц мережах</h4>
-              <ul className="flex flex-col gap-3">
+              <ul className="flex flex-col gap-3 xl:gap-6">
                 <li><a href="#">telegram</a></li>
                 <li><a href="#">instagram</a></li>
                 <li><a href="#">tiktok</a></li>
@@ -27,7 +27,7 @@ export const Footer = () => {
 
             <div className="text-[13px] xl:text-[26px]">
               <h4 className="pb-7 font-semibold xl:text-[26px]">меню</h4>
-              <ul className="flex flex-col gap-3">
+              <ul className="flex flex-col gap-3 xl:gap-6">
                 <li><a href="#for_whom">для кого</a></li>
                 <li><a href="#how_works">як це працює</a></li>
                 <li><a href="#products">послуги</a></li>
