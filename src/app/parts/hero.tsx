@@ -5,7 +5,7 @@ export const Hero = () => {
   return (
     <>
     <Header/>
-    <section className="h-svh w-full flex flex-col items-center pt-[88px] 2xl:px-[50px] 2xl:pt-[50px] lg:h-screen">
+    <section className="h-svh w-full flex flex-col items-center pt-[88px] 2xl:px-[50px] 2xl:pt-[50px] lg:h-screen lg:min-h-[900px]">
       <div className="container relative">
         <div className="w-full relative mb-6">
           <picture>

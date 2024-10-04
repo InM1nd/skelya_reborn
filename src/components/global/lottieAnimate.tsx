@@ -42,7 +42,7 @@ const LottieAnimation: React.FC<LottieAnimationProps> = ({ animationData, speed 
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-        <span className="text-white text-[24px] uppercase pr-3 md:text-[32px]">меню</span>
+        <span className="text-white text-[24px] uppercase pr-3 lg:text-[32px]">меню</span>
         <div
           className="w-4 h-4 md:w-5 md:h-5"
           ref={containerRef}
