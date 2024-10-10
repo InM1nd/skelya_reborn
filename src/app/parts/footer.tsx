@@ -1,4 +1,7 @@
+import ContactFormModal from "@/components/global/modal"
+
 import { BigButton } from "@/components/ui/custom/BigButton"
+import Link from "next/link"
 
 export const Footer = () => {
   return(
@@ -9,8 +12,8 @@ export const Footer = () => {
           <div className="w-full hidden text-[13px] lg:block xl:text-[26px]">
             <p className="pb-7 font-semibold">2024, Skelya career</p>
             <ul className="flex flex-col gap-3 xl:gap-6">
-              <li><a href="#">Політика конфіденційності</a></li>
-              <li><a href="#">Угода Користувача</a></li>
+              <li><a href="/legal/privacy-policy">Політика конфіденційності</a></li>
+              <li><a href="/legal/terms">Угода Користувача</a></li>
             </ul>
           </div>
 
@@ -44,11 +47,13 @@ export const Footer = () => {
         </div>
           <img src={"/svg/Hero_Words.svg"} alt='' className="w-full" />
           <ul className="flex justify-between text-xs pt-5">
-            <li><a href="#">Політика конфіденційності</a></li>
+            <li><Link href="/legal/privacy-policy">Політика конфіденційності</Link></li>
             <li>|</li>
-            <li><a href="#">Угода Користувача</a></li>
+            <li><Link href="/legal/terms">Угода Користувача</Link></li>
           </ul>
         </div>
+
+        <ContactFormModal/>
 
         <img src={"/svg/Hero_Words.svg"} alt='' className="w-full pb-14 hidden lg:block" />
         

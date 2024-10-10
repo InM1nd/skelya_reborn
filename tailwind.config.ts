@@ -81,7 +81,8 @@ const config: Config = {
   			}
   		},
   		fontFamily: {
-  			unbounded: ['Unbounded', 'sans-serif']
+  			unbounded: ['Unbounded', 'sans-serif'],
+				raleway: ['Raleway', 'sans-serif'],
   		},
   		borderRadius: {
   			lg: 'var(--radius)',

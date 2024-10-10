@@ -1,3 +1,5 @@
+'use client'
+
 interface ProductCardProps {
   title: string;
   subtitle: string;
@@ -9,16 +11,32 @@ interface ProductCardProps {
   backgroundColor: string;
 }
 
-export const ProductCard: React.FC<ProductCardProps> = ({ 
-  title, 
-  subtitle, 
-  description, 
-  image, 
-  price, 
+// Объект для сопоставления товара и ссылки оплаты
+const paymentUrls: Record<string, string> = {
+  'Консультація': 'https://secure.wayforpay.com/button/b51358399b740',
+  'Супровід': 'https://secure.wayforpay.com/button/b2b2523b05a5d',
+};
+
+export const ProductCard: React.FC<ProductCardProps> = ({
+  title,
+  subtitle,
+  description,
+  image,
+  price,
   duration,
   backgroundColor,
   listHeader,
 }) => {
+
+  // Обработчик клика на кнопку оплаты
+  const handlePayment = () => {
+    const paymentUrl = paymentUrls[title]; // Получаем URL по названию товара
+
+    if (paymentUrl) {
+      window.location.href = paymentUrl; // Перенаправляем на URL
+    }
+  };
+
   return (  
     <div className="">
       <div className="flex flex-col justify-between lg:flex-row">
@@ -36,19 +54,24 @@ export const ProductCard: React.FC<ProductCardProps> = ({
             </ul>
           </div>
           <div className="">
-          <p className="text-[14px] md:text-[32px]">
-            <b className="uppercase inline-block mb-3 md:mb-8">Скільки:</b> <br/> 
-            {duration}
-          </p>
+            <p className="text-[14px] md:text-[32px]">
+              <b className="uppercase inline-block mb-3 md:mb-8">Скільки:</b> <br/> 
+              {duration}
+            </p>
           </div>
         </div>
         <div className="flex flex-col pt-[20px] lg:w-1/2 lg:pl-[50px] md:pt-[50px] lg:justify-between">
           <img
-          src={image}
-          alt={title}
-          className="px-12" 
+            src={image}
+            alt={title}
+            className="px-12" 
           />
-          <button className={`${backgroundColor} w-full mt-[20px] p-5 font-unbounded font-medium text-[18px] uppercase md:mt-[60px] md:p-14 md:text-4xl`}>{price}</button>
+          <button 
+            onClick={handlePayment}
+            className={`${backgroundColor} w-full mt-[20px] p-5 font-unbounded font-medium text-[18px] uppercase md:mt-[60px] md:p-14 md:text-4xl`}
+          >
+            {price}
+          </button>
         </div>
       </div>
     </div>
