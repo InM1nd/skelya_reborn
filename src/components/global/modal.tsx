@@ -3,8 +3,18 @@
 import emailjs from '@emailjs/browser'; 
 import { useRef, useState, FormEvent } from "react";
 
-const ContactFormModal = () => {
+
+export const useModal = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+
+  const toggleModal = () => {
+    setIsOpen(!isOpen);
+  };
+
+  return { isOpen, toggleModal };
+};
+
+const ContactFormModal = ({ isOpen, toggleModal }: { isOpen: boolean; toggleModal: () => void }) => {
   const form = useRef<HTMLFormElement | null>(null);
   const [isSuccess, setSuccess] = useState<boolean>(false);
 
@@ -26,20 +36,8 @@ const ContactFormModal = () => {
       });
   };
 
-  const toggleModal = () => {
-    setIsOpen(!isOpen);
-  };
-
   return (
     <>
-      {/* Кнопка открытия модального окна */}
-      <button
-        onClick={toggleModal}
-        className="text-blue-500 underline"
-      >
-        Открыть форму
-      </button>
-
       {isOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-center justify-center z-50">
 

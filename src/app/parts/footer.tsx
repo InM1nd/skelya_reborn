@@ -1,5 +1,3 @@
-import ContactFormModal from "@/components/global/modal"
-
 import { BigButton } from "@/components/ui/custom/BigButton"
 import Link from "next/link"
 
@@ -52,8 +50,6 @@ export const Footer = () => {
             <li><Link href="/legal/terms">Угода Користувача</Link></li>
           </ul>
         </div>
-
-        <ContactFormModal/>
 
         <img src={"/svg/Hero_Words.svg"} alt='' className="w-full pb-14 hidden lg:block" />
         
