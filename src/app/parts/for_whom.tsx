@@ -8,7 +8,7 @@ export const ForWhom = () => {
     <section className="w-full pb-7 lg:pb-0 lg:h-screen lg:min-h-[1000px]" id="for_whom">
       <Title>для кого</Title>
       <div className="w-full flex justify-center">
-        <div className="w-full container flex justify-center flex-col px-6 pt-10">   
+        <div className="w-full container flex justify-center flex-col px-2 pt-10 md:px-6">   
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 pb-3">
             <Card
               title=""
@@ -31,9 +31,11 @@ export const ForWhom = () => {
               items={['ПЕРЕКВАЛІФІКАЦІЯ', 'УВІЙТИ В АЙТІ', 'КАР\'ЄРНА СТРАТЕГІЯ']}
             />
           </div>
-          <BigButton
-            text={"Свій запит"}
-          />
+          <a href="https://t.me/skelya_careers">
+            <BigButton
+              text={"Свій запит"}
+            />
+          </a>
         </div>
       </div>
     </section>

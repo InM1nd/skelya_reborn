@@ -3,8 +3,17 @@
 import emailjs from '@emailjs/browser'; 
 import { useRef, useState, FormEvent } from "react";
 
+interface ModalState {
+  isOpen: boolean;
+  toggleModal: () => void;
+}
 
-export const useModal = () => {
+interface ContactFormModalProps {
+  isOpen: boolean;
+  toggleModal: () => void;
+}
+
+export const useModal = (): ModalState => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const toggleModal = () => {
@@ -14,7 +23,7 @@ export const useModal = () => {
   return { isOpen, toggleModal };
 };
 
-const ContactFormModal = ({ isOpen, toggleModal }: { isOpen: boolean; toggleModal: () => void }) => {
+const ContactFormModal = ({ isOpen, toggleModal }: ContactFormModalProps) => {
   const form = useRef<HTMLFormElement | null>(null);
   const [isSuccess, setSuccess] = useState<boolean>(false);
 
@@ -53,7 +62,7 @@ const ContactFormModal = ({ isOpen, toggleModal }: { isOpen: boolean; toggleModa
             </div> 
             
             <h2 className="text-5xl font-bold text-center text-white mb-9">
-              МАЄТЕ ПИТАННЯ
+              МАЄШ ПИТАННЯ?
             </h2>
         
             <form className="space-y-10" ref={form} onSubmit={sendEmail}>

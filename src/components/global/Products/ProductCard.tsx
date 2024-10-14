@@ -68,7 +68,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           />
           <button 
             onClick={handlePayment}
-            className={`${backgroundColor} w-full mt-[20px] p-5 font-unbounded font-medium text-[18px] uppercase md:mt-[60px] md:p-14 md:text-4xl`}
+            className={`${backgroundColor} w-full mt-[20px] p-5 font-unbounded font-medium text-[18px] uppercase md:mt-[60px] md:p-14 md:text-4xl hover:bg-blue transition-colors duration-300`}
           >
             {price}
           </button>
