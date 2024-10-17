@@ -32,7 +32,7 @@ export const HowWorks = () => {
               onMouseEnter={() => setIsHovered(true)} 
               onMouseLeave={() => setIsHovered(false)} 
             >
-              <a href="https://skelya.careers/" className="h-full w-full absolute"></a>
+              <a href="https://t.me/skelya_careers" className="h-full w-full absolute"></a>
             </div>
           </div>
           <div className="h-full lg:w-1/2 ">
