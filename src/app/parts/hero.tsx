@@ -22,10 +22,28 @@ export const Hero = () => {
     };
   }, []);
 
+  useEffect(() => {
+    // Устанавливаем высоту в зависимости от высоты экрана
+    const setVh = () => {
+      const vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    };
+    
+    // Устанавливаем высоту при загрузке страницы
+    setVh();
+    
+    // Изменяем высоту при изменении размеров экрана
+    window.addEventListener('resize', setVh);
+    
+    return () => {
+      window.removeEventListener('resize', setVh);
+    };
+  }, []);
+
   return (
     <>
     <Header/>
-    <section className="h-lvh w-full flex flex-col justify-end items-center pb-5 pt-[88px] sm:justify-normal 2xl:px-[50px] 2xl:pt-[50px] lg:h-screen lg:min-h-[1200px] lg:pb-20">
+    <section className="h-dvh w-full flex flex-col justify-end items-center pb-5 pt-[88px] sm:justify-normal 2xl:px-[50px] 2xl:pt-[50px] lg:h-screen lg:min-h-[1200px] lg:pb-20">
       <div className="container relative">
         <div className="w-full relative mb-6">
             {isMobile ? (
