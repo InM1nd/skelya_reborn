@@ -4,7 +4,7 @@ import React from 'react'
 const PrivacyPolicy = () => {
   return (
     <section className='bg-black w-full h-full flex justify-center text-lg py-10'>
-      <div className='h-full max-w-4xl'>
+      <div className='h-full max-w-4xl px-4'>
       <div className='pb-10'>
         <Link href="/">
           <img src={'/svg/skelya_logo.svg'} alt='' className='h-[42px] lg:h-[56px]'/>
