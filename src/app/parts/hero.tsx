@@ -22,7 +22,7 @@ export const Hero = () => {
     };
   }, []);
 
-  const sectionRef = useRef(null); // Создаём ссылку на секцию
+  const sectionRef = useRef<HTMLDivElement>(null); // Создаём ссылку на секцию
 
   useEffect(() => {
     // Вычисляем высоту экрана только при загрузке и фиксируем её
