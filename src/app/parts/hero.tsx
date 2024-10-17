@@ -43,7 +43,7 @@ export const Hero = () => {
   return (
     <>
     <Header/>
-    <section className="h-dvh w-full flex flex-col justify-end items-center pb-5 pt-[88px] sm:justify-normal 2xl:px-[50px] 2xl:pt-[50px] lg:h-screen lg:min-h-[1200px] lg:pb-20">
+    <section style={{ height: `calc(${vh}px * 100)` }} className="w-full flex flex-col justify-end items-center pb-5 pt-[88px] sm:justify-normal 2xl:px-[50px] 2xl:pt-[50px] lg:h-screen lg:min-h-[1200px] lg:pb-20">
       <div className="container relative">
         <div className="w-full relative mb-6">
             {isMobile ? (
