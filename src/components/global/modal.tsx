@@ -82,19 +82,19 @@ const ContactFormModal = ({ isOpen, toggleModal }: ContactFormModalProps) => {
               </label>
               </div>
 
-              {/* Input: Номер телефону */}
+              {/* Input: Email */}
               <div className="relative">
                 <input
-                  type="text"
+                  type="email"
                   className="peer w-full border-[1px] border-white bg-transparent text-white outline-none py-3 px-4 placeholder-transparent focus:border-[#6566F1] transition"
-                  placeholder="Номер телефону"
-                  id="phone"
+                  placeholder="Імейл"
+                  id="email"
                 />
                 <label
-                  htmlFor="phone"
+                  htmlFor="email"
                   className="absolute normal-case text-xl left-3 top-0 px-1 text-white bg-gray transition-all transform -translate-y-1/2 scale-100 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-[12px] peer-focus:scale-100 peer-focus:-translate-y-[22px] peer-focus:text-purple-main"
                 >
-                  Номер телефону
+                  Імейл
                 </label>
               </div>
         

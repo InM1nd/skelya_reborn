@@ -5,7 +5,7 @@ import { BigButton } from "@/components/ui/custom/BigButton"
 
 export const ForWhom = () => {
   return(
-    <section className="w-full pb-7 lg:pb-0 lg:h-screen lg:min-h-[1000px]" id="for_whom">
+    <section className="w-full pb-20 lg:pb-40 lg:min-h-[1100px]" id="for_whom">
       <Title>для кого</Title>
       <div className="w-full flex justify-center">
         <div className="w-full container flex justify-center flex-col px-2 pt-10 md:px-6">   

@@ -10,7 +10,7 @@ export const HowWorks = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   return(
-    <section className="w-full h-full pb-14 lg:pb-0 lg:h-screen lg:min-h-[1000px]" id="how_works">
+    <section className="w-full h-full pb-20 lg:pb-40 lg:min-h-[1200px]" id="how_works">
       <Title>як це працює</Title>
       <div className="w-full flex justify-center">
         <div className="w-full container flex flex-col-reverse justify-center py-5 gap-[35px] lg:flex-row px-2 md:px-6 md:py-10 ">
