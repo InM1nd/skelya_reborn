@@ -41,7 +41,7 @@ export const Footer = () => {
                   </a>
                 </li>
                 <li className="hover:underline">
-                  <a href="hi@skelya.careers" className="block w-full h-full leading-0 leading-normal">
+                  <a href="mailto:hi@skelya.careers" className="block w-full h-full leading-0 leading-normal">
                     email
                   </a>
                 </li>
@@ -79,7 +79,7 @@ export const Footer = () => {
         
         <div className="block lg:hidden pb-7 md:pb-14">
         <div className="">
-            <p className="pb-5 text-xs font-unbounded">2024, <br/> Skelya career</p>  
+            <p className="pb-5 text-xs font-unbounded">2024, Skelya career</p>  
         </div>
           <img src={"/svg/Hero_Words.svg"} alt='' className="w-full" />
           <ul className="flex justify-between text-xs pt-5">

@@ -12,6 +12,10 @@ const Header = ({ }) => {
     setIsOpen(!isOpen);
   };
 
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
   return (
     <>
     {isOpen && (
@@ -49,16 +53,16 @@ const Header = ({ }) => {
             </button>
           </div>
           <ul className="flex flex-col gap-3 uppercase pt-[40px] font-semibold text-[32px] lg:text-[40px] lg:pt-[100px] lg:font-bold">
-            <li className="w-full hover:bg-white hover:text-black">
+            <li className="w-full hover:bg-white hover:text-black" onClick={closeMenu}>
               <a href="#for_whom" className="flex h-auto w-full px-4 pl-[40px] lg:pl-[50px]">Для кого</a>
             </li>
-            <li className="w-full hover:bg-white hover:text-black">
+            <li className="w-full hover:bg-white hover:text-black" onClick={closeMenu}>
               <a href="#how_works" className="flex h-auto w-full px-4 pl-[40px] lg:pl-[50px]">як це працює</a>
             </li>
-            <li className="w-full hover:bg-white hover:text-black">
+            <li className="w-full hover:bg-white hover:text-black" onClick={closeMenu}>
               <a href="#products" className="flex h-auto w-full px-4 pl-[40px] lg:pl-[50px]">послуги</a>
             </li>
-            <li className="w-full hover:bg-white hover:text-black">
+            <li className="w-full hover:bg-white hover:text-black" onClick={closeMenu}>
               <a href="#reviews" className="flex h-auto w-full px-4 pl-[40px] lg:pl-[50px]">історії успіху</a>
             </li>
           </ul>
