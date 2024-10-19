@@ -10,8 +10,8 @@ export const Footer = () => {
 
   return (
     <section className="w-full text-white flex justify-center">
-      <div className="container w-full flex-col px-3 pt-10 uppercase lg:px-6">
-        <BigButton text={"задати питання"} onClick={toggleModal} />
+      <div className="container w-full flex-col px-3 pb-7 uppercase lg:px-6">
+        <BigButton text={"ПОСТАВИТИ ПИТАННЯ"} onClick={toggleModal} />
         <div className="pt-24 flex flex-row justify-between pb-60 text-2xl">
           <div className="w-full hidden text-[13px] lg:block xl:text-[26px]">
             <p className="pb-7 font-semibold">2024, Skelya career</p>
@@ -25,10 +25,10 @@ export const Footer = () => {
             <div className="text-[13px] xl:text-[26px]">
               <h4 className="pb-7 font-semibold xl:text-[26px]">ми у соц мережах</h4>
               <ul className="flex flex-col xl:gap-6">
-                <li className="hover:underline"><a href="#">telegram</a></li>
-                <li className="hover:underline"><a href="#">instagram</a></li>
-                <li className="hover:underline"><a href="#">tiktok</a></li>
-                <li className="hover:underline"><a href="#">email</a></li>
+                <li className="hover:underline"><a href="https://t.me/skelya_careers">telegram</a></li>
+                <li className="hover:underline"><a href="https://www.instagram.com/skelya.careers/">instagram</a></li>
+                <li className="hover:underline"><a href="https://www.tiktok.com/@skelya_careers">tiktok</a></li>
+                <li className="hover:underline"><a href="hi@skelya.careers">email</a></li>
               </ul>
             </div>
 

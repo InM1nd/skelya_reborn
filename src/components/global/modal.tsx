@@ -125,9 +125,8 @@ const ContactFormModal = ({ isOpen, toggleModal }: ContactFormModalProps) => {
           </div>
         </div> 
         {isSuccess && (
-          <div>
-          <p>Message sent successfully!</p> 
-          <p>Form will be cleared shortly.</p>
+          <div className='absolute bg-opacity-50 backdrop-blur-sm h-full w-full flex flex-col justify-center items-center'>
+          <p className='text-3xl'>Повідомлення надіслано!</p> 
           </div>
         )}
       </div>    

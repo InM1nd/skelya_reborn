@@ -10,10 +10,10 @@ export const HowWorks = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   return(
-    <section className="w-full h-full pb-14 sm:pb-20 lg:pb-40 lg:min-h-[1200px]" id="how_works">
+    <section className="w-full h-full pb-7 sm:pb-20 lg:pb-40 lg:min-h-[1200px]" id="how_works">
       <Title>як це працює</Title>
       <div className="w-full flex justify-center">
-        <div className="w-full container flex flex-col-reverse justify-center pt-7 sm:py-5 gap-[35px] lg:flex-row px-2 md:px-6 md:py-10 ">
+        <div className="w-full container flex flex-col-reverse justify-center pt-7 sm:py-5 gap-[35px] lg:flex-row px-2 md:px-6 md:pt-10 ">
           <div className="relative lg:w-1/2 ">
           {/* <div className="flex h-full w-full "> */}
           <svg viewBox="0 0 943 830" fill="none" xmlns="http://www.w3.org/2000/svg">
