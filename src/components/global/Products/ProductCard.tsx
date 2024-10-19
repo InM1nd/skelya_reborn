@@ -43,7 +43,10 @@ export const ProductCard: React.FC<ProductCardProps> = ({
         <div className={`${backgroundColor} p-[16px] flex flex-col gap-4 md:p-[50px] lg:w-5/6 lg:gap-12`}>
           <div className="flex flex-col gap-2">
             <h2 className="text-[22px] font-bold text-left uppercase font-unbounded md:text-[52px]">{title}</h2>
-            <span className="text-[14px] font-medium text-left uppercase md:text-[26px]">{subtitle}</span>
+            <span className="block md:hidden text-[14px] font-medium text-left uppercase md:text-[26px]" dangerouslySetInnerHTML={{ __html: 'Проконсультуємо та розробимо <br /> план дій під задачу' }}></span>
+            <span className="hidden md:inline text-[14px] font-medium text-left uppercase md:text-[26px]">
+              {subtitle}
+            </span>
           </div>
           <div>
             <h4 className="text-[14px] font-bold text-left uppercase md:text-[32px]">{listHeader}</h4>

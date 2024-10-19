@@ -9,7 +9,7 @@ export const Footer = () => {
   const { isOpen, toggleModal } = useModal();
 
   return (
-    <section className="w-full text-white flex justify-center px-3 lg:px-6">
+    <section className="w-full text-white flex justify-center px-2 lg:px-6">
       <div className="container w-full flex-col uppercase">
         <BigButton text={"Спитати"} onClick={toggleModal} />
         <div className="pt-24 flex flex-row justify-between pb-60 text-2xl">
@@ -24,7 +24,7 @@ export const Footer = () => {
           <div className="w-full flex flex-row-reverse justify-between md:gap-[50px] lg:flex-row lg:justify-end xl:gap-[120px] 2xl:gap-[164px]">
             <div className="text-[13px] xl:text-[26px]">
               <h4 className="pb-7 font-semibold xl:text-[26px]">ми у соц мережах</h4>
-              <ul className="flex flex-col gap-2 xl:gap-6">
+              <ul className="flex flex-col gap-[6px] xl:gap-6">
                 <li className="hover:underline">
                   <a href="https://t.me/skelya_careers" className="block w-full h-full leading-0 leading-normal">
                     telegram
@@ -50,7 +50,7 @@ export const Footer = () => {
 
             <div className="text-[13px] xl:text-[26px]">
               <h4 className="pb-7 font-semibold xl:text-[26px]">меню</h4>
-              <ul className="flex flex-col gap-2 xl:gap-6">
+              <ul className="flex flex-col gap-[6px] xl:gap-6">
                 <li className="hover:underline">
                   <a href="#for_whom" className="block w-full h-full leading-normal">
                     для кого
@@ -77,7 +77,7 @@ export const Footer = () => {
         </div>
 
         
-        <div className="block lg:hidden pb-14">
+        <div className="block lg:hidden pb-7 md:pb-14">
         <div className="">
             <p className="pb-5 text-xs font-unbounded">2024, <br/> Skelya career</p>  
         </div>
