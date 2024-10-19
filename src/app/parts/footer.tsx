@@ -10,8 +10,8 @@ export const Footer = () => {
 
   return (
     <section className="w-full text-white flex justify-center px-3 lg:px-6">
-      <div className="container w-full flex-col pb-7 uppercase">
-        <BigButton text={"ПОСТАВИТИ ПИТАННЯ"} onClick={toggleModal} />
+      <div className="container w-full flex-col uppercase">
+        <BigButton text={"Спитати"} onClick={toggleModal} />
         <div className="pt-24 flex flex-row justify-between pb-60 text-2xl">
           <div className="w-full hidden text-[13px] lg:block xl:text-[26px]">
             <p className="pb-7 font-semibold">2024, Skelya career</p>
