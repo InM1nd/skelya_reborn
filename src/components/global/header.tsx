@@ -22,7 +22,7 @@ const Header = ({ }) => {
       )}
 
 
-    <header className="container absolute z-10 top-0 pt-8 px-4 flex justify-between 2xl:px-[50px] 2xl:pt-[50px]">
+    <header className="container absolute z-10 top-0 pt-4 px-4 flex justify-between sm:pt-8 2xl:px-[50px] 2xl:pt-[50px]">
       <img src={'/svg/skelya_logo.svg'} alt='' className='h-[42px] lg:h-[56px]'/>
       <div className="flex items-center">
         <button onClick={toggleMenu} className="focus:outline-none">
