@@ -69,16 +69,16 @@ const Header = ({ }) => {
 
           <ul className="flex flex-col gap-3 uppercase font-semibold text-[26px] pt-[32px] lg:text-[32px] lg:pt-[100px]">
             <li className="w-full hover:bg-white hover:text-black">
-              <a href="#" className="flex h-auto w-full px-3 pl-[40px] lg:pl-[50px]"># telegram</a>
+              <a href="https://t.me/skelya_careers" className="flex h-auto w-full px-3 pl-[40px] lg:pl-[50px]"># telegram</a>
             </li>
             <li className="w-full hover:bg-white hover:text-black">
-              <a href="#" className="flex h-auto w-full px-3 pl-[40px] lg:pl-[50px]"># instagram</a>
+              <a href="https://www.instagram.com/skelya.careers/" className="flex h-auto w-full px-3 pl-[40px] lg:pl-[50px]"># instagram</a>
             </li>
             <li className="w-full hover:bg-white hover:text-black">
-              <a href="#" className="flex h-auto w-full px-3 pl-[40px] lg:pl-[50px]"># tiktok</a>
+              <a href="https://www.tiktok.com/@skelya_careers" className="flex h-auto w-full px-3 pl-[40px] lg:pl-[50px]"># tiktok</a>
             </li>
             <li className="w-full hover:bg-white hover:text-black">
-              <a href="#" className="flex h-auto w-full px-3 pl-[40px] lg:pl-[50px]"># email</a>
+              <a href="mailto:hi@skelya.careers" className="flex h-auto w-full px-3 pl-[40px] lg:pl-[50px]"># email</a>
             </li>
           </ul>
 
