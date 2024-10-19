@@ -24,21 +24,53 @@ export const Footer = () => {
           <div className="w-full flex flex-row-reverse justify-between md:gap-[50px] lg:flex-row lg:justify-end xl:gap-[120px] 2xl:gap-[164px]">
             <div className="text-[13px] xl:text-[26px]">
               <h4 className="pb-7 font-semibold xl:text-[26px]">ми у соц мережах</h4>
-              <ul className="flex flex-col xl:gap-6">
-                <li className="hover:underline"><a href="https://t.me/skelya_careers">telegram</a></li>
-                <li className="hover:underline"><a href="https://www.instagram.com/skelya.careers/">instagram</a></li>
-                <li className="hover:underline"><a href="https://www.tiktok.com/@skelya_careers">tiktok</a></li>
-                <li className="hover:underline"><a href="hi@skelya.careers">email</a></li>
+              <ul className="flex flex-col gap-2 xl:gap-6">
+                <li className="hover:underline">
+                  <a href="https://t.me/skelya_careers" className="block w-full h-full leading-0 leading-normal">
+                    telegram
+                  </a>
+                </li>
+                <li className="hover:underline">
+                  <a href="https://www.instagram.com/skelya.careers/" className="block w-full h-full leading-0 leading-normal">
+                    instagram
+                  </a>
+                </li>
+                <li className="hover:underline">
+                  <a href="https://www.tiktok.com/@skelya_careers" className="block w-full h-full leading-0 leading-normal">
+                    tiktok
+                  </a>
+                </li>
+                <li className="hover:underline">
+                  <a href="hi@skelya.careers" className="block w-full h-full leading-0 leading-normal">
+                    email
+                  </a>
+                </li>
               </ul>
             </div>
 
             <div className="text-[13px] xl:text-[26px]">
               <h4 className="pb-7 font-semibold xl:text-[26px]">меню</h4>
-              <ul className="flex flex-col xl:gap-6">
-                <li className="hover:underline"><a href="#for_whom">для кого</a></li>
-                <li className="hover:underline"><a href="#how_works">як це працює</a></li>
-                <li className="hover:underline"><a href="#products">послуги</a></li>
-                <li className="hover:underline"><a href="#reviews">історії успіху</a></li>
+              <ul className="flex flex-col gap-2 xl:gap-6">
+                <li className="hover:underline">
+                  <a href="#for_whom" className="block w-full h-full leading-normal">
+                    для кого
+                  </a>
+                </li>
+                <li className="hover:underline">
+                  <a href="#how_works" className="block w-full h-full leading-normal">
+                    як це працює
+                  </a>
+                </li>
+                <li className="hover:underline">
+                  <a href="#products" className="block w-full h-full leading-normal">
+                    послуги
+                  </a>
+                </li>
+                <li className="hover:underline">
+                  <a href="#reviews" className="block w-full h-full leading-0 leading-normal">
+                    історії успіху
+                  </a>
+                </li>
               </ul>
             </div>
           </div>  
