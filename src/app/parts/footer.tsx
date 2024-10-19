@@ -9,8 +9,8 @@ export const Footer = () => {
   const { isOpen, toggleModal } = useModal();
 
   return (
-    <section className="w-full text-white flex justify-center">
-      <div className="container w-full flex-col px-3 pb-7 uppercase lg:px-6">
+    <section className="w-full text-white flex justify-center px-3 lg:px-6">
+      <div className="container w-full flex-col pb-7 uppercase">
         <BigButton text={"ПОСТАВИТИ ПИТАННЯ"} onClick={toggleModal} />
         <div className="pt-24 flex flex-row justify-between pb-60 text-2xl">
           <div className="w-full hidden text-[13px] lg:block xl:text-[26px]">
