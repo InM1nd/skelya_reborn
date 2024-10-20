@@ -4,7 +4,7 @@ import * as React from "react"
 import useEmblaCarousel, {
   type UseEmblaCarouselType,
 } from "embla-carousel-react"
-import { ArrowLeft, ArrowRight } from "lucide-react"
+// import { ArrowLeft, ArrowRight } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
@@ -206,7 +206,7 @@ const CarouselPrevious = React.forwardRef<
       variant={variant}
       size={size}
       className={cn(
-        "absolute h-12 w-12 bg-black border-black hover:bg-blue",
+        "absolute h-12 w-12 bg-black border-black hover:bg-blue rounded-none",
         orientation === "horizontal"
           ? "right-24 top-[80px] -translate-y-1/2"
           : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
@@ -216,7 +216,10 @@ const CarouselPrevious = React.forwardRef<
       onClick={scrollPrev}
       {...props}
     >
-      <ArrowLeft className="h-6 w-6 stroke-white" />
+      <svg width="22" height="33" viewBox="0 0 22 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20.3684 31.4736L2.99999 16.2105L20.3684 1.99995" stroke="#F3F3F3" stroke-width="3"/>
+      </svg>
+
       <span className="sr-only">Previous slide</span>
     </Button>
   )
@@ -235,7 +238,7 @@ const CarouselNext = React.forwardRef<
       variant={variant}
       size={size}
       className={cn(
-        "absolute h-12 w-12 bg-black border-black hover:bg-blue",
+        "absolute h-12 w-12 bg-black border-black hover:bg-blue rounded-none",
         orientation === "horizontal"
           ? "right-10 top-[80px]  -translate-y-1/2"
           : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
@@ -245,7 +248,9 @@ const CarouselNext = React.forwardRef<
       onClick={scrollNext}
       {...props}
     >
-      <ArrowRight className="h-6 w-6 stroke-white" />
+      <svg width="22" height="33" viewBox="0 0 22 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M1.73682 1.5791L19.1052 16.8423L1.73682 31.0528" stroke="#F3F3F3" stroke-width="3"/>
+      </svg>
       <span className="sr-only">Next slide</span>
     </Button>
   )
