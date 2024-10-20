@@ -45,7 +45,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
   return (  
     <div className="">
       <div className="flex flex-col justify-between lg:flex-row">
-        <div style={{ backgroundColor }} className="p-[16px] flex flex-col gap-4 md:p-[50px] lg:w-5/6 lg:gap-12">
+        <div style={{ backgroundColor }} className="p-[16px] flex flex-col gap-4 md:p-[40px] lg:w-5/6 xl:gap-8  2xl:p-[50px] 2xl:gap-12">
           <div className="flex flex-col gap-2">
             <h2 className="text-[22px] font-bold text-left uppercase font-unbounded md:text-[52px]">{title}</h2>
             <span className="block md:hidden text-[14px] font-medium text-left uppercase md:text-[26px]" dangerouslySetInnerHTML={{ __html: 'Проконсультуємо та розробимо <br /> план дій під задачу' }}></span>
