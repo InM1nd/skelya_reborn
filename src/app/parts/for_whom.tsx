@@ -6,7 +6,7 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/components/ui/carousel"
+} from "@/components/ui/carousel_mob"
 import { Card } from "@/components/global/card"
 import Title from "@/components/global/title"
 import { BigButton } from "@/components/ui/custom/BigButton"
@@ -17,7 +17,7 @@ export const ForWhom = () => {
     <section className="w-full pb-7 sm:pb-20" id="for_whom">
       <Title>для кого</Title>
       <div className="w-full flex justify-center">
-        <div className="w-full container flex justify-center flex-col px-2 pt-7 md:px-6">   
+        <div className="w-full container flex justify-center flex-col pt-7 px-2 md:px-6">   
           <div className="hidden md:grid md:grid-cols-1 md:gap-4 md:pb-3 lg:grid-cols-4 ">
             <Card
               title=""

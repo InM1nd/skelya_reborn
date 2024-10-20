@@ -43,7 +43,7 @@ export function CarouselSize() {
       <CarouselContent className="">
         {images.map((image, index) => (
           <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-            <div className="relative p-1">
+            <div className="relative">
               {/* Оригинальное изображение */}
               <img src={image.original} alt={`Slide ${index}`} className="block w-full h-auto" />
 
