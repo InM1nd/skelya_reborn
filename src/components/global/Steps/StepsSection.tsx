@@ -34,8 +34,6 @@ const StepsSection: React.FC = () => {
         <StepCard
           key={index}
           title={step.title}
-          // stepNumber={step.stepNumber}
-          // description={step.description}
           imageDesktop={step.imageDesktop}
           imageMobile={step.imageMobile}
         />

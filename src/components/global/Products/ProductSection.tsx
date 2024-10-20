@@ -14,7 +14,7 @@ const ProductSection: React.FC = () => {
       image: '/svg/Letter_К.svg', 
       price: "1200 грн - купити",
       duration: "5 робочих днів підтримки",
-      backgroundColor: "bg-green"
+      backgroundColor: "#3FAD78"
     },
     {
       title: 'Супровід',
@@ -29,7 +29,7 @@ const ProductSection: React.FC = () => {
       image: '/svg/Letter_С.svg', 
       price: "4500 грн - купити",
       duration: "20 робочих днів підтримки",
-      backgroundColor: "bg-pink"
+      backgroundColor: "#E3B7F5"
     },
   ];
 

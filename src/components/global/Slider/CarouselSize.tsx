@@ -1,3 +1,4 @@
+'use client'
 import * as React from "react"
  
 import {
@@ -10,33 +11,54 @@ import {
  
 export function CarouselSize() {
 
-  const photos = [
-    "/svg/Review/Vlad.png",   // 1
-    "/svg/Review/Nikita.png", // 2
-    "/svg/Review/Mari.png",   // 3
-    "/svg/Review/Sasha.png",   // 4
-    "/svg/Review/Vika.png", // 5
-    "/svg/Review/Dima.png" // 6
+  const images = [
+    {
+      original: "/svg/Review/Vlad.png",
+      hover: "/svg/Review/Vlad_Hover.png",  // Заменяющее изображение при ховере
+    },
+    {
+      original: "/svg/Review/Nikita.png",
+      hover: "/svg/Review/Nikita_Hover.png",
+    },
+    {
+      original: "/svg/Review/Mari.png",
+      hover: "/svg/Review/Mari_Hover.png",
+    },
+    {
+      original: "/svg/Review/Sasha.png",
+      hover: "/svg/Review/Sasha_Hover.png",
+    },
+    {
+      original: "/svg/Review/Vika.png",
+      hover: "/svg/Review/Vika_Hover.png",
+    },
+    {
+      original: "/svg/Review/Dima.png",
+      hover: "/svg/Review/Dima_Hover.png",
+    },
   ];
 
   return (
-    <Carousel
-      opts={{
-        align: "start",
-      }}
-      className="w-full container"
-    >
+    <Carousel opts={{ align: "start" }} className="w-full container">
       <CarouselContent className="">
-        {photos.map((photo, index) => (
+        {images.map((image, index) => (
           <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-            <div className="p-1">
-              <img src={photo} alt={`Slide ${index}`} />
+            <div className="relative p-1">
+              {/* Оригинальное изображение */}
+              <img src={image.original} alt={`Slide ${index}`} className="block w-full h-auto" />
+
+              {/* Второе изображение для ховера */}
+              <img
+                src={image.hover}
+                alt={`Hover Slide ${index}`}
+                className="absolute inset-0 w-full h-full transition-opacity duration-300 ease-in-out opacity-0 hover:opacity-100"
+              />
             </div>
           </CarouselItem>
         ))}
       </CarouselContent>
       <div className="hidden lg:block">
-        <CarouselPrevious/>
+        <CarouselPrevious />
         <CarouselNext />
       </div>
     </Carousel>

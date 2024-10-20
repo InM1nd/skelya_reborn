@@ -26,9 +26,9 @@ const Header = ({ }) => {
       )}
 
 
-    <header className="container fixed z-10 top-0 pt-4 px-4 flex justify-between sm:pt-8 2xl:px-[50px] 2xl:pt-[50px]">
-      <img src={'/svg/skelya_logo.svg'} alt='' className='h-[42px] lg:h-[56px]'/>
-      <div className="flex items-center">
+    <header className="container fixed bg-opacity-50 backdrop-blur-md z-10 top-0 py-4 flex justify-between sm:pt-8 2xl:py-4">
+      <img src={'/svg/skelya_logo.svg'} alt='' className='h-[42px] lg:h-[56px] pl-4'/>
+      <div className="flex items-center pr-6">
         <button onClick={toggleMenu} className="focus:outline-none">
           <LottieAnimation animationData={animationData} />
         </button>
