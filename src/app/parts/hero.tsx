@@ -35,9 +35,9 @@ export const Hero = () => {
   return (
     <>
     <Header/>
-    <section ref={sectionRef} className="w-full flex flex-col justify-end items-center pb-2 pt-[88px] sm:pb-5 sm:justify-end 2xl:px-[50px] 2xl:pt-[50px] lg:h-screen lg:pb-5">
-      <div className="container relative">
-        <div className="w-full relative mb-6">
+    <section ref={sectionRef} className="w-full flex flex-col justify-end items-center pb-2 px-4 pt-[88px] sm:pb-5 sm:justify-end 2xl:px-[50px] 2xl:pt-[50px] lg:h-screen lg:pb-5">
+      <div className="w-full relative">
+        <div className="relative mb-6">
             {isMobile ? (
               <svg viewBox="0 0 1180 1366" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M1179.86 0L420.583 591.072L774.283 0H134.937V246.514L0.859375 0V777.05V1172.71H781L737 1364.5H1179.86L1123.27 1188.9L1046.24 970.841H906.331L1179.86 0Z" fill="#6D61FF"/>

@@ -4,7 +4,7 @@ const ProductSection: React.FC = () => {
   const contents = [
     {
       title: 'Консультація',
-      subtitle: 'Проконсультуємо та розробимо план дій під задачу',
+      subtitle: 'Проконсультуємо та розробимо <br /> план дій під задачу',
       listHeader: 'Що включає:',
       description: [
         'Аналіз та підготовка резюме під вакансію',
@@ -18,7 +18,7 @@ const ProductSection: React.FC = () => {
     },
     {
       title: 'Супровід',
-      subtitle: 'Розробимо план дій під задачу та підтримаємо у її досягненні',
+      subtitle: 'Розробимо план дій під задачу <br /> та підтримаємо у її досягненні',
       listHeader: 'Що включає:',
       description: [
         'Аналіз та підготовка резюме під вакансію',
@@ -34,8 +34,8 @@ const ProductSection: React.FC = () => {
   ];
 
   return (
-    <div className="w-full pt-7 flex justify-center md:px-6 md:pt-12">
-      <div className="container flex flex-col gap-10  ">
+    <div className="w-full pt-7 flex justify-center md:px-4 md:pt-12">
+      <div className="w-full flex flex-col gap-10  ">
         {contents.map((content, index) => (
           <ProductCard
             key={index}

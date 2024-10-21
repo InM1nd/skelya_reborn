@@ -39,7 +39,7 @@ export function CarouselSize() {
   ];
 
   return (
-    <Carousel opts={{ align: "start" }} className="w-full container">
+    <Carousel opts={{ align: "start" }} className="w-full">
       <CarouselContent className="">
         {images.map((image, index) => (
           <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
