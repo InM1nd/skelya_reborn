@@ -45,7 +45,7 @@ export const ForWhom = () => {
             opts={{
               align: "start",
             }}
-            className="w-full container md:hidden"
+            className="w-full md:hidden"
           >
             <CarouselContent className="">
                 <CarouselItem className="md:basis-1/2 lg:basis-1/3">
