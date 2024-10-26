@@ -20,7 +20,7 @@ const unbounded = Unbounded({
 export const metadata: Metadata = {
   title: "Skelya Careers",
   description: "Skelya Careers",
-  metadataBase: new URL('skelya.careers'),
+  metadataBase: new URL('http://skelya.careers'),
   keywords:[''],
 };
 
