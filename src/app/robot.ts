@@ -7,7 +7,6 @@ export default function robot(): MetadataRoute.Robots{
       userAgent:'*',
       allow:'/',
       disallow:[]
-    },
-    sitemap:'https://skelya.careers/sitemap.xml'
+    }
   }
 }

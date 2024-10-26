@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Raleway, Unbounded } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
+import { GoogleAnalytics  } from '@next/third-parties/google'
 
 const raleway = Raleway({
   subsets: ["cyrillic", "latin"],
@@ -35,6 +36,7 @@ export default function RootLayout({
         className={`${raleway.variable} ${unbounded.variable} antialiased`}
       >
         {children}
+        <GoogleAnalytics gaId="G-SLW6C9CCYM" />
         <Analytics/>
       </body>
     </html>
