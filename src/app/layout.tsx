@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Raleway, Unbounded } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/react";
 
 const raleway = Raleway({
   subsets: ["cyrillic", "latin"],
@@ -19,6 +20,8 @@ const unbounded = Unbounded({
 export const metadata: Metadata = {
   title: "Skelya Careers",
   description: "Skelya Careers",
+  metadataBase: new URL('skelya.careers'),
+  keywords:[''],
 };
 
 export default function RootLayout({
@@ -32,6 +35,7 @@ export default function RootLayout({
         className={`${raleway.variable} ${unbounded.variable} antialiased`}
       >
         {children}
+        <Analytics/>
       </body>
     </html>
   );
