@@ -21,15 +21,19 @@ const unbounded = Unbounded({
 
 export const metadata: Metadata = {
   title: "Skelya Careers",
-  description: "Skelya Careers",
+  description: "Скеля — це сервіс, що допомагає вирішувати кар’єрні виклики: від профорієнтації та пошуку роботи до зміни сфери діяльності та отримання підвищення.",
   metadataBase: new URL('http://skelya.careers'),
   keywords:[
-    'Кар&apos;єрна консультація', 
+    'Кар\'єрна консультація', 
     'Пошук роботи', 
     'Профорієнтація', 
     'Скеля', 
     'Skelya',
-    '',
+    'Робота в айті',
+    'IT Курси',
+    'Робота онлайн',
+    'Резюме',
+    'Співбесіда',
   ],
 };
 
