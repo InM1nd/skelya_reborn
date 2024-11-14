@@ -17,6 +17,7 @@ interface ProductCardProps {
 const paymentUrls: Record<string, string> = {
   'Консультація': 'https://secure.wayforpay.com/button/b51358399b740',
   'Супровід': 'https://secure.wayforpay.com/button/b2b2523b05a5d',
+  'Test' : 'https://secure.wayforpay.com/button/bcb5d05ec6686',
 };
 
 export const ProductCard: React.FC<ProductCardProps> = ({

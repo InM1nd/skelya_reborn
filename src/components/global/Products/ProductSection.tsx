@@ -31,6 +31,21 @@ const ProductSection: React.FC = () => {
       duration: "20 робочих днів підтримки",
       backgroundColor: "#E3B7F5"
     },
+    {
+      title: 'Test',
+      subtitle: 'Test',
+      listHeader: 'Test',
+      description: [
+        'Test',
+        'Test',
+        'Test',
+        'Test'
+      ],
+      image: '/svg/Letter_С.svg', 
+      price: "Test - купити",
+      duration: "Test",
+      backgroundColor: "#f8df00"
+    },
   ];
 
   return (

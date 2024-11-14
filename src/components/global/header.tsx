@@ -52,7 +52,7 @@ const Header = ({ }) => {
               <img src={'/svg/close_btn.svg'} alt='' className='h-[32px] md:h-[32px]'/>
             </button>
           </div>
-          <ul className="flex flex-col gap-3 uppercase pt-[40px] font-semibold text-[32px] lg:text-[40px] lg:pt-[100px] lg:font-bold">
+          <ul className="flex flex-col gap-3 uppercase pt-[40px] font-semibold text-[32px] 2xl:pt-[15%] 2xl:font-bold 2xl:text-[40px]">
             <li className="w-full hover:bg-white hover:text-black" onClick={closeMenu}>
               <a href="#for_whom" className="flex h-auto w-full px-4 pl-[40px] lg:pl-[50px]">Для кого</a>
             </li>
@@ -67,7 +67,7 @@ const Header = ({ }) => {
             </li>
           </ul>
 
-          <ul className="flex flex-col gap-3 uppercase font-semibold text-[26px] pt-[32px] lg:text-[32px] lg:pt-[100px]">
+          <ul className="flex flex-col gap-3 uppercase font-semibold text-[26px] pt-[32px] 2xl:text-[32px] 2xl:pt-[15%]">
             <li className="w-full hover:bg-white hover:text-black">
               <a href="https://t.me/skelya_careers" className="flex h-auto w-full px-3 pl-[40px] lg:pl-[50px]"># telegram</a>
             </li>
