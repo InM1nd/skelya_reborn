@@ -3,6 +3,7 @@ import { Raleway, Unbounded } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import { GoogleAnalytics  } from '@next/third-parties/google'
+import Clarity from '@microsoft/clarity';
 import Script from "next/script";
 
 const raleway = Raleway({
@@ -37,6 +38,10 @@ export const metadata: Metadata = {
     'Зміна професії',
   ],
 };
+
+const projectId = "oyhpsu2zvy"
+
+Clarity.init(projectId);
 
 export default function RootLayout({
   children,
