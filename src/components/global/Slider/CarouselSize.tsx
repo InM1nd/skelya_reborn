@@ -16,10 +16,10 @@ export function CarouselSize() {
       original: "/svg/Review/Vlad.png",
       hover: "/svg/Review/Vlad_Hover.png",  // Заменяющее изображение при ховере
     },
-    {
-      original: "/svg/Review/Nikita.png",
-      hover: "/svg/Review/Nikita_Hover.png",
-    },
+    // {
+    //   original: "/svg/Review/Nikita.png",
+    //   hover: "/svg/Review/Nikita_Hover.png",
+    // },
     {
       original: "/svg/Review/Mari.png",
       hover: "/svg/Review/Mari_Hover.png",
