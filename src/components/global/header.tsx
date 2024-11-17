@@ -1,12 +1,13 @@
 "use client"
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import animationData from '../../../public/menu_square.json'
 import LottieAnimation from "./lottieAnimate";
 
 const Header = ({ }) => {
-
   const [isOpen, setIsOpen] = useState(false);
+  const [showHeader, setShowHeader] = useState(true);
+  let lastScrollTop = 0;
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -15,6 +16,31 @@ const Header = ({ }) => {
   const closeMenu = () => {
     setIsOpen(false);
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (currentScroll > 50) { // Порог для появления хедера (например, после геро-секции)
+        if (currentScroll > lastScrollTop) {
+          // Скролл вниз
+          setShowHeader(true);
+        } else {
+          // Скролл вверх
+          setShowHeader(true);
+        }
+      } else {
+        setShowHeader(false); // Скрыть хедер, если в пределах геро-секции
+      }
+
+      lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <>
@@ -26,8 +52,14 @@ const Header = ({ }) => {
       )}
 
 
-    <header className="w-full fixed bg-black z-10 top-0 py-4 flex justify-between sm:pt-8 2xl:py-4">
-      <img src={'/svg/skelya_logo.svg'} alt='' className='h-[42px] lg:h-[56px] pl-4'/>
+      <header
+        className={`w-full fixed bg-black z-10 top-0 py-4 flex justify-between sm:pt-8 2xl:py-4 transition-transform duration-300 ${
+          showHeader ? "translate-y-0" : "-translate-y-full"
+        }`}
+      >
+      <a href="/">
+        <img src={'/svg/skelya_logo.svg'} alt='' className='h-[42px] lg:h-[56px] pl-4'/>
+      </a>
       <div className="flex items-center pr-6">
         <button onClick={toggleMenu} className="focus:outline-none">
           <LottieAnimation animationData={animationData} />

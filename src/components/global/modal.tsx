@@ -26,12 +26,19 @@ export const useModal = (): ModalState => {
 const ContactFormModal = ({ isOpen, toggleModal }: ContactFormModalProps) => {
   const form = useRef<HTMLFormElement | null>(null);
   const [isSuccess, setSuccess] = useState<boolean>(false);
+  const [isClosing, setIsClosing] = useState<boolean>(false);
+
+  const handleClose = () => {
+    setIsClosing(true);
+    setTimeout(() => {
+      setIsClosing(false);
+      toggleModal();
+    }, 150); // время совпадает с длительностью анимации
+  };
 
   const sendEmail = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
     if (!form.current) return;
-
     emailjs.sendForm('service_yb8b94j', 'template_ytnv6zk', form.current, 'tz4Y_9ETUjuo63w3o')
       .then((result) => {
           console.log(result.text);
@@ -48,16 +55,16 @@ const ContactFormModal = ({ isOpen, toggleModal }: ContactFormModalProps) => {
   return (
     <>
       {isOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-center justify-center z-50">
-
+        <div className={`fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-center justify-center z-50
+        ${isClosing ? 'animate-fade-out' : 'animate-fade-in'}`}>
         <div className="relative bg-gray w-auto shadow-lg z-1 p-10 pb-[90px]"> 
           <div className="px-10">  
             <div className="flex justify-end w-full pb-7">
               <button
-                onClick={toggleModal}
+                onClick={handleClose}
                 className="text-white text-xl font-bold"
               >
-                <img src={'/svg/close_btn.svg'} alt='' className='h-[30px] md:h-[30px]'/>
+                <img src={'/svg/close_btn.svg'} alt='' className='h-[30px] md:h-[30px] hover:stroke-blue'/>
               </button>
             </div> 
             
@@ -67,19 +74,20 @@ const ContactFormModal = ({ isOpen, toggleModal }: ContactFormModalProps) => {
         
             <form className="space-y-10" ref={form} onSubmit={sendEmail}>
               {/* Input: Ім'я */}
-            <div className="relative">
-              <input
-                type="text"
-                className="peer w-full border-[1px] border-white bg-transparent text-white outline-none py-3 px-4 placeholder-transparent focus:border-[#6566F1] transition"
-                placeholder="Ім'я"
-                id="name"
-              />
-              <label
-                htmlFor="name"
-                className="absolute normal-case text-xl left-3 top-0 px-1 text-white bg-gray transition-all transform -translate-y-1/2 scale-100 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-[12px] peer-focus:scale-100 peer-focus:-translate-y-[22px] peer-focus:text-purple-main"
-              >
-                Імя
-              </label>
+              <div className="relative">
+                <input
+                  type="text"
+                  className="peer w-full border-[1px] border-white bg-transparent text-white outline-none py-3 px-4 placeholder-transparent focus:border-[#6566F1] transition"
+                  placeholder="Ім'я"
+                  id="name"
+                  required 
+                />
+                <label
+                  htmlFor="name"
+                  className="absolute normal-case text-xl left-3 top-0 px-1 text-white bg-gray transition-all transform -translate-y-1/2 scale-100 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-[12px] peer-focus:scale-100 peer-focus:-translate-y-[22px] peer-focus:text-purple-main"
+                >
+                  Імя
+                </label>
               </div>
 
               {/* Input: Email */}
@@ -89,6 +97,7 @@ const ContactFormModal = ({ isOpen, toggleModal }: ContactFormModalProps) => {
                   className="peer w-full border-[1px] border-white bg-transparent text-white outline-none py-3 px-4 placeholder-transparent focus:border-[#6566F1] transition"
                   placeholder="Імейл"
                   id="email"
+                  required
                 />
                 <label
                   htmlFor="email"
@@ -105,6 +114,7 @@ const ContactFormModal = ({ isOpen, toggleModal }: ContactFormModalProps) => {
                   placeholder="Твій запит"
                   rows={5}
                   id="request"
+                  required
                 />
                 <label
                   htmlFor="request"
@@ -116,7 +126,7 @@ const ContactFormModal = ({ isOpen, toggleModal }: ContactFormModalProps) => {
         
               <button
                 type="submit"
-                className="w-full bg-[#6566F1] text-black py-6 px-14 text-3xl font-semibold mt-6 hover:bg-blue-600 transition"
+                className="w-full bg-[#6566F1] text-black py-6 px-14 text-3xl font-semibold mt-6 hover:bg-blue transition"
               >
                 ОТРИМАТИ КОНСУЛЬТАЦІЮ
               </button>
