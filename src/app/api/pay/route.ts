@@ -30,8 +30,8 @@ export async function POST(request: Request) {
     productPrice: [amount].toString(),
     productCount: '1',
     merchantSignature,
-    returnUrl: 'https://skelya.careers/success', // Замените на ваш URL
-    serviceUrl: 'https://skelya.careers/api/payment-response', // URL для обработки ответов
+    returnUrl: 'https://skelya-reborn.vercel.app/success', // Замените на ваш URL
+    serviceUrl: 'https://skelya-reborn.vercel.app/api/payment-response', // URL для обработки ответов
   };
 
   const url = `https://secure.wayforpay.com/pay?${new URLSearchParams(paymentData).toString()}`;
