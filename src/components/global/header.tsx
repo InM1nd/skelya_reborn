@@ -6,7 +6,7 @@ import LottieAnimation from "./lottieAnimate";
 
 const Header = ({ }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [showHeader, setShowHeader] = useState(true);
+  const [showHeader, setShowHeader] = useState(false);
   let lastScrollTop = 0;
 
   const toggleMenu = () => {
