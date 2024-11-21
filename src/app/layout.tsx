@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Raleway, Unbounded } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
-import { GoogleAnalytics  } from '@next/third-parties/google'
+import { GoogleAnalytics, GoogleTagManager} from '@next/third-parties/google'
 import Clarity from '@microsoft/clarity';
 import Script from "next/script";
 
@@ -52,6 +52,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
       </head>
+      <GoogleTagManager gtmId="GTM-MJPQTGFF" />
       <body
         className={`${raleway.variable} ${unbounded.variable} antialiased`}
       >
