@@ -85,6 +85,11 @@ export default function RootLayout({
             src={`https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1`}
           />
         </noscript>
+        <noscript>
+          <iframe src="https://www.googletagmanager.com/ns.html?id=YourIdGoesHere"
+            height="0" width="0" style={{ display: "none", visibility: "hidden" }}>
+          </iframe>
+        </noscript>
       </body>
     </html>
   );
