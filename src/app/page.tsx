@@ -1,7 +1,6 @@
 import { Hero } from "./parts/hero";
 import { Footer } from "./parts/footer";
 
-
 import { ForWhom } from "./parts/for_whom";
 import { HowWorks } from "./parts/how_works";
 import { Products } from "./parts/products";

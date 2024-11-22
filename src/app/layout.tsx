@@ -59,7 +59,6 @@ export default function RootLayout({
         {children}
         <GoogleAnalytics gaId="G-SLW6C9CCYM" />
         <Analytics/>
-
         <Script
         id="facebook-pixel"
         strategy="afterInteractive"
