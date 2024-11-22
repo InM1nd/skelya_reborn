@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Raleway, Unbounded } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
-import { GoogleAnalytics  } from '@next/third-parties/google'
+import { GoogleAnalytics, GoogleTagManager} from '@next/third-parties/google'
 import Clarity from '@microsoft/clarity';
 import Script from "next/script";
 
@@ -52,6 +52,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
       </head>
+      <GoogleTagManager gtmId="GTM-MJPQTGFF" />
       <body
         className={`${raleway.variable} ${unbounded.variable} antialiased`}
       >
@@ -83,6 +84,11 @@ export default function RootLayout({
             style={{ display: "none" }}
             src={`https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1`}
           />
+        </noscript>
+        <noscript>
+          <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MJPQTGFF"
+            height="0" width="0" style={{ display: "none", visibility: "hidden" }}>
+          </iframe>
         </noscript>
       </body>
     </html>
