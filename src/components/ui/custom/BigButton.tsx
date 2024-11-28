@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from "react";
+import { sendGAEvent } from '@next/third-parties/google'
 
 export interface BigButtonProps {
   text: string;
@@ -10,6 +11,14 @@ export interface BigButtonProps {
 export const BigButton: React.FC<BigButtonProps> = ({ text, onClick }) => {
 
   const [isHovered, setIsHovered] = useState(false);
+
+  const handleClick = () => {
+    sendGAEvent('event', 'buttonClicked', { value: 'xyz' });
+
+    if (onClick) {
+      onClick();
+    }
+  };
 
   return (
     <div className="w-full flex items-center">

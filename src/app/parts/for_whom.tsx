@@ -12,7 +12,9 @@ import Title from "@/components/global/title"
 import { BigButton } from "@/components/ui/custom/BigButton"
 
 
+
 export const ForWhom = () => {
+
   return(
     <section className="w-full pb-7 sm:pb-20" id="for_whom">
       <Title>для кого</Title>

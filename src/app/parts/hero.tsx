@@ -2,6 +2,8 @@
 
 import React, { useState, useEffect, useRef  } from 'react';
 import Header from "@/components/global/header"
+import { sendGAEvent } from '@next/third-parties/google'
+
 
 const debounce = (func: (...args: unknown[]) => void, delay: number) => {
   let timeout: NodeJS.Timeout;
@@ -35,7 +37,7 @@ export const Hero = () => {
     };
   }, []);
 
-  
+
 
   useEffect(() => {
     // Вычисляем высоту экрана только при загрузке и фиксируем её
@@ -44,6 +46,11 @@ export const Hero = () => {
       sectionRef.current.style.height = `${initialVh}px`; // Задаём фиксированную высоту
     }
   }, []);
+
+
+  const handleClick = () => {
+    sendGAEvent('event', 'buttonClicked', { value: 'xyz' });
+  };
 
   return (
     <>
@@ -74,7 +81,7 @@ export const Hero = () => {
               onMouseEnter={() => setIsHovered(true)} 
               onMouseLeave={() => setIsHovered(false)}
             >
-              <a href='#products' className="h-full w-full absolute"></a>
+              <a href='#products' onClick={handleClick} className="h-full w-full absolute" ></a>
             </div>
         </div>
         <div className="flex flex-col justify-start items-start relative px-4">
