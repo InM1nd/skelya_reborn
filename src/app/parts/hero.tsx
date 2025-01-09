@@ -55,7 +55,7 @@ export const Hero = () => {
   return (
     <>
     <Header/>
-    <section ref={sectionRef} className="w-full flex flex-col justify-end items-center pb-2 px-2 pt-[88px] sm:pb-5 sm:justify-end md:px-4 2xl:pt-[50px] lg:h-screen lg:pb-5">
+    <section ref={sectionRef} className="w-full flex flex-col justify-end items-center pb-2 px-2 pt-[88px] sm:pb-5 sm:justify-end md:px-[50px] 2xl:pt-[50px] lg:h-screen lg:pb-5">
       <div className="w-full relative">
         <div className="relative mb-6">
             {isMobile ? (

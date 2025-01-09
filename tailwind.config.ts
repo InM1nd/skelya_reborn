@@ -9,6 +9,20 @@ const config: Config = {
   ],
   theme: {
   	extend: {
+			fontSize: {
+        'sm': ['14px', {
+          lineHeight: '1.2'
+        }],
+        'base': ['16px', {
+          lineHeight: '1.2'
+        }],
+        'lg': ['18px', {
+          lineHeight: '1.2'
+        }],
+        'xl': ['20px', {
+          lineHeight: '1.2'
+        }]
+      },
 			screens: {
         xsm: '425px',
       },
@@ -21,6 +35,7 @@ const config: Config = {
   				light: '#B5B0FF',
   				main: '#6D61FF'
   			},
+				orange: "#FA6F17",
   			yellow: '#F4D06F',
   			green: '#3FAD78',
   			white: {

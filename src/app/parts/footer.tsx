@@ -1,19 +1,23 @@
 'use client'
 
-import { BigButton } from "@/components/ui/custom/BigButton";
 import ContactFormModal from "@/components/global/modal";
 import { useModal } from '@/components/global/modal';
+import { ArrowUpRight } from 'lucide-react';
 import Link from "next/link";
 
 export const Footer = () => {
   const { isOpen, toggleModal } = useModal();
 
   return (
-    <section className="w-full text-white flex justify-center px-2 md:px-4">
+    <section className="w-full text-white flex justify-center px-2 md:px-4 bg-gray">
       <div className="w-full flex-col uppercase">
-        <BigButton text={"Спитати"} onClick={toggleModal} />
-        <div className="pt-24 flex flex-row justify-between pb-60 text-2xl">
+      <a className="mt-[32px] w-full flex bg-pink text-black font-bold text-[18px] uppercase items-center justify-center py-5 px-6 lg:hidden" href="https://t.me/skelya_careers">
+        задати питання
+        <ArrowUpRight className="ml-3" size={20} />
+      </a>
+        <div className="pt-[50px] flex flex-row justify-between pb-60 text-2xl">
           <div className="w-full hidden text-[13px] lg:block xl:text-[26px]">
+            <a className="flex bg-pink text-black font-bold text-3xl uppercase items-center py-5 px-6 mb-[52px]" href="https://t.me/skelya_careers">задати питання<ArrowUpRight className="ml-3" size={40} /></a>
             <p className="pb-7 font-semibold">2024, Skelya career</p>
             <ul className="flex flex-col gap-3 xl:gap-6">
               <li className="hover:underline"><a href="/legal/privacy-policy">Політика конфіденційності</a></li>
@@ -87,6 +91,7 @@ export const Footer = () => {
             <li>|</li>
             <li><Link href="/legal/terms">Угода Користувача</Link></li>
           </ul>
+          
         </div>
 
         <img src={"/svg/Hero_Words.svg"} alt='' className="w-full pb-14 hidden lg:block" />
