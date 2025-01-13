@@ -22,7 +22,7 @@ const config: Config = {
         'xl': ['20px', {
           lineHeight: '1.2'
         }],
-        '2xl': ['20px', {
+        '2xl': ['24px', {
           lineHeight: '1.2'
         }],
         '3xl': ['32px', {
