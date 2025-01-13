@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react';
 import { ArrowUpRight } from 'lucide-react';
 import Title from '@/components/global/title';
@@ -7,7 +9,7 @@ const ConsultantsSection = () => {
   return (
 <section className="w-full pb-7 sm:pb-20" id="consultants"> 
       <Title>КОНСУЛЬТАНТИ</Title>
-        <div className="w-full flex justify-center flex-col px-4 py-6 xl:px-[40px] xl:py-[120px]">
+        <div className="w-full flex justify-center flex-col p-4 lg:p-6">
         <div className="grid grid-cols-1 mb-4 gap-4 md:grid-cols-3 md:mb-8 lg:mb-12 lg:gap-8 ">
           {/* Card 1 */}
           <div className="bg-gray text-white h-full flex flex-col">
@@ -92,7 +94,10 @@ const ConsultantsSection = () => {
           </div>
 
         </div>
-        <BigButton text={"обрати консультанта"}  onClick={() => window.open('https://t.me/skelya_careers', '_blank')}/>
+        <BigButton 
+          text="обрати консультанта"
+          onClick={() => window.open('https://t.me/skelya_careers', '_blank')}
+        />
       </div>
     </section>
   );

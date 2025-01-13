@@ -7,9 +7,9 @@ import React from 'react';
 const IntensiveForWhom = () => {
 
   return(
-    <section className="w-full h-full pb-7 sm:pb-20" id="IntensiveForWhom">
+    <section className="w-full h-full pb-7 sm:pb-14" id="IntensiveForWhom">
       <Title>КОРИСНО ДЛЯ</Title>
-      <div className="w-full grid md:grid-cols-2 gap-8 px-4 py-6 xl:px-[40px] xl:py-[120px]">
+      <div className="w-full grid md:grid-cols-2 gap-8 py-6 px-4 xl:px-6 xl:py-[60px]">
         <div className="flex flex-col h-full">
           <div className="">
             <img src="/svg/Intensive_Purp.svg" className="object-cover w-full h-full" />

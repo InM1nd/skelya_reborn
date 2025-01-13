@@ -38,18 +38,18 @@ export const Faq = () => {
   }
 
   return(
-    <section className="w-full h-full pb-4 sm:pb-8 lg:pb-20" id="Faq">
+    <section className="w-full h-full pb-7 sm:pb-14" id="Faq">
       <Title>ЧАСТІ ПИТАННЯ</Title>
       <div className="w-full space-y-8 text-white px-4 py-6 xl:px-[40px] xl:py-[120px]">
         {faqs.map((faq, index) => (
-          <div key={index} className="border-4 border-gray">
+          <div key={index} className="border-4 border-gray hover:border-blue transition-colors duration-300">
             <button
               onClick={() => toggleAccordion(index)}
-              className={`w-full flex justify-between items-center text-left font-unbounded gap-0 p-4 sm:p-6 lg:p-[50px] ${
+              className={`w-full flex justify-between items-center text-left font-unbounded gap-5 p-4 sm:p-6 lg:p-[50px] ${
                 openIndex === index ? 'bg-gray' : ''
               }`}
             >
-              <span className="font-semibold text-[13px] sm:text-2xl lg:text-[26px]">{faq.question}</span>
+              <span className="font-semibold text-[15px] sm:text-2xl lg:text-[26px]">{faq.question}</span>
               {openIndex === index ? <Minus className="font-bold w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10" /> : <Plus className="font-bold w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10" />}
             </button>
             

@@ -8,6 +8,7 @@ interface TabContent {
   title: string;
   price: string;
   description: string;
+  buyLink: string;
 }
 
 interface TabContents {
@@ -25,13 +26,19 @@ const ServicesSection: React.FC = () => {
     once: {
       title: 'ОДНОРАЗОВА КОНСУЛЬТАЦІЯ',
       price: '1200 грн',
-      description: 'Зустріч із кар\'єрним консультантом для вирішення одного запиту'
+      description: 'Зустріч із кар\'єрним консультантом для вирішення одного запиту',
+      buyLink: 'https://secure.wayforpay.com/button/b6a33d90d22ce',
     },
     bundle: {
       title: 'БАНДЛ КОНСУЛЬТАЦІЙ',
       price: '2800 грн',
-      description: 'Зустріч із кар\'єрним консультантом для вирішення одного запиту'
+      description: 'Зустріч із кар\'єрним консультантом для вирішення одного запиту',
+      buyLink: 'https://secure.wayforpay.com/button/b12436e04beaf'
     }
+  };
+
+  const handleBuyClick = () => {
+    window.open(tabContent[activeTab].buyLink, '_blank');
   };
 
   return (
@@ -42,7 +49,7 @@ const ServicesSection: React.FC = () => {
         {/* Left Column */}
         <div className="col-span-4 flex justify-between gap-4 flex-col sm:gap-6 lg:gap-8 lg:col-span-4">
           {/* Tabs */}
-          <div className="flex gap-2 font-bold text-xl sm:gap-4 sm:text-2xl lg:text-[32px] ">
+          <div className="flex  gap-2 font-bold text-xl  sm:gap-4 sm:text-2xl lg:text-[32px] lg:flex-col 2xl:flex-row">
             <button 
               className={`px-4 w-full py-2 sm:py-3 sm:px-6 lg:px-10 ${activeTab === 'once' ? 'bg-green' : 'border-4 border-green text-green'}`}
               onClick={() => setActiveTab('once')}
@@ -59,14 +66,14 @@ const ServicesSection: React.FC = () => {
           <div className="w-full">
             <img src="/svg/Letter_К.svg" alt="Consultant" className="object-cover h-auto w-full "/>
           </div>
-          <button className="w-full bg-green hover:bg-emerald-500 text-black text-xl font-semibold py-2 px-4 flex items-center justify-center gap-2 transition-colors sm:text-2xl sm:py-3 sm:px-6 lg:py-4 lg:text-[40px]">
+          <button onClick={handleBuyClick} className="w-full bg-green border-4 border-green text-black text-xl font-semibold py-2 px-4 flex items-center justify-center gap-2 sm:text-2xl sm:py-3 sm:px-6 lg:py-4 lg:text-[40px] transition-colors duration-300 hover:border-purple-main hover:text-purple-main hover:bg-black group hover:stroke-change">
             {tabContent[activeTab].price} - КУПИТИ <ArrowUpRight className="w-6 h-6 sm:w-8 sm:h-8 lg:w-12 lg:h-12" />
           </button>
         </div>
 
         {/* Right Column */}
         <div className="bg-gray text-white col-span-8 mt-4 p-4 sm:p-6 lg:mt-0 lg:col-span-8 lg:p-[50px]">
-          <h2 className="text-green text-2xl font-bold text-left uppercase font-unbounded mb-4 sm:mb-6 sm:text-3xl lg:text-[52px]">{tabContent[activeTab].title}</h2>
+          <h2 className="text-green text-2xl font-bold text-left uppercase font-unbounded  mb-4 sm:mb-6 sm:text-3xl lg:text-[52px] ">{tabContent[activeTab].title}</h2>
           <p className="mb-6 text-xl sm:text-2xl lg:text-[32px]">{tabContent[activeTab].description}</p>
           
           <div className="mb-6 text-xl sm:text-2xl lg:text-[32px]">
@@ -109,7 +116,7 @@ const ServicesSection: React.FC = () => {
               </div>
             </div>
             
-            <div className="flex flex-col justify-between text-lg bg-blue space-y-4 p-4 sm:text-xl sm:p-6 lg:flex-row lg:text-3xl lg:p-[50px] lg:space-y-0">
+            <div className="flex flex-col justify-between text-lg bg-blue gap-6 p-4 sm:text-xl sm:p-6 lg:flex-row xl:text-3xl lg:p-[50px] ">
               <div>
                 <h3 className="font-bold">СТАРТ:</h3>
                 <p>22 січня 2025</p>
@@ -135,17 +142,15 @@ const ServicesSection: React.FC = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 mt-6 sm:grid-cols-12 sm:gap-8 sm:mt-12">
-            <Link href="/intensive" className="col-span-1 border-4 border-blue text-blue flex items-center justify-center gap-2 text-xl mb-4 font-semibold py-3 px-4 hover:bg-blue hover:text-black transition-colors sm:col-span-7 md:mb-0 sm:py-4 sm:px-6 sm:text-3xl lg:text-[40px] ">
+        <div className="grid grid-cols-1 mt-6 md:grid-cols-12 md:gap-8 sm:mt-12">
+            <Link href="/intensive" className="col-span-1 border-4 border-blue text-blue flex items-center justify-center gap-2 text-xl mb-4 font-semibold py-3 px-4 transition-colors md:col-span-7 md:mb-0 sm:py-4 sm:px-6 sm:text-3xl lg:text-[40px] transition-colors duration-300 hover:border-purple-main hover:text-purple-main group hover:stroke-change">
                 ПРОГРАМА ІНТЕНСИВУ <ArrowUpRight className="w-6 h-6 sm:w-8 sm:h-8 lg:w-12 lg:h-12" />
             </Link>
           {/* Register Button */}
-            <button className="col-span-1 border-4 border-blue bg-blue hover:border-sky-400 text-black flex items-center justify-center gap-2 text-xl font-semibold py-3 px-4 transition-colors sm:col-span-5 sm:px-6 sm:py-4 lg:text-[40px] sm:text-3xl">
+            <a className="col-span-1 border-4 border-blue bg-blue text-black flex items-center justify-center gap-2 text-xl font-semibold py-3 px-4 transition-colors md:col-span-5 sm:px-6 sm:py-4 lg:text-[40px] sm:text-3xl transition-colors duration-300 hover:border-purple-main hover:text-purple-main hover:bg-black group hover:stroke-change " href="https://secure.wayforpay.com/button/b12436e04beaf">
               ЗАРЕЄСТРУВАТИСЯ <ArrowUpRight className="w-6 h-6 sm:w-8 sm:h-8 lg:w-12 lg:h-12" />
-            </button>
+            </a>
         </div>
-        
-
     </div>
   );
 };

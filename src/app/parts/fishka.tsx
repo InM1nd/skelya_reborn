@@ -5,9 +5,9 @@ import Title from "@/components/global/title"
 export const Fishka = () => {
 
   return(
-    <section className="w-full h-full pb-7 lg:pb-20" id="fishka">
+    <section className="w-full h-full pb-7 sm:pb-14" id="fishka">
       <Title>Фішка</Title>
-      <div className="w-full flex justify-center px-4 py-6 xl:px-[40px] xl:py-[120px]">
+      <div className="w-full flex justify-center py-6 px-4 xl:px-6 xl:py-[60px]">
         <div className="grid grid-cols-1 gap-4 w-full lg:grid-cols-3 ">
 
           <div className="col-span-1 gap-4 w-full lg:col-span-2">

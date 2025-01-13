@@ -14,11 +14,11 @@ import Title from "@/components/global/title"
 export const ForWhom = () => {
 
   return(
-    <section className="w-full pb-7 sm:pb-20" id="for_whom">
+    <section className="w-full pb-7 sm:pb-14" id="for_whom">
       <Title>для кого</Title>
       <div className="w-full flex justify-center">
-        <div className="w-full flex justify-center flex-col px-4 py-6 xl:px-[40px] xl:py-[120px]">   
-          <div className="hidden md:grid md:grid-cols-1 md:gap-8 md:pb-3 lg:grid-cols-4 ">
+        <div className="w-full flex justify-center flex-col py-6 px-4 xl:px-6 xl:py-[60px]">   
+          <div className="hidden md:grid md:grid-cols-2 md:gap-8 md:pb-3 lg:grid-cols-4 ">
             <Card
               title=""
               borderColor="#95D4F8"

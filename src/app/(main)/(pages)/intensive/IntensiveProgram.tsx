@@ -60,9 +60,9 @@ const IntensiveProgram = () => {
   ];
 
   return(
-    <section className="w-full h-full pb-7 sm:pb-20" id="IntensiveProgram">
+    <section className="w-full h-full pb-7 sm:pb-14" id="IntensiveProgram">
       <Title>ПРОГРАМА</Title>
-      <div className="bg-black text-white px-4 py-6 xl:px-[40px] xl:py-[120px]">
+      <div className="bg-black text-white py-6 px-4 xl:px-6 xl:py-[60px]">
       <div className="">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {programs.map((program, index) => (

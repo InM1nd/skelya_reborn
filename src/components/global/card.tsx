@@ -15,7 +15,7 @@ export const Card: React.FC<CardProps> = ({ title, image, items, borderColor }) 
             <p
               key={index}
               className="w-full font-semibold text-left text-[#f3f3f3] text-[20px] 
-               md:text-[28px] lg:text-[18px] 2xl:text-[32px]"
+              lg:text-[18px] 2xl:text-[32px]"
             >
               ● {itemText}
             </p>

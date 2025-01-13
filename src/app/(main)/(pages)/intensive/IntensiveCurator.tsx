@@ -8,10 +8,10 @@ import React from 'react';
 const IntensiveCurator = () => {
 
   return(
-    <section className="w-full h-full pb-7 sm:pb-20" id="how_works">
+    <section className="w-full h-full pb-7 sm:pb-14" id="how_works">
       <Title>КУРАТОР</Title>
 
-      <div className="px-4 py-6 xl:px-[40px] xl:py-[120px]">
+      <div className="py-6 px-4 xl:px-6 xl:py-[60px]">
         <div className="mx-auto">
           {/* Video Player */}
           <div className="relative aspect-video border-4 border-[#7DD3FC] bg-gray-800 overflow-hidden">
@@ -32,7 +32,7 @@ const IntensiveCurator = () => {
             <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center bg-[#7DD3FC] p-4 sm:p-6 lg:p-8">
               <div>
                 <h2 className="text-xl sm:text-3xl lg:text-[32px] font-bold mb-1 sm:mb-0">МАРІЯ ЗІ СКЕЛЯ</h2>
-                <p className="text-xl sm:text-2xl lg:text-3xl text-gray-400">кар'єрна консультантка</p>
+                <p className="text-xl sm:text-2xl lg:text-3xl text-gray-400">кар&apos;єрна консультантка</p>
               </div>
               <a 
                 href="https://www.linkedin.com/in/mariiaternovska/" 
@@ -67,7 +67,7 @@ const IntensiveCurator = () => {
             </div>
 
             {/* Registration Button */}
-            <button className="flex w-full items-center border-4 border-pink justify-center text-pink text-xl sm:text-2xl lg:text-[52px] font-bold uppercase py-4 sm:py-6 lg:py-[50px] px-4 sm:px-6 hover:bg-blue group hover:stroke-change transition-colors duration-300">
+            <button className="flex w-full items-center border-4 border-pink justify-center text-pink text-xl sm:text-2xl lg:text-[52px] font-bold uppercase py-4 sm:py-6 lg:py-[50px] px-4 sm:px-6 transition-colors duration-300 hover:border-purple-main hover:text-purple-main group hover:stroke-change">
               <span>ЗАРЕЄСТРУВАТИСЯ</span>
               <ArrowUpRight className="ml-2 w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
             </button>

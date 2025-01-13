@@ -21,6 +21,15 @@ const config: Config = {
         }],
         'xl': ['20px', {
           lineHeight: '1.2'
+        }],
+        '2xl': ['20px', {
+          lineHeight: '1.2'
+        }],
+        '3xl': ['32px', {
+          lineHeight: '1.2'
+        }],
+        '4xl': ['20px', {
+          lineHeight: '1.2'
         }]
       },
 			screens: {
