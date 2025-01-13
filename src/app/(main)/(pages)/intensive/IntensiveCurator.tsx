@@ -8,7 +8,7 @@ import React from 'react';
 const IntensiveCurator = () => {
 
   return(
-    <section className="w-full h-full pb-7 sm:pb-14" id="how_works">
+    <section className="w-full h-full pb-7 sm:pb-14" id="IntensiveCurator">
       <Title>КУРАТОР</Title>
 
       <div className="py-6 px-4 xl:px-6 xl:py-[60px]">

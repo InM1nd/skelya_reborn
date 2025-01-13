@@ -14,18 +14,18 @@ const IntensiveForWhom = () => {
           <div className="">
             <img src="/svg/Intensive_Purp.svg" className="object-cover w-full h-full" />
           </div>
-          <div className="border-4 border-purple-main px-[16px] py-[20px] flex-1 lg:px-[50px] lg:py-16 ">
+          <div className="border-4 border-purple-main p-6 flex-1 lg:px-[50px] lg:py-16 ">
             <h5 className="uppercase text-purple-main text-[20px] font-bold font-unbounded lg:text-[34px]">Шукачі роботи</h5>
-            <p className="text-white text-[18px] lg:text-[34px]">які хочуть систематизувати процес пошуку.</p>
+            <p className="text-white text-[20px] lg:text-[34px]">які хочуть систематизувати процес пошуку.</p>
           </div>
         </div>
         <div className="flex flex-col h-full">
           <div className="">
             <img src="/svg/Intensive_Green.svg" className="object-cover w-full h-full" />
           </div>
-          <div className="border-4 border-green px-[16px] py-[20px] flex-1 lg:px-[50px] lg:py-16">
+          <div className="border-4 border-green p-6 flex-1 lg:px-[50px] lg:py-16">
             <h5 className="uppercase text-green text-[20px] font-bold font-unbounded lg:text-[34px]">Світчери</h5>
-            <p className="text-white text-[18px] lg:text-[34px]">які планують змінити професії та потребують допомоги з адаптацією профілю під нові цілі.</p>
+            <p className="text-white text-[20px] lg:text-[34px]">які планують змінити професії та потребують допомоги з адаптацією профілю під нові цілі.</p>
           </div>
         </div>
       </div>

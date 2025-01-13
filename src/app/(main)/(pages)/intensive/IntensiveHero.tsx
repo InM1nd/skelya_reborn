@@ -33,7 +33,7 @@ const IntensiveHero = () => {
             <div className="flex flex-col justify-between text-lg bg-blue gap-6 p-4 sm:text-xl sm:p-6 xl:flex-row xl:p-[50px] xl:text-3xl">
               <div>
                 <h3 className="font-bold">СТАРТ:</h3>
-                <p>22 січня 2025</p>
+                <p>30 січня 2025</p>
               </div>
               <div>
                 <h3 className="font-bold">ГРУПА:</h3>

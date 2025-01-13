@@ -81,7 +81,7 @@ export const Footer = () => {
         </div>
 
         
-        <div className="block lg:hidden pb-7 md:pb-14">
+        <div className="block lg:hidden pb-4 ">
         <div className="">
             <p className="pb-5 text-xs font-unbounded">2024, Skelya career</p>  
         </div>
@@ -94,7 +94,7 @@ export const Footer = () => {
           
         </div>
 
-        <img src={"/svg/Hero_Words.svg"} alt='' className="w-full pb-14 hidden lg:block" />
+        <img src={"/svg/Hero_Words.svg"} alt='' className="w-full pb-4 hidden lg:block" />
         
       </div>
       <ContactFormModal isOpen={isOpen} toggleModal={toggleModal} />

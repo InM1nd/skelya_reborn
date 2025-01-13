@@ -9,7 +9,7 @@ const IntensiveProgram = () => {
   const programs = [
     {
       number: "1",
-      title: "РИНОК IT І ТВОЯ КОНКУРЕНТОСПРОМОЖНІСТЬ",
+      title: "РИНОК IT І ТВОЯ КОНКУРЕНТНІСТЬ",
       date: "<b>вебінар</b> / 2 березня / середа / 19:00",
       points: [
         "Як аналізувати ринок і типи компаній.",
@@ -68,11 +68,11 @@ const IntensiveProgram = () => {
         {programs.map((program, index) => (
           <div 
             key={index}
-            className={`p-4 lg:p-[25px] xl:p-[50px] ${
+            className={`p-6 lg:p-[25px] xl:p-[50px] ${
               program.isBonus ? 'bg-sky-300 text-black' : 'bg-gray'
             }`}
           >
-            <h3 className={`text-sm md:text-[18px] lg:text-[28px] font-bold mb-3 lg:mb-5 font-unbounded ${
+            <h3 className={`text-[18px] lg:text-[28px] font-bold mb-3 lg:mb-5 font-unbounded ${
               program.isBonus ? 'text-black' : 'text-sky-300'
             }`}>
               {program.number}. {program.title}
@@ -85,7 +85,7 @@ const IntensiveProgram = () => {
             />
             <ul className="space-y-2">
               {program.points.map((point, pointIndex) => (
-                <li key={pointIndex} className="flex items-start text-[14px] lg:text-[28px]">
+                <li key={pointIndex} className="flex items-start text-[16px] lg:text-[28px]">
                   <span className="mr-2">•</span>
                   <span className={program.isBonus ? 'text-black' : 'text-gray-300'}>
                     {point}
