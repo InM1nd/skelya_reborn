@@ -30,7 +30,7 @@ const ServicesSection: React.FC = () => {
       buyLink: 'https://secure.wayforpay.com/button/b51358399b740',
     },
     bundle: {
-      title: 'БАНДЛ КОНСУЛЬТАЦІЙ (x3 шт)',
+      title: 'БАНДЛ КОНСУЛЬТАЦІЙ (x3)',
       price: '3200 грн',
       description: 'Зустріч із кар\'єрним консультантом для вирішення одного запиту',
       buyLink: 'https://secure.wayforpay.com/button/b5b18008eb592'
@@ -92,7 +92,9 @@ const ServicesSection: React.FC = () => {
             <h3 className="font-bold mb-4">ПРОЦЕС:</h3>
             <div className="relative">
               <p className={`transition-all duration-300 ${isExpanded ? 'h-auto' : 'h-[80px] overflow-hidden'}`}>
-                Після оплати заповниш інформацію про себе та свій виклик, і ми підберемо консультанта, який найкраще впорається із твоєю задачею. Перед зустріччю консультант підготує уточнювальні питання: під час зустрічі разом обговорите виклик і розробите план дій. Після зустрічі отримаєш персональний простір у Notion із записом, матеріалами та рекомендаціями. Протягом 5 днів консультант буде на звʼязку для текстової підтримки.
+                1. Після оплати заповниш інформацію про себе та свій виклик, і ми підберемо консультанта, який найкраще впорається із твоєю задачею. <br/>
+                2. Перед зустріччю консультант підготує уточнювальні питання: під час зустрічі разом обговорите виклик і розробите план дій. <br/>
+                3.Після зустрічі отримаєш персональний простір у Notion із записом, матеріалами та рекомендаціями. Протягом 5 днів консультант буде на звʼязку для текстової підтримки.
               </p>
               <button 
                 onClick={() => setIsExpanded(!isExpanded)}
@@ -106,7 +108,7 @@ const ServicesSection: React.FC = () => {
       </div>
 
       {/* Intensive Section */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8" id="intencive">
         <div className="lg:col-span-12">
           <div className="bg-gray flex flex-col pt-8 sm:pt-12 lg:pt-[100px]">
             <div className="flex flex-col lg:flex-row">
@@ -143,11 +145,11 @@ const ServicesSection: React.FC = () => {
               </div>
               <div>
                 <h3 className="font-bold">ДЛЯ КОГО:</h3>
-                <p>шукачам роботи</p>
+                <p>шукачам роботи та світчерам</p>
               </div>
               <div>
                 <h3 className="font-bold">КУРАТОР:</h3>
-                <p>Марія зі Скеля кар’єрна консультантка </p>
+                <p>Марія зі Скеля, кар’єрна консультантка </p>
               </div>
             </div>
           </div>

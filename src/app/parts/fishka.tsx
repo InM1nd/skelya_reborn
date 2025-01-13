@@ -14,7 +14,7 @@ export const Fishka = () => {
             <div className="grid grid-cols-1 grid-rows-none gap-4 w-full h-full lg:grid-cols-7 lg:grid-rows-6">
                 {/* 8 People Stat */}
               <div className="col-span-1 border-4 border-green lg:col-span-4 lg:row-span-4">
-                <h2 className="text-[40px] font-semibold font-unbounded underline bg-green p-4 lg:text-[50px] 2xl:text-[80px]"><a href="https://miro.com/app/board/uXjVL-opX4c=/?moveToWidget=3458764609406428031&cot=14">8 людей</a></h2>
+                <h2 className="text-[40px] font-semibold font-unbounded underline bg-green p-4 lg:text-[50px] 2xl:text-[80px]"><a href="https://www.linkedin.com/pulse/important-linkedin-statistics-data-trends-oleksii-bondar-pqlie/">8 людей</a></h2>
                 <p className="text-[20px] p-6 font-medium text-white lg:text-[26px] lg:px-8 lg:py-[60px] 2xl:py-[120px] 2xl:text-[32px]">В середньому отримує роботу на LinkedIn щохвилини</p>
               </div>
               {/* 7% Stat */}

@@ -8,6 +8,7 @@ import { Reviews } from "./parts/reviews";
 import { Fishka } from "./parts/fishka";
 import ConsultantsSection from "./parts/consultants";
 import { Faq } from "./parts/faq";
+import FloatingButton from "@/components/global/floatingButton";
 
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
       <HowWorks/>
       <Reviews/>
       <Faq/>
+      <FloatingButton/>
       <Footer/>
     </main>
   );

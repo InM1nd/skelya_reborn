@@ -9,6 +9,7 @@ import IntensiveAbout from "./IntensiveAbout";
 import IntensiveCurator from "./IntensiveCurator";
 
 
+
 const Intensive = () => {
 
   return(

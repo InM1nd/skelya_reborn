@@ -45,7 +45,7 @@ const IntensiveHero = () => {
               </div>
               <div>
                 <h3 className="font-bold">ДЛЯ КОГО:</h3>
-                <p>шукачам роботи</p>
+                <p>шукачам роботи та світчерам</p>
               </div>
               <div>
                 <h3 className="font-bold">КУРАТОР:</h3>

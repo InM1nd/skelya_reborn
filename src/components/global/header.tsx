@@ -9,6 +9,7 @@ import Link from "next/link";
 interface NavItem {
   href: string;
   label: string;
+  isHighlighted?: boolean;
 }
 
 const Header = ({ }) => {
@@ -19,11 +20,10 @@ const Header = ({ }) => {
   const pathname = usePathname();
 
   const homeNavItems: NavItem[] = [
-    { href: '#fishka', label: 'Фішка' },
+    { href: '#fishka', label: 'Трішки цифр' },
     { href: '#consultants', label: 'КОНСУЛЬТАНТИ' },
-    { href: '#for_whom', label: 'Для кого' },
     { href: '#products', label: 'послуги' },
-    { href: '#how_works', label: 'як це працює' },
+    { href: '#intencive', label: 'Інтенсив', isHighlighted: true },
     { href: '#reviews', label: 'історії успіху' },
     { href: '#Faq', label: 'ЧАСТІ ПИТАННЯ' },
   ];
@@ -123,7 +123,9 @@ const Header = ({ }) => {
               >
                 <a 
                   href={item.href} 
-                  className="flex h-auto w-full px-4 pl-[40px] lg:pl-[50px]"
+                  className={`flex h-auto w-full px-4 pl-[40px] lg:pl-[50px] ${
+                    item.isHighlighted ? 'text-blue' : ''
+                  }`}
                 >
                   {item.label}
                 </a>
