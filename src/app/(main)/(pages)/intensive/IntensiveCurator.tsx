@@ -71,7 +71,9 @@ const IntensiveCurator = () => {
             </div>
 
             {/* Registration Button */}
-            <button className="flex w-full items-center border-4 border-pink justify-center text-pink text-xl sm:text-2xl lg:text-[52px] font-bold uppercase py-4 sm:py-6 lg:py-[50px] px-4 sm:px-6 transition-colors duration-300 hover:border-purple-main hover:text-purple-main group hover:stroke-change">
+            <button
+              onClick={() => window.open('https://secure.wayforpay.com/button/b12436e04beaf', '_blank')}
+              className="flex w-full items-center border-4 border-pink justify-center text-pink text-xl sm:text-2xl lg:text-[52px] font-bold uppercase py-4 sm:py-6 lg:py-[20px] px-4 sm:px-6 transition-colors duration-300 hover:border-purple-main hover:text-purple-main group hover:stroke-change">
               <span>ЗАРЕЄСТРУВАТИСЯ</span>
               <ArrowUpRight className="ml-2 w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
             </button>
