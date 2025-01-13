@@ -49,7 +49,7 @@ const IntensiveProgram = () => {
     {
       number: "5",
       title: "ПРАКТИЧНЕ ЗАСТОСУВАННЯ",
-      date: "<b>бонусний вебінар з Вікторією, Tech Recruitment </br> Consultant з Tietoevry</b> / 2 березня / середа / 19:00",
+      date: "<b>бонусний вебінар з <a href={https://www.linkedin.com/in/moroz-viktoriia/} className={underline}>Вікторією</a>, Tech Recruitment </br> Consultant з Tietoevry</b> / 2 березня / середа / 19:00",
       points: [
         "Як аналізувати ринок і типи компаній.",
         "Визначення власної конкурентності.",
