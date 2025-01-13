@@ -49,13 +49,14 @@ const IntensiveHero = () => {
               </div>
               <div>
                 <h3 className="font-bold">КУРАТОР:</h3>
-                <p>Марія із Скеля </p>
+                <p>Марія ЗІ Скеля </p>
               </div>
             </div>
           </div>
           </div>
         </div>
         <button
+        onClick={() => window.open('https://secure.wayforpay.com/button/b12436e04beaf', '_blank')}
         className="flex w-full mt-8 items-center border-4 border-blue justify-center text-blue text-2xl font-bold uppercase py-[20px] lg:py-[50px] hover:border-purple-main hover:text-purple-main sm:text-3xl md:pl-12 md:text-[52px] group hover:stroke-change transition-colors duration-300"
         >
           зареєструватися <ArrowUpRight size={50} />

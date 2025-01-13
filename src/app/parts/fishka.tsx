@@ -6,7 +6,7 @@ export const Fishka = () => {
 
   return(
     <section className="w-full h-full pb-7 sm:pb-14" id="fishka">
-      <Title>Фішка</Title>
+      <Title>Трішки цифр</Title>
       <div className="w-full flex justify-center py-6 px-4 xl:px-6 xl:py-[60px]">
         <div className="grid grid-cols-1 gap-4 w-full lg:grid-cols-3 ">
 

@@ -94,7 +94,7 @@ export const Footer = () => {
           
         </div>
 
-        <img src={"/svg/Hero_Words.svg"} alt='' className="w-full pb-4 hidden lg:block" />
+        <img src={"/svg/Hero_Words.svg"} alt='' className="w-full hidden lg:block" />
         
       </div>
       <ContactFormModal isOpen={isOpen} toggleModal={toggleModal} />
