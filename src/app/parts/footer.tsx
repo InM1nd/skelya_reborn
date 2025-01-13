@@ -26,7 +26,7 @@ export const Footer = () => {
           </div>
 
           <div className="w-full flex flex-row-reverse justify-between md:gap-[50px] lg:flex-row lg:justify-end xl:gap-[120px] 2xl:gap-[164px]">
-            <div className="text-[13px] xl:text-[26px]">
+            <div className="text-[16px] xl:text-[26px]">
               <h4 className="pb-7 font-semibold xl:text-[26px]">ми у соц мережах</h4>
               <ul className="flex flex-col gap-[6px] xl:gap-6">
                 <li className="hover:underline">
@@ -52,7 +52,7 @@ export const Footer = () => {
               </ul>
             </div>
 
-            <div className="text-[13px] xl:text-[26px]">
+            <div className="text-[16px] xl:text-[26px]">
               <h4 className="pb-7 font-semibold xl:text-[26px]">меню</h4>
               <ul className="flex flex-col gap-[6px] xl:gap-6">
                 <li className="hover:underline">

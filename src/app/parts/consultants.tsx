@@ -16,8 +16,8 @@ const ConsultantsSection = () => {
             <div className="relative mb-4">
               <img src="/svg/Consultant_1.svg" alt="Consultant" className="object-cover h-auto w-full " />
             </div>            
-            <div className="text-[16px] flex flex-col flex-1 p-4 gap-8 sm:gap-12 lg:p-6 lg:gap-[45px] xl:text-[28px] 2xl:p-10 " >
-              <div className='text-[20px] xl:text-[34px]'>
+            <div className="text-[20px] flex flex-col flex-1 p-4 gap-8 sm:gap-12 lg:p-6 lg:gap-[45px] xl:text-[28px] 2xl:p-10 " >
+              <div className='text-[22px] xl:text-[34px]'>
                 <h3 className="font-bold">Марія зі Скеля</h3>
                 <p className="">Кар&apos;єрна Консультантка </p>
               </div>
@@ -43,8 +43,8 @@ const ConsultantsSection = () => {
             <div className="relative mb-4">
               <img src="/svg/Consultant_2.svg" alt="Consultant" className="object-cover h-auto w-full " />
             </div>            
-            <div className="text-[16px] flex flex-col flex-1 p-4 gap-8 sm:gap-12 lg:p-6 lg:gap-[45px] xl:text-[28px] 2xl:p-10 ">
-              <div className='text-[20px] xl:text-[34px]'>
+            <div className="text-[20px] flex flex-col flex-1 p-4 gap-8 sm:gap-12 lg:p-6 lg:gap-[45px] xl:text-[28px] 2xl:p-10 ">
+              <div className='text-[22px] xl:text-[34px]'>
                 <h3 className="font-bold">Даша зі Computools</h3>
                 <p className="">Chief Recruiting Officer</p>
               </div>
@@ -71,8 +71,8 @@ const ConsultantsSection = () => {
             <div className="relative mb-4">
               <img src="/svg/Consultant_3.svg" alt="Consultant" className="object-cover h-auto w-full " />
             </div>            
-            <div className="text-[16px] flex flex-col flex-1 p-4 gap-8 sm:gap-12 lg:p-6 lg:gap-[45px] xl:text-[28px] 2xl:p-10 ">
-              <div className='text-[20px] xl:text-[34px]'>
+            <div className="text-[20px] flex flex-col flex-1 p-4 gap-8 sm:gap-12 lg:p-6 lg:gap-[45px] xl:text-[28px] 2xl:p-10 ">
+              <div className='text-[22px] xl:text-[34px]'>
                 <h3 className="font-bold">Вікторія з Tietoevry</h3>
                 <p className="">Кар&apos;єрна Консультантка</p>
               </div>

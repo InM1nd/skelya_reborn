@@ -56,7 +56,7 @@ const IntensiveHero = () => {
           </div>
         </div>
         <button
-        className="flex w-full mt-8 items-center border-4 border-blue justify-center text-blue text-2xl font-bold uppercase py-[50px] hover:border-purple-main hover:text-purple-main sm:text-3xl md:pl-12 md:text-[52px] group hover:stroke-change transition-colors duration-300"
+        className="flex w-full mt-8 items-center border-4 border-blue justify-center text-blue text-2xl font-bold uppercase py-[20px] lg:py-[50px] hover:border-purple-main hover:text-purple-main sm:text-3xl md:pl-12 md:text-[52px] group hover:stroke-change transition-colors duration-300"
         >
           зареєструватися <ArrowUpRight size={50} />
         </button>
