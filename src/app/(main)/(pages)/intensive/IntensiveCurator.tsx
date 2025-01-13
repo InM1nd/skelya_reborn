@@ -59,7 +59,7 @@ const IntensiveCurator = () => {
                 </div>
                 <div>
                   <h3 className="font-bold mb-2 text-xl sm:text-2xl lg:text-[32px]">СУПЕРСИЛА:</h3>
-                  <p className="text-gray-300 text-lg sm:text-xl lg:text-2xl">вибудовувати карєрні стратегії та знаходити найкращі карєрні рішення</p>
+                  <p className="text-gray-300 text-lg sm:text-xl lg:text-2xl">вибудовувати кар&apos;єрні стратегії та знаходити найкращі кар&apos;єрні рішення</p>
                 </div>
               </div>
             </div>

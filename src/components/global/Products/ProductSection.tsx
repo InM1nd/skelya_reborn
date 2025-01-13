@@ -27,19 +27,21 @@ const ServicesSection: React.FC = () => {
       title: 'ОДНОРАЗОВА КОНСУЛЬТАЦІЯ',
       price: '1200 грн',
       description: 'Зустріч із кар\'єрним консультантом для вирішення одного запиту',
-      buyLink: 'https://secure.wayforpay.com/button/b6a33d90d22ce',
+      buyLink: 'https://secure.wayforpay.com/button/b51358399b740',
     },
     bundle: {
-      title: 'БАНДЛ КОНСУЛЬТАЦІЙ',
-      price: '2800 грн',
+      title: 'БАНДЛ КОНСУЛЬТАЦІЙ (x3 шт)',
+      price: '3200 грн',
       description: 'Зустріч із кар\'єрним консультантом для вирішення одного запиту',
-      buyLink: 'https://secure.wayforpay.com/button/b12436e04beaf'
+      buyLink: 'https://secure.wayforpay.com/button/b5b18008eb592'
     }
   };
 
   const handleBuyClick = () => {
     window.open(tabContent[activeTab].buyLink, '_blank');
   };
+
+  const [isExpanded, setIsExpanded] = useState(false);
 
   return (
     <div className="bg-black p-4 lg:p-6 w-full ">
@@ -73,7 +75,7 @@ const ServicesSection: React.FC = () => {
 
         {/* Right Column */}
         <div className="bg-gray text-white col-span-8 mt-4 p-4 sm:p-6 lg:mt-0 lg:col-span-8 lg:p-[50px]">
-          <h2 className="text-green text-2xl font-bold text-left uppercase font-unbounded  mb-4 sm:mb-6 sm:text-3xl lg:text-[52px] ">{tabContent[activeTab].title}</h2>
+          <h2 className="text-green text-2xl font-bold text-left font-unbounded  mb-4 sm:mb-6 sm:text-3xl lg:text-[52px] ">{tabContent[activeTab].title}</h2>
           <p className="mb-6 text-xl sm:text-2xl lg:text-[32px]">{tabContent[activeTab].description}</p>
           
           <div className="mb-6 text-xl sm:text-2xl lg:text-[32px]">
@@ -88,7 +90,17 @@ const ServicesSection: React.FC = () => {
 
           <div className="text-xl sm:text-2xl lg:text-[32px]">
             <h3 className="font-bold mb-4">ПРОЦЕС:</h3>
-            <p>• Після оплати заповниш інформацію про себе та свій виклик, і ми підберемо консультанта, який найкраще впорається із твоєю задачею...</p>
+            <div className="relative">
+              <p className={`transition-all duration-300 ${isExpanded ? 'h-auto' : 'h-[80px] overflow-hidden'}`}>
+                Після оплати заповниш інформацію про себе та свій виклик, і ми підберемо консультанта, який найкраще впорається із твоєю задачею. Перед зустріччю консультант підготує уточнювальні питання: під час зустрічі разом обговорите виклик і розробите план дій. Після зустрічі отримаєш персональний простір у Notion із записом, матеріалами та рекомендаціями. Протягом 5 днів консультант буде на звʼязку для текстової підтримки.
+              </p>
+              <button 
+                onClick={() => setIsExpanded(!isExpanded)}
+                className="text-blue hover:text-sky-300 transition-colors text-xl sm:text-2xl mt-2"
+              >
+                {isExpanded ? 'Згорнути' : 'Читати далі...'}
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -135,7 +147,7 @@ const ServicesSection: React.FC = () => {
               </div>
               <div>
                 <h3 className="font-bold">КУРАТОР:</h3>
-                <p>Марія із Скеля кар’єрна консультантка </p>
+                <p>Марія зі Скеля кар’єрна консультантка </p>
               </div>
             </div>
           </div>

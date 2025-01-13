@@ -49,7 +49,7 @@ const IntensiveHero = () => {
               </div>
               <div>
                 <h3 className="font-bold">КУРАТОР:</h3>
-                <p>Марія ЗІ Скеля </p>
+                <p>Марія зі Скеля </p>
               </div>
             </div>
           </div>
