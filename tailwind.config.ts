@@ -9,6 +9,9 @@ const config: Config = {
   ],
   theme: {
   	extend: {
+			lineHeight: {
+        DEFAULT: '1.1',
+      },
 			fontSize: {
         'sm': ['14px', {
           lineHeight: '1.2'
@@ -26,7 +29,7 @@ const config: Config = {
           lineHeight: '1.2'
         }],
         '3xl': ['32px', {
-          lineHeight: '1.2'
+          lineHeight: '1'
         }],
         '4xl': ['20px', {
           lineHeight: '1.2'
