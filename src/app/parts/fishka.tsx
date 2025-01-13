@@ -34,7 +34,7 @@ export const Fishka = () => {
             <div className="grid grid-cols-1 grid-rows-none gap-4 w-full h-full lg:grid-cols-5 lg:grid-rows-6 ">
                 {/* 5x Stat */}
               <div className="col-span-1 border-4 border-orange lg:col-span-5 lg:row-span-3 ">
-                <h2 className="text-[40px] font-semibold font-unbounded bg-orange p-4 underline lg:text-[50px] 2xl:text-[80px]"><a href="https://miro.com/app/board/uXjVL-opX4c=/?moveToWidget=3458764609406428032&cot=14">в 5 разів</a></h2>
+                <h2 className="text-[40px] font-semibold font-unbounded bg-orange p-4 underline lg:text-[50px] 2xl:text-[80px]"><a href="https://www.linkedin.com/business/talent/blog/talent-acquisition/reasons-employee-referrals-are-best-way-to-hire">в 5 разів</a></h2>
                 <p className="text-[20px] p-6 font-medium text-white lg:text-[26px] lg:py-9 2xl:text-[32px]">Рекомендації ефективніші за решту способів найму</p>
               </div>
               {/* 67% Stat */}
