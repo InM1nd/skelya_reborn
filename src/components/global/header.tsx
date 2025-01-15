@@ -29,7 +29,7 @@ const Header = ({ }) => {
   ];
 
   const intensiveNavItems: NavItem[] = [
-    { href: '#IntensiveForWhom', label: 'КОРИСНО ДЛЯ' },
+    { href: '#IntensiveForWhom', label: 'ЦЕ ДЛЯ ТЕБЕ' },
     { href: '#IntensiveAbout', label: 'ЩО НА ВИХОДІ' },
     { href: '#IntensiveProgram', label: 'програма' },
     { href: '#IntensiveCurator', label: 'КУРАТОР' }
@@ -124,7 +124,7 @@ const Header = ({ }) => {
                 <a 
                   href={item.href} 
                   className={`flex h-auto w-full px-4 pl-[40px] lg:pl-[50px] ${
-                    item.isHighlighted ? 'text-blue' : ''
+                    item.isHighlighted ? 'text-blue hover:text-black' : ''
                   }`}
                 >
                   {item.label}
