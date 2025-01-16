@@ -37,7 +37,7 @@ const IntensiveForWhom = () => {
               ⁃ постійно отримуєш відмови після співбесід
             </p>
             <p className="text-white text-[20px] lg:text-[26px] 2xl:text-3xl">
-              ⁃ не розумієш, чого вартуєш на ринку
+              ⁃ не усвідомлюєш свою цінність на ринку
             </p>
             <p className="text-white text-[20px] lg:text-[26px] 2xl:text-3xl">
               ⁃ боїшся отримати офер і не пройти випробувальний термін

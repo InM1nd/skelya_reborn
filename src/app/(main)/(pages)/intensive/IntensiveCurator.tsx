@@ -33,7 +33,7 @@ const IntensiveCurator = () => {
               <div className="flex-none bg-[#7DD3FC] p-4 sm:p-6 lg:p-8">
                 <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
                   <div>
-                    <h2 className="text-xl sm:text-3xl lg:text-[32px] font-bold mb-1 sm:mb-0">МАРІЯ ЗІ СКЕЛЯ</h2>
+                    <h2 className="text-xl sm:text-3xl lg:text-[32px] font-bold mb-2 ">МАРІЯ ЗІ СКЕЛЯ</h2>
                     <p className="text-xl sm:text-2xl lg:text-3xl text-gray-400">кар&apos;єрна консультантка</p>
                   </div>
                   <a 
@@ -48,7 +48,7 @@ const IntensiveCurator = () => {
                 </div>
               </div>
 
-              <div className="flex-1 grid grid-cols-1 sm:grid-cols-3 3xl:flex 3xl:flex-col 3xl:justify-evenly gap-6 2xl:gap-10 text-white border-4 border-[#7DD3FC] px-4 py-8 sm:p-6 lg:p-8">
+              <div className="flex-1 grid grid-cols-1 sm:grid-cols-3 3xl:flex 3xl:flex-col 3xl:justify-evenly gap-6 xl:gap-10 text-white border-4 border-[#7DD3FC] px-4 py-8 sm:p-6 lg:p-8">
                 <div>
                   <h3 className="font-bold mb-2 text-xl sm:text-2xl lg:text-[32px]">АЧІВКА:</h3>
                   <p className="text-gray-300 text-lg sm:text-xl lg:text-2xl">Працевлаштувала 300+ людей в IT та Digital.</p>
