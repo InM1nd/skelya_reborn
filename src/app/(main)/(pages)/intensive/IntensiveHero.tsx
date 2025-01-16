@@ -1,7 +1,6 @@
 'use client'
 
-import { ArrowLeft, ArrowUpRight } from "lucide-react";
-import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 
 const IntensiveHero = () => {
 
@@ -10,13 +9,6 @@ const IntensiveHero = () => {
       <section className="w-full flex flex-col items-center pb-2 px-2 pt-[20px] sm:pb-5 md:px-4 2xl:pt-[50px] lg:pb-5">
         
       <div className="w-full relative grid grid-cols-1 lg:grid-cols-12 gap-8">
-        <Link 
-          href="/" 
-          className="absolute top-4 left-4 sm:top-6 sm:left-6 lg:top-10 lg:left-12 flex items-center gap-2 text-white hover:text-blue transition-colors"
-        >
-          <ArrowLeft className="w-5 h-5 sm:w-6 sm:h-6" />
-          <span className="text-base sm:text-lg lg:text-xl">На Головну</span>
-        </Link>
         <div className="lg:col-span-12">
           <div className="bg-gray flex flex-col pt-8 sm:pt-12 2xl:pt-[100px]">
             <div className="flex flex-col lg:flex-row lg:justify-between">
