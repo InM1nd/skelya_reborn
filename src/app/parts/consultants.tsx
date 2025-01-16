@@ -29,7 +29,7 @@ const ConsultantsSection = () => {
                   <span className="font-bold">Досвід:</span> Працювала в освітніх проектах Mate academy, Projector Institute та AI House.
                 </div>
                 <div>
-                  <span className="font-bold">Супер-сила:</span> Розуміє світчірів та початківців
+                  <span className="font-bold">Супер-сила:</span> Розуміє світчерів та початківців.
                 </div>
               </div>
               <a href="https://www.linkedin.com/in/mariiaternovska/" className="w-fit font-bold text-[23px] text-purple-light hover:underline flex items-center gap-1 mt-auto xl:text-[34px]">
@@ -57,7 +57,7 @@ const ConsultantsSection = () => {
                   <span className="font-bold">Досвід:</span> За 5 років у Computools виросла до керівної позиції.
                 </div>
                 <div>
-                  <span className="font-bold">Супер-сила:</span> Знає як працює рекрутинг в айтішці зсередені.
+                  <span className="font-bold">Супер-сила:</span> Знає як працює рекрутинг в айтішці зсередини.
                 </div>
               </div>
               <a href="https://www.linkedin.com/in/darya-savchenko/" className="w-fit font-bold text-[23px] text-green hover:underline flex items-center gap-1 mt-auto xl:text-[34px]">
@@ -81,7 +81,7 @@ const ConsultantsSection = () => {
                   <span className="font-bold">Ачівка:</span> Провела більше 1000 співбесід. 
                 </div>
                 <div>
-                  <span className="font-bold">Досвід:</span> 10+ років міжнародного досвіду в рекрутингу та кар’єрному консалтингу у сферах IT, телекомунікацій та консалтингу.
+                  <span className="font-bold">Досвід:</span> 10+ років міжнародного досвіду в рекрутингу та кар’єрному консалтингу у сферах у ІТ, телекомунікаціях та консалтингу.
                 </div>
                 <div>
                   <span className="font-bold">Супер-сила:</span> Досвід у психології, що дозволяє глибше зануритися в твої потреби.

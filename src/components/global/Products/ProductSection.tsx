@@ -26,13 +26,13 @@ const ServicesSection: React.FC = () => {
     once: {
       title: 'ОДНОРАЗОВА КОНСУЛЬТАЦІЯ',
       price: '1200 грн',
-      description: 'Зустріч із кар\'єрним консультантом для вирішення одного запиту',
+      description: 'Зустріч із кар\'єрним консультантом для вирішення твого запиту',
       buyLink: 'https://secure.wayforpay.com/button/b51358399b740',
     },
     bundle: {
       title: 'БАНДЛ КОНСУЛЬТАЦІЙ (x3)',
       price: '3200 грн',
-      description: 'Зустріч із кар\'єрним консультантом для вирішення одного запиту',
+      description: 'Зустріч із кар\'єрним консультантом для вирішення трьох запитів',
       buyLink: 'https://secure.wayforpay.com/button/b5b18008eb592'
     }
   };
@@ -68,7 +68,7 @@ const ServicesSection: React.FC = () => {
           <div className="w-full">
             <img src="/svg/Letter_К.svg" alt="Consultant" className="object-cover h-auto w-full "/>
           </div>
-          <button onClick={handleBuyClick} className="w-full bg-green border-4 border-green text-black text-xl font-semibold py-2 px-4 flex items-center justify-center gap-2 sm:text-2xl sm:py-3 sm:px-6 xl:py-4 2xl:text-[40px] transition-colors duration-300 hover:border-purple-main hover:text-purple-main hover:bg-black group hover:stroke-change">
+          <button onClick={handleBuyClick} className="w-full bg-green border-4 border-green text-black text-xl font-semibold py-2 px-4 flex items-center justify-center gap-2 sm:text-2xl sm:py-3 sm:px-6 xl:py-4 2xl:text-[38px] transition-colors duration-300 hover:border-purple-main hover:text-purple-main hover:bg-black group hover:stroke-change">
             {tabContent[activeTab].price} - КУПИТИ <ArrowUpRight className="w-6 h-6 sm:w-8 sm:h-8 2xl:w-12 2xl:h-12" />
           </button>
         </div>
@@ -77,7 +77,7 @@ const ServicesSection: React.FC = () => {
         <div className="bg-gray text-white col-span-8 mt-4 p-4 sm:p-6 lg:mt-0 lg:col-span-8 2xl:p-[50px]">
           <h2 className="text-green text-2xl font-bold text-left font-unbounded  mb-4 sm:mb-6 sm:text-3xl 2xl:text-[52px] ">{tabContent[activeTab].title}</h2>
           <p className="mb-6 text-xl sm:text-2xl 2xl:text-[32px]">{tabContent[activeTab].description}</p>
-          
+
           <div className="mb-6 text-xl sm:text-2xl 2xl:text-[32px]">
             <h3 className="font-bold mb-4">ВКЛЮЧАЄ:</h3>
             <ul className="space-y-2">
@@ -88,7 +88,28 @@ const ServicesSection: React.FC = () => {
             </ul>
           </div>
 
-          <div className="text-xl sm:text-2xl 2xl:text-[32px]">
+          <div className="flex flex-col gap-4 text-xl sm:text-2xl 2xl:text-[32px]">
+            <h3 className="font-bold">ДЕТАЛІ:</h3>
+            <div className="relative">
+            <p className={`transition-all duration-300 flex flex-col gap-4 ${isExpanded ? 'h-auto' : 'h-[80px] overflow-hidden'}`}>
+              <span>
+                Консультація — це 1:1 зустріч з карʼєним експертом, під час якої ти отримаєш конкретний план дій щодо твого запиту або відповідь на питання, які тебе цікавлять.
+              </span>
+              <span>
+                Консультація триває 60 хвилин і відбувається в Zoom. Ми знаємо, як часто найважливіші питання приходять в голову вже після зустрічі. Саме тому наші консультації передбачають можливість поставити додаткові питання консультанту в телеграм-чаті протягом 5 робочих днів після завершення сесії.
+              </span>
+            </p>
+              <button 
+                onClick={() => setIsExpanded(!isExpanded)}
+                className="text-blue hover:text-sky-300 transition-colors text-xl sm:text-2xl mt-2 "
+              >
+                {isExpanded ? 'Згорнути' : 'Читати далі...'}
+              </button>
+            </div>
+          </div>
+          
+
+          {/* <div className="text-xl sm:text-2xl 2xl:text-[32px]">
             <h3 className="font-bold mb-4">ПРОЦЕС:</h3>
             <div className="relative">
             <p className={`transition-all duration-300 flex flex-col gap-4 ${isExpanded ? 'h-auto' : 'h-[80px] overflow-hidden'}`}>
@@ -103,7 +124,7 @@ const ServicesSection: React.FC = () => {
                 {isExpanded ? 'Згорнути' : 'Читати далі...'}
               </button>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
 

@@ -18,7 +18,7 @@ export const ForWhom = () => {
       <Title>для кого</Title>
       <div className="w-full flex justify-center">
         <div className="w-full flex justify-center flex-col py-6 px-4 xl:px-6 xl:py-[60px]">   
-          <div className="hidden md:grid md:grid-cols-2 md:gap-8 md:pb-3 2xl:grid-cols-4 ">
+          <div className="hidden md:grid md:grid-cols-2 md:gap-8 md:pb-3 lg:grid-cols-4 ">
             <Card
               title=""
               borderColor="#95D4F8"
