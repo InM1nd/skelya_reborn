@@ -3,10 +3,10 @@ import Title from "@/components/global/title"
 
 export const Reviews = () => {
   return(
-    <section className="w-full pb-7 sm:pb-20" id="reviews">
+    <section className="w-full h-full pb-7 sm:pb-14" id="reviews">
       <Title>історії успіху</Title>
 
-      <div className="w-full flex justify-center pt-7 md:px-4 md:pt-10">
+      <div className="w-full flex justify-center px-4 py-6 xl:px-[40px] xl:py-[120px]">
        <CarouselSize/>
       </div>
     </section>

@@ -44,11 +44,11 @@ export function CarouselSize() {
               <img src={image.original} alt={`Slide ${index}`} className="block w-full h-auto" />
 
               {/* Второе изображение для ховера */}
-              <img
+              {/* <img
                 src={image.hover}
                 alt={`Hover Slide ${index}`}
                 className="absolute inset-0 w-full h-full transition-opacity duration-300 ease-in-out opacity-0 hover:opacity-100"
-              />
+              /> */}
             </div>
           </CarouselItem>
         ))}

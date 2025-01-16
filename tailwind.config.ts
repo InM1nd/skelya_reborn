@@ -9,9 +9,42 @@ const config: Config = {
   ],
   theme: {
   	extend: {
-			screens: {
-        xsm: '425px',
+			lineHeight: {
+        DEFAULT: '1.1',
       },
+			fontSize: {
+        'sm': ['14px', {
+          lineHeight: '1.2'
+        }],
+        'base': ['16px', {
+          lineHeight: '1.2'
+        }],
+        'lg': ['18px', {
+          lineHeight: '1.2'
+        }],
+        'xl': ['20px', {
+          lineHeight: '1.2'
+        }],
+        '2xl': ['24px', {
+          lineHeight: '1.2'
+        }],
+        '3xl': ['32px', {
+          lineHeight: '1'
+        }],
+        '4xl': ['20px', {
+          lineHeight: '1.2'
+        }]
+      },
+			screens: {
+				xsm:'425px',
+				sm: '640px',
+				md: '768px',
+				lg: '1024px',
+				xl: '1280px',
+				'2xl': '1536px',
+				'3xl': '1920px',
+				'4xl': '2520px',
+			},
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
@@ -21,6 +54,7 @@ const config: Config = {
   				light: '#B5B0FF',
   				main: '#6D61FF'
   			},
+				orange: "#FA6F17",
   			yellow: '#F4D06F',
   			green: '#3FAD78',
   			white: {

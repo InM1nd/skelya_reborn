@@ -9,36 +9,38 @@ import {
 } from "@/components/ui/carousel_mob"
 import { Card } from "@/components/global/card"
 import Title from "@/components/global/title"
-import { BigButton } from "@/components/ui/custom/BigButton"
-
 
 
 export const ForWhom = () => {
 
   return(
-    <section className="w-full pb-7 sm:pb-20" id="for_whom">
+    <section className="w-full pb-7 sm:pb-14" id="for_whom">
       <Title>для кого</Title>
       <div className="w-full flex justify-center">
-        <div className="w-full flex justify-center flex-col pt-7 px-2 md:px-4">   
-          <div className="hidden md:grid md:grid-cols-1 md:gap-4 md:pb-3 lg:grid-cols-4 ">
+        <div className="w-full flex justify-center flex-col py-6 px-4 xl:px-6 xl:py-[60px]">   
+          <div className="hidden md:grid md:grid-cols-2 md:gap-8 md:pb-3 lg:grid-cols-4 ">
             <Card
               title=""
-              image="/svg/Pink_Forwhom.svg" // Путь к изображению
-              items={['ПРОФОРІЄНТАЦІЯ', 'ПЕРША РОБОТА', 'РОБОТА ПІСЛЯ КУРСІВ']}
+              borderColor="#95D4F8"
+              image="/svg/1_Forwhom.svg" // Путь к изображению
+              items={['ПРОФОРІЄНТАЦІЯ', 'ПЕРША РОБОТА', 'РОБОТА ПІСЛЯ КУРСІВ']} 
             />
             <Card
               title=""
-              image="/svg/Purple_Forwhom.svg"
+              borderColor="#B5B0FF"
+              image="/svg/2_Forwhom.svg"
               items={['ПОШУК РОБОТИ', 'ТЕСТОВЕ ІНТЕРВ\'Ю', 'ПІДГОТОВКА РЕЗЮМЕ']}
             />
             <Card
               title=""
-              image="/svg/Green_Forwhom.svg"
+              borderColor="#3FAD78"
+              image="/svg/3_Forwhom.svg"
               items={['ПІДВИЩЕННЯ', 'ЗМІНА РОБОТИ', 'РОБОТА ЗА КОРДОНОМ']}
             />
             <Card
               title=""
-              image="/svg/Blue_Forwhom.svg"
+              borderColor="#F4D06F"
+              image="/svg/4_Forwhom.svg"
               items={['ПЕРЕКВАЛІФІКАЦІЯ', 'УВІЙТИ В АЙТІ', 'КАР\'ЄРНА СТРАТЕГІЯ']}
             />
           </div>
@@ -51,32 +53,36 @@ export const ForWhom = () => {
           >
             <CarouselContent className="">
                 <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-                  <Card
-                    title=""
-                    image="/svg/Pink_Forwhom.svg" // Путь к изображению
-                    items={['ПРОФОРІЄНТАЦІЯ', 'ПЕРША РОБОТА', 'РОБОТА ПІСЛЯ КУРСІВ']}
-                  />
+                <Card
+                  title=""
+                  borderColor="#95D4F8"
+                  image="/svg/1_Forwhom.svg" // Путь к изображению
+                  items={['ПРОФОРІЄНТАЦІЯ', 'ПЕРША РОБОТА', 'РОБОТА ПІСЛЯ КУРСІВ']} 
+                />
                 </CarouselItem>  
                 <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-                  <Card
-                    title=""
-                    image="/svg/Purple_Forwhom.svg"
-                    items={['ПОШУК РОБОТИ', 'ТЕСТОВЕ ІНТЕРВ\'Ю', 'ПІДГОТОВКА РЕЗЮМЕ']}
-                  />
+                <Card
+                  title=""
+                  borderColor="#B5B0FF"
+                  image="/svg/2_Forwhom.svg"
+                  items={['ПОШУК РОБОТИ', 'ТЕСТОВЕ ІНТЕРВ\'Ю', 'ПІДГОТОВКА РЕЗЮМЕ']}
+                />
                 </CarouselItem>  
                 <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-                  <Card
-                    title=""
-                    image="/svg/Green_Forwhom.svg"
-                    items={['ПІДВИЩЕННЯ', 'ЗМІНА РОБОТИ', 'РОБОТА ЗА КОРДОНОМ']}
-                  />
+                <Card
+                  title=""
+                  borderColor="#3FAD78"
+                  image="/svg/3_Forwhom.svg"
+                  items={['ПІДВИЩЕННЯ', 'ЗМІНА РОБОТИ', 'РОБОТА ЗА КОРДОНОМ']}
+                />
                 </CarouselItem>  
                 <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-                  <Card
-                    title=""
-                    image="/svg/Blue_Forwhom.svg"
-                    items={['ПЕРЕКВАЛІФІКАЦІЯ', 'УВІЙТИ В АЙТІ', 'КАР\'ЄРНА СТРАТЕГІЯ']}
-                  />
+                <Card
+                  title=""
+                  borderColor="#F4D06F"
+                  image="/svg/4_Forwhom.svg"
+                  items={['ПЕРЕКВАЛІФІКАЦІЯ', 'УВІЙТИ В АЙТІ', 'КАР\'ЄРНА СТРАТЕГІЯ']}
+                />    
                 </CarouselItem>  
             </CarouselContent>
             <div className="hidden lg:block">
@@ -84,12 +90,6 @@ export const ForWhom = () => {
               <CarouselNext />
             </div>
           </Carousel>
-
-          <a href="https://t.me/skelya_careers" className="pt-4">
-            <BigButton
-              text={"Свій запит"}
-            />
-          </a>
         </div>
       </div>
     </section>

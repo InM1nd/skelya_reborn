@@ -5,6 +5,7 @@
 body {
   font-family: var(--font-raleway);
   /* font-family: var(--font-unbounded); */
+  background-color: black;
 }
 
 @layer utilities {
@@ -76,6 +77,9 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+  html {
+    line-height: 1.1;
+  }
 }
 
 @keyframes modal-fade-in {
@@ -106,4 +110,18 @@ body {
 
 .animate-fade-out {
   animation: modal-fade-out 0.3s ease-out forwards;
+}
+
+@layer utilities {
+  .custom-marker {
+    position: relative;
+    padding-left: 1rem; 
+  }
+  
+  .custom-marker::before {
+    content: '•'; 
+    position: absolute;
+    left: 0;
+    margin-right: 10px; 
+  }
 }
