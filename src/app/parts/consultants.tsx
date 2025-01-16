@@ -51,7 +51,7 @@ const ConsultantsSection = () => {
             
               <div className='space-y-3'>
                 <div>
-                  <span className="font-bold">Ачівка:</span> Найняла більше 100 людей
+                  <span className="font-bold">Ачівка:</span> Найняла більше 100 людей.
                 </div>
                 <div>
                   <span className="font-bold">Досвід:</span> За 5 років у Computools виросла до керівної позиції.
@@ -81,7 +81,7 @@ const ConsultantsSection = () => {
                   <span className="font-bold">Ачівка:</span> Провела більше 1000 співбесід. 
                 </div>
                 <div>
-                  <span className="font-bold">Досвід:</span> 10+ років міжнародного досвіду в рекрутингу та кар’єрному консалтингу у сферах у ІТ, телекомунікаціях та консалтингу.
+                  <span className="font-bold">Досвід:</span> 10+ років міжнародного досвіду в рекрутингу, кар’єрному консалтингу у сферах у ІТ та телекомунікаціях.
                 </div>
                 <div>
                   <span className="font-bold">Супер-сила:</span> Досвід у психології, що дозволяє глибше зануритися в твої потреби.

@@ -48,11 +48,11 @@ const IntensiveProgram = () => {
     },
     {
       number: "5",
-      title: "ПРАКТИЧНЕ ЗАСТОСУВАННЯ",
+      title: "УСПІШНИЙ ВИПРОБОВУВАЛЬНИЙ ТЕРМІН",
       date: "<b>бонусний вебінар з <a href={https://www.linkedin.com/in/moroz-viktoriia/} class='underline'>Вікторією</a>, Tech Recruitment </br> Consultant з Tietoevry</b> / 6 березня / четвер / 19:00",
       points: [
-        "Портфоліо й тестові завдання.",
-        "Рекомендації щодо онбордингу та випробувального терміну.",
+        "Розгляд реальних кейсів.",
+        "Tips and Tricks які допоможуть пройти випробовувальний термін.",
       ],
       isBonus: true
     }
