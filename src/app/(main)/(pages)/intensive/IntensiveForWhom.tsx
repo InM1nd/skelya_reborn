@@ -23,7 +23,7 @@ const IntensiveForWhom = () => {
               - хочеш свічнутись в IT і не розумієш як
             </p>
             <p className="text-white text-[20px] lg:text-[26px] 2xl:text-3xl">
-              - постійно отримуєш відмови після співбесід
+              ⁃ надсилаєш сотні резюме і не маєш результату
             </p>
           </div>
         </div>

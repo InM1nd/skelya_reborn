@@ -45,7 +45,7 @@ const ConsultantsSection = () => {
             </div>            
             <div className="text-[20px] flex flex-col flex-1 p-4 gap-4 lg:p-6 lg:gap-[35px] xl:text-[28px] 2xl:p-7 ">
               <div className='text-[22px] xl:text-[34px]'>
-                <h3 className="font-bold">Даша зі Computools</h3>
+                <h3 className="font-bold">Даша з Computools</h3>
                 <p className="">Chief Recruiting Officer</p>
               </div>
             
