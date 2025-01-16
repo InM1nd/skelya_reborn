@@ -154,7 +154,7 @@ const ServicesSection: React.FC = () => {
             <div className="flex flex-col justify-between text-lg bg-blue gap-6 p-4 sm:text-[18px] sm:p-6 lg:flex-row xl:px-[50px] 3xl:p-[50px] lg:text-xl 2xl:text-2xl 3xl:text-3xl">
               <div>
                 <h3 className="font-bold">СТАРТ:</h3>
-                <p>30 січня 2025</p>
+                <p>6 лютого 2025</p>
               </div>
               <div>
                 <h3 className="font-bold">ГРУПА:</h3>

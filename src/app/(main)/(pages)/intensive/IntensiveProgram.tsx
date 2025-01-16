@@ -51,7 +51,7 @@ const IntensiveProgram = () => {
       title: "ПРАКТИЧНЕ ЗАСТОСУВАННЯ",
       date: "<b>бонусний вебінар з <a href={https://www.linkedin.com/in/moroz-viktoriia/} class='underline'>Вікторією</a>, Tech Recruitment </br> Consultant з Tietoevry</b> / 6 березня / четвер / 19:00",
       points: [
-        "Як аналізувати ринок і типи компаній.",
+        "Портфоліо й тестові завдання.",
         "Оцінка власної конкурентоспроможності.",
         "Створення резюме: структура, найкращі практики."
       ],
