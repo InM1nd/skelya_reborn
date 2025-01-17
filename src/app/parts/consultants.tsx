@@ -51,10 +51,10 @@ const ConsultantsSection = () => {
             
               <div className='space-y-3'>
                 <div>
-                  <span className="font-bold">Ачівка:</span> Найняла більше 100 людей.
+                  <span className="font-bold">Ачівка:</span> Найняла більше 300 людей.
                 </div>
                 <div>
-                  <span className="font-bold">Досвід:</span> За 5 років у Computools виросла до керівної позиції.
+                  <span className="font-bold">Досвід:</span>З Trainee до керівної позиції за 5 років.
                 </div>
                 <div>
                   <span className="font-bold">Супер-сила:</span> Знає як працює рекрутинг в айтішці зсередини.
