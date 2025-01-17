@@ -66,7 +66,7 @@ export const Footer = () => {
                   </a>
                 </li>
                 <li className="hover:underline">
-                  <a href="https://www.tiktok.com/@skelya_careers" className="block w-full h-full leading-0 leading-normal">
+                  <a href="https://www.tiktok.com/@skelya.career?is_from_webapp=1&sender_device=pc" className="block w-full h-full leading-0 leading-normal">
                     tiktok
                   </a>
                 </li>
