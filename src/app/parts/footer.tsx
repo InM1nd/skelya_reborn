@@ -56,7 +56,7 @@ export const Footer = () => {
               <h4 className="pb-7 font-semibold xl:text-[26px]">ми у соц мережах</h4>
               <ul className="flex flex-col gap-[6px] xl:gap-6">
                 <li className="hover:underline">
-                  <a href="https://t.me/skelya_careers" className="block w-full h-full leading-0 leading-normal">
+                  <a href="https://t.me/skelya_career_support" className="block w-full h-full leading-0 leading-normal">
                     telegram
                   </a>
                 </li>
