@@ -135,13 +135,13 @@ const Header = ({ }) => {
 
           <ul className="flex flex-col gap-3 uppercase font-semibold text-[20px] pt-[32px] 2xl:text-[32px] 2xl:pt-[15%]">
             <li className="w-full hover:bg-white hover:text-black">
-              <a href="https://t.me/skelya_careers" className="flex h-auto w-full px-3 pl-[40px] lg:pl-[50px]"># telegram</a>
+              <a href="https://t.me/skelya_career_support" className="flex h-auto w-full px-3 pl-[40px] lg:pl-[50px]"># telegram</a>
             </li>
             <li className="w-full hover:bg-white hover:text-black">
-              <a href="https://www.instagram.com/skelya.careers/" className="flex h-auto w-full px-3 pl-[40px] lg:pl-[50px]"># instagram</a>
+              <a href="https://www.instagram.com/skelya.careers?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" className="flex h-auto w-full px-3 pl-[40px] lg:pl-[50px]"># instagram</a>
             </li>
             <li className="w-full hover:bg-white hover:text-black">
-              <a href="https://www.tiktok.com/@skelya_careers" className="flex h-auto w-full px-3 pl-[40px] lg:pl-[50px]"># tiktok</a>
+              <a href="https://www.tiktok.com/@skelya.career?is_from_webapp=1&sender_device=pc" className="flex h-auto w-full px-3 pl-[40px] lg:pl-[50px]"># tiktok</a>
             </li>
             <li className="w-full hover:bg-white hover:text-black">
               <a href="mailto:hi@skelya.careers" className="flex h-auto w-full px-3 pl-[40px] lg:pl-[50px]"># email</a>
