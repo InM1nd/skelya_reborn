@@ -65,7 +65,7 @@ const ConsultantsSection = () => {
                   <span className="font-bold">Ачівка:</span> Найняла більше 300 людей.
                 </div>
                 <div>
-                  <span className="font-bold">Досвід:</span>З Trainee до керівної позиції за 5 років.
+                  <span className="font-bold">Досвід:</span> З Trainee до керівної позиції за 5 років.
                 </div>
                 <div>
                   <span className="font-bold">Супер-сила:</span> Знає як працює рекрутинг в айтішці зсередини.

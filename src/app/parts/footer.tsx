@@ -69,13 +69,13 @@ export const Footer = () => {
   return (
     <section className="w-full text-white flex justify-center p-4 lg:p-6 bg-gray">
       <div className="w-full flex-col uppercase">
-      <a className="mt-[32px] w-full flex bg-pink text-black font-bold text-[18px] uppercase items-center justify-center py-5 px-6 lg:hidden hover:bg-blue transition-colors duration-300" href="https://t.me/skelya_careers" onClick={handleContactClick}>
+      <a className="mt-[32px] w-full flex bg-pink text-black font-bold text-[18px] uppercase items-center justify-center py-5 px-6 lg:hidden hover:bg-blue transition-colors duration-300" href="https://t.me/skelya_support" onClick={handleContactClick}>
       поставити питання
         <ArrowUpRight className="ml-3" size={20} />
       </a>
         <div className="pt-[50px] flex flex-row justify-between pb-60 text-2xl">
           <div className="w-full hidden text-[13px] lg:block xl:text-[26px]">
-            <a className="flex bg-pink text-black font-bold text-3xl uppercase items-center py-5 px-6 mb-[52px] max-w-fit hover:bg-blue transition-colors duration-300" href="https://t.me/skelya_careers" onClick={handleContactClick}>поставити питання<ArrowUpRight className="ml-3" size={40} /></a>
+            <a className="flex bg-pink text-black font-bold text-3xl uppercase items-center py-5 px-6 mb-[52px] max-w-fit hover:bg-blue transition-colors duration-300" href="https://t.me/skelya_support" onClick={handleContactClick}>поставити питання<ArrowUpRight className="ml-3" size={40} /></a>
             <p className="pb-7 font-semibold">2025, Skelya career</p>
             <ul className="flex flex-col gap-3 xl:gap-6">
               <li className="hover:underline"><a href="/legal/privacy-policy" onClick={() => handleLegalClick('privacy-policy')}>Політика конфіденційності</a></li>
@@ -88,7 +88,7 @@ export const Footer = () => {
               <h4 className="pb-7 font-semibold xl:text-[26px]">ми у соц мережах</h4>
               <ul className="flex flex-col gap-[6px] xl:gap-6">
                 <li className="hover:underline">
-                  <a href="https://t.me/skelya_careers" onClick={() => handleSocialClick('telegram')} className="block w-full h-full leading-0 leading-normal">
+                  <a href="https://t.me/skelya_career_support" onClick={() => handleSocialClick('telegram')}className="block w-full h-full leading-0 leading-normal">
                     telegram
                   </a>
                 </li>
@@ -98,7 +98,7 @@ export const Footer = () => {
                   </a>
                 </li>
                 <li className="hover:underline">
-                  <a href="https://www.tiktok.com/@skelya_careers" onClick={() => handleSocialClick('tiktok')} className="block w-full h-full leading-0 leading-normal">
+                  <a href="https://www.tiktok.com/@skelya.career?is_from_webapp=1&sender_device=pc" onClick={() => handleSocialClick('tiktok')} className="block w-full h-full leading-0 leading-normal">
                     tiktok
                   </a>
                 </li>

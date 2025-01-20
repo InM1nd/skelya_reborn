@@ -27,13 +27,13 @@ const ServicesSection: React.FC = () => {
   const tabContent: TabContents = {
     once: {
       title: 'ОДНОРАЗОВА КОНСУЛЬТАЦІЯ',
-      price: '1200 грн',
+      price: '2400 грн',
       description: 'Зустріч із кар\'єрним консультантом для вирішення твого запиту',
       buyLink: 'https://secure.wayforpay.com/button/b51358399b740',
     },
     bundle: {
       title: 'БАНДЛ КОНСУЛЬТАЦІЙ (x3)',
-      price: '3200 грн',
+      price: '6200 грн',
       description: 'Зустріч із кар\'єрним консультантом для вирішення трьох запитів',
       buyLink: 'https://secure.wayforpay.com/button/b5b18008eb592'
     }
