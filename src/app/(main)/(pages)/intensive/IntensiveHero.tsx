@@ -1,8 +1,18 @@
 'use client'
 
 import { ArrowUpRight } from "lucide-react";
+import { sendGAEvent } from '@next/third-parties/google';
 
 const IntensiveHero = () => {
+
+  const handleRegisterClick = () => {
+    sendGAEvent('event', 'Register_Button_Click', {
+      location: 'intensive_hero'
+    });
+    window.open('https://secure.wayforpay.com/button/b12436e04beaf', '_blank');
+  };
+
+
 
   return(
     <>
@@ -56,7 +66,7 @@ const IntensiveHero = () => {
           </div>
         </div>
         <button
-        onClick={() => window.open('https://secure.wayforpay.com/button/b12436e04beaf', '_blank')}
+        onClick={handleRegisterClick}
         className="flex w-full mt-8 items-center border-4 border-blue justify-center text-blue text-2xl font-bold uppercase py-[20px] 2xl:py-[50px] hover:border-purple-main hover:text-purple-main sm:text-3xl md:pl-12 2xl:text-[52px] group hover:stroke-change transition-colors duration-300"
         >
           зареєструватися <ArrowUpRight size={50} />

@@ -49,7 +49,7 @@ export const Hero = () => {
 
 
   const handleClick = () => {
-    sendGAEvent('event', 'buttonClicked', { value: 'xyz' });
+    sendGAEvent('event', 'Hero_ButtonClicked', { value: 'xyz' });
   };
 
   return (

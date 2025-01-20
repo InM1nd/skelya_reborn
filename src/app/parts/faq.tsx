@@ -3,6 +3,7 @@
 import Title from "@/components/global/title"
 import { useState } from 'react'
 import { Plus, Minus } from 'lucide-react'
+import { sendGAEvent } from '@next/third-parties/google'
 
 
 type FAQItem = {
@@ -34,8 +35,17 @@ export const Faq = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggleAccordion = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
+    const isOpen = openIndex === index;
+    setOpenIndex(isOpen ? null : index);
+
+    // Отправка события в GA
+    sendGAEvent('event', 'FAQ_Toggle', {
+      action: isOpen ? 'Close_Question' : 'Open_Question',
+      question: faqs[index].question,
+    });
   }
+
+
 
   return(
     <section className="w-full h-full pb-7 sm:pb-14" id="Faq">

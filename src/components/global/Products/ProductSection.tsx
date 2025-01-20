@@ -3,6 +3,7 @@
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
+import { sendGAEvent } from '@next/third-parties/google';
 
 interface TabContent {
   title: string;
@@ -21,6 +22,7 @@ type TabType = 'once' | 'bundle';
 
 const ServicesSection: React.FC = () => {
   const [activeTab, setActiveTab] = useState<TabType>('once');
+  const [isExpanded, setIsExpanded] = useState(false);
 
   const tabContent: TabContents = {
     once: {
@@ -37,11 +39,36 @@ const ServicesSection: React.FC = () => {
     }
   };
 
+  const handleTabClick = (tab: TabType) => {
+    setActiveTab(tab);
+    sendGAEvent('event', 'Tab_Click', {
+      tab: tab,
+      location: 'product_section'
+    });
+  };
+
   const handleBuyClick = () => {
+    sendGAEvent('event', 'Buy_Button_Click', {
+      tab: activeTab,
+      location: 'product_section'
+    });
     window.open(tabContent[activeTab].buyLink, '_blank');
   };
 
-  const [isExpanded, setIsExpanded] = useState(false);
+  const handleRegisterClick = () => {
+    sendGAEvent('event', 'Register_Button_Click', {
+      location: 'product_section'
+    });
+    window.open('https://secure.wayforpay.com/button/b12436e04beaf', '_blank');
+  };
+
+  const handleIntensivePageClick = () => {
+    sendGAEvent('event', 'Intensive_Page_Click', {
+      location: 'product_section'
+    });
+    window.location.href = '/intensive';
+  };
+  
 
   return (
     <div className="bg-black p-4 lg:p-6 w-full ">
@@ -54,13 +81,13 @@ const ServicesSection: React.FC = () => {
           <div className="flex gap-2 font-bold text-xl  sm:gap-4 sm:text-2xl lg:flex-col 2xl:text-[32px] 2xl:flex-row">
             <button 
               className={`px-4 w-full py-2 sm:py-3 sm:px-6 3xl:px-10 ${activeTab === 'once' ? 'bg-green' : 'border-4 border-green text-green'}`}
-              onClick={() => setActiveTab('once')}
+              onClick={() => handleTabClick('once')}
             >
               ОДНОРАЗОВА
             </button>
             <button 
               className={`px-4 w-full py-2 sm:py-3 sm:px-6 xl:px-10 ${activeTab === 'bundle' ? 'bg-green' : 'border-4 border-green text-green'} hover:bg-green hover:text-black transition-colors`}
-              onClick={() => setActiveTab('bundle')}
+              onClick={() => handleTabClick('bundle')}
             >
               БАНДЛ
             </button>
@@ -178,11 +205,11 @@ const ServicesSection: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 mt-6 md:grid-cols-12 md:gap-8 sm:mt-12">
-            <Link href="/intensive" className="col-span-1 border-4 border-blue text-blue flex items-center justify-center gap-2 text-xl mb-4 font-semibold py-3 px-4 transition-colors md:col-span-7 md:mb-0 sm:py-4 sm:px-6 sm:text-2xl 2xl:text-[40px] duration-300 hover:border-purple-main hover:text-purple-main group hover:stroke-change">
+            <Link href="/intensive" onClick={handleIntensivePageClick} className="col-span-1 border-4 border-blue text-blue flex items-center justify-center gap-2 text-xl mb-4 font-semibold py-3 px-4 transition-colors md:col-span-7 md:mb-0 sm:py-4 sm:px-6 sm:text-2xl 2xl:text-[40px] duration-300 hover:border-purple-main hover:text-purple-main group hover:stroke-change">
                 ПРОГРАМА ІНТЕНСИВУ <ArrowUpRight className="w-6 h-6 sm:w-8 sm:h-8 2xl:w-12 2xl:h-12" />
             </Link>
           {/* Register Button */}
-            <a className="col-span-1 border-4 border-blue bg-blue text-black flex items-center justify-center gap-2 text-xl font-semibold py-3 px-4 md:col-span-5 sm:px-6 sm:py-4 2xl:text-[40px] sm:text-2xl transition-colors duration-300 hover:border-purple-main hover:text-purple-main hover:bg-black group hover:stroke-change " href="https://secure.wayforpay.com/button/b12436e04beaf">
+            <a className="col-span-1 border-4 border-blue bg-blue text-black flex items-center justify-center gap-2 text-xl font-semibold py-3 px-4 md:col-span-5 sm:px-6 sm:py-4 2xl:text-[40px] sm:text-2xl transition-colors duration-300 hover:border-purple-main hover:text-purple-main hover:bg-black group hover:stroke-change " onClick={handleRegisterClick}>
               ЗАРЕЄСТРУВАТИСЯ <ArrowUpRight className="w-6 h-6 sm:w-8 sm:h-8 2xl:w-12 2xl:h-12" />
             </a>
         </div>
