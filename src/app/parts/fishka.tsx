@@ -1,8 +1,17 @@
 'use client'
 
 import Title from "@/components/global/title"
+import { sendGAEvent } from '@next/third-parties/google'
 
 export const Fishka = () => {
+
+  const handleLinkClick = (label: string, href: string) => {
+    sendGAEvent('event', 'Fishka_Link_Click', {
+      action: 'Click',
+      label: label,
+      href: href,
+    });
+  }
 
   return(
     <section className="w-full h-full pb-7 sm:pb-14" id="fishka">
@@ -14,17 +23,38 @@ export const Fishka = () => {
             <div className="grid grid-cols-1 grid-rows-none gap-4 w-full h-full lg:grid-cols-7 lg:grid-rows-6">
                 {/* 8 People Stat */}
               <div className="col-span-1 border-4 border-green lg:col-span-4 lg:row-span-4">
-                <h2 className="text-[40px] font-semibold font-unbounded underline bg-green p-4 lg:text-[50px] 2xl:text-[80px]"><a href="https://www.linkedin.com/pulse/important-linkedin-statistics-data-trends-oleksii-bondar-pqlie/">8 людей</a></h2>
+                <h2 className="text-[40px] font-semibold font-unbounded underline bg-green p-4 lg:text-[50px] 2xl:text-[80px]">
+                  <a 
+                    href="https://www.linkedin.com/pulse/important-linkedin-statistics-data-trends-oleksii-bondar-pqlie/" 
+                    onClick={() => handleLinkClick('8 людей', 'https://www.linkedin.com/pulse/important-linkedin-statistics-data-trends-oleksii-bondar-pqlie/')}
+                  >
+                  8 людей
+                  </a>
+                </h2>
                 <p className="text-[20px] p-6 font-medium text-white lg:text-[26px] lg:px-8 lg:py-[60px] 2xl:py-[120px] 2xl:text-[32px]">В середньому отримує роботу на LinkedIn щохвилини</p>
               </div>
               {/* 7% Stat */}
               <div className="col-span-1 border-4 border-yellow flex flex-col justify-between lg:col-span-3 lg:row-span-4 ">
                 <p className="text-[20px] p-6 font-medium text-white lg:text-[26px] lg:px-8 lg:py-[40px] xl:py-16 2xl:text-[32px]">Професійно складене CV збільшує потенційний рівень заробітку</p>
-                <h2 className="text-[40px] p-4  font-semibold font-unbounded underline bg-yellow lg:text-[50px] 2xl:text-[80px]"><a href="https://topresume.com/career-advice/7-top-job-search-statistics">до 7%</a></h2>
+                <h2 className="text-[40px] p-4  font-semibold font-unbounded underline bg-yellow lg:text-[50px] 2xl:text-[80px]">
+                  <a 
+                    href="https://topresume.com/career-advice/7-top-job-search-statistics"
+                    onClick={() => handleLinkClick('до 7%', 'https://topresume.com/career-advice/7-top-job-search-statistics')}
+                  >
+                    до 7%
+                  </a>
+                </h2>
               </div>
                 {/* 30% Stat */}
               <div className="col-span-1 flex flex-col-reverse border-4 border-blue lg:items-center lg:flex-row lg:col-span-7 lg:row-span-2 ">
-                <h2 className="text-[40px] font-semibold underline font-unbounded bg-blue p-4 w-full flex lg:text-[50px] lg:justify-center lg:items-center 2xl:text-[80px] lg:w-auto lg:h-full"><a href="https://niss.gov.ua/doslidzhennya/sotsialna-polityka/osnovni-kharakterystyky-rynku-pratsi-ukrayiny-u-pershomu">30%</a></h2>
+                <h2 className="text-[40px] font-semibold underline font-unbounded bg-blue p-4 w-full flex lg:text-[50px] lg:justify-center lg:items-center 2xl:text-[80px] lg:w-auto lg:h-full">
+                  <a 
+                    href="https://niss.gov.ua/doslidzhennya/sotsialna-polityka/osnovni-kharakterystyky-rynku-pratsi-ukrayiny-u-pershomu"
+                    onClick={() => handleLinkClick('30%', 'https://niss.gov.ua/doslidzhennya/sotsialna-polityka/osnovni-kharakterystyky-rynku-pratsi-ukrayiny-u-pershomu')}
+                  >
+                    30%
+                  </a>
+                </h2>
                 <p className="text-[20px] p-6 font-medium text-white lg:text-[26px] lg:py-9 2xl:text-[32px]">Дефіцит кадрів на ринку праці</p>
               </div>
             </div>
@@ -34,12 +64,26 @@ export const Fishka = () => {
             <div className="grid grid-cols-1 grid-rows-none gap-4 w-full h-full lg:grid-cols-5 lg:grid-rows-6 ">
                 {/* 5x Stat */}
               <div className="col-span-1 border-4 border-orange lg:col-span-5 lg:row-span-3 ">
-                <h2 className="text-[40px] font-semibold font-unbounded bg-orange p-4 underline lg:text-[50px] 2xl:text-[80px]"><a href="https://www.linkedin.com/business/talent/blog/talent-acquisition/reasons-employee-referrals-are-best-way-to-hire">в 5 разів</a></h2>
+                <h2 className="text-[40px] font-semibold font-unbounded bg-orange p-4 underline lg:text-[50px] 2xl:text-[80px]">
+                  <a 
+                    href="https://www.linkedin.com/business/talent/blog/talent-acquisition/reasons-employee-referrals-are-best-way-to-hire"
+                    onClick={() => handleLinkClick('в 5 разів', 'https://www.linkedin.com/business/talent/blog/talent-acquisition/reasons-employee-referrals-are-best-way-to-hire')}
+                  >
+                    в 5 разів
+                  </a>
+                </h2>
                 <p className="text-[20px] p-6 font-medium text-white lg:text-[26px] lg:py-9 2xl:text-[32px]">Рекомендації ефективніші за решту способів найму</p>
               </div>
               {/* 67% Stat */}
               <div className="col-span-1 border-4 border-purple-light lg:col-span-5 lg:row-span-3 ">
-                <h2 className="text-[40px] font-semibold font-unbounded underline bg-purple-light p-4 lg:text-[50px] 2xl:text-[80px]"><a href="https://eba.com.ua/try-chverti-robotodavtsiv-vidchuvayut-defitsyt-kadriv-v-ukrayini/">67%</a></h2>
+                <h2 className="text-[40px] font-semibold font-unbounded underline bg-purple-light p-4 lg:text-[50px] 2xl:text-[80px]">
+                  <a 
+                    href="https://eba.com.ua/try-chverti-robotodavtsiv-vidchuvayut-defitsyt-kadriv-v-ukrayini/"
+                    onClick={() => handleLinkClick('67%', 'https://eba.com.ua/try-chverti-robotodavtsiv-vidchuvayut-defitsyt-kadriv-v-ukrayini/')}
+                  >
+                    67%
+                  </a>
+                </h2>
                 <p className="text-[20px] p-6 font-medium text-white lg:text-[26px] lg:py-9 2xl:text-[32px]">Українських компаній планують відкривати вакансії протягом найближчого року</p>
               </div>
             </div>

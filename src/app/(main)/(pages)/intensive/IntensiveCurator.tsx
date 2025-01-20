@@ -3,9 +3,24 @@
 import Title from "@/components/global/title"
 import { ArrowUpRight } from 'lucide-react';
 import React from 'react';
+import { sendGAEvent } from '@next/third-parties/google';
 
 
 const IntensiveCurator = () => {
+
+  const handleRegisterClick = () => {
+    sendGAEvent('event', 'Register_Button_Click', {
+      location: 'intensive_curator'
+    });
+    window.open('https://secure.wayforpay.com/button/b12436e04beaf', '_blank');
+  };
+
+  const handleLinkClick = (platform: string) => {
+    sendGAEvent('event', 'Link_Click', {
+      platform: platform,
+      location: 'intensive_curator'
+    });
+  };
 
   return(
     <section className="w-full h-full pb-7 sm:pb-14" id="IntensiveCurator">
@@ -41,6 +56,7 @@ const IntensiveCurator = () => {
                     className="flex items-center font-semibold text-xl sm:text-2xl lg:text-[32px] hover:underline"
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={() => handleLinkClick('linkedin')}
                   >
                     LinkedIn
                     <ArrowUpRight className="ml-1 w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10" />
@@ -72,7 +88,7 @@ const IntensiveCurator = () => {
 
             {/* Registration Button */}
             <button
-              onClick={() => window.open('https://secure.wayforpay.com/button/b12436e04beaf', '_blank')}
+             onClick={handleRegisterClick}
               className="flex w-full items-center border-4 border-pink justify-center text-pink text-xl sm:text-2xl lg:text-[52px] font-bold uppercase py-4 sm:py-6 lg:py-[20px] px-4 sm:px-6 transition-colors duration-300 hover:border-purple-main hover:text-purple-main group hover:stroke-change">
               <span>ЗАРЕЄСТРУВАТИСЯ</span>
               <ArrowUpRight className="ml-2 w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />

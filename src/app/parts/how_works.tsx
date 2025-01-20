@@ -3,11 +3,19 @@
 import StepsSection from "@/components/global/Steps/StepsSection"
 import Title from "@/components/global/title"
 import React, { useState } from 'react';
+import { sendGAEvent } from '@next/third-parties/google';
 
 
 export const HowWorks = () => {
 
   const [isHovered, setIsHovered] = useState(false);
+
+  const handleLinkClick = () => {
+    sendGAEvent('event', 'Link_Click', {
+      platform: 'telegram',
+      location: 'how_works'
+    });
+  };
 
   return(
     <section className="w-full h-full pb-7 sm:pb-14" id="how_works">
@@ -32,7 +40,7 @@ export const HowWorks = () => {
               onMouseEnter={() => setIsHovered(true)} 
               onMouseLeave={() => setIsHovered(false)} 
             >
-              <a href="https://t.me/skelya_support" className="h-full w-full absolute"></a>
+              <a href="https://t.me/skelya_support" onClick={handleLinkClick} className="h-full w-full absolute"></a>
             </div>
           </div>
           <div className="h-full lg:w-1/2 ">

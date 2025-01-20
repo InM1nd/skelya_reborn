@@ -4,10 +4,21 @@ import React from 'react';
 import { ArrowUpRight } from 'lucide-react';
 import Title from '@/components/global/title';
 import { BigButton } from '@/components/ui/custom/BigButton';
+import { sendGAEvent } from '@next/third-parties/google'
 
 const ConsultantsSection = () => {
+
+  const handleClick = (consultantName: string, eventCategory: string) => {
+    sendGAEvent('event', eventCategory, { consultant: consultantName });
+  };
+
+  const handleButtonClick = () => {
+    sendGAEvent('event', 'Button_Click', { action: 'Choose_Consultant' });
+    window.open('https://t.me/skelya_careers', '_blank');
+  };
+
   return (
-<section className="w-full pb-7 sm:pb-20" id="consultants"> 
+    <section className="w-full pb-7 sm:pb-20" id="consultants"> 
       <Title>КОНСУЛЬТАНТИ</Title>
         <div className="w-full flex justify-center flex-col p-4 lg:p-6">
         <div className="grid grid-cols-1 mb-4 gap-4 md:grid-cols-3 md:mb-8 lg:mb-12 lg:gap-8 ">
@@ -32,7 +43,7 @@ const ConsultantsSection = () => {
                   <span className="font-bold">Супер-сила:</span> Розуміє світчерів та початківців.
                 </div>
               </div>
-              <a href="https://www.linkedin.com/in/mariiaternovska/" className="w-fit font-bold text-[23px] text-purple-light hover:underline flex items-center gap-1 mt-auto xl:text-[34px]">
+              <a href="https://www.linkedin.com/in/mariiaternovska/" onClick={() => handleClick('Maria Skelya', 'Linkedin_Click')} className="w-fit font-bold text-[23px] text-purple-light hover:underline flex items-center gap-1 mt-auto xl:text-[34px]">
                 LinkedIn <ArrowUpRight className="w-6 h-6 sm:w-8 sm:h-8 xl:w-10 xl:h-10" />
               </a>
             </div>
@@ -60,7 +71,7 @@ const ConsultantsSection = () => {
                   <span className="font-bold">Супер-сила:</span> Знає як працює рекрутинг в айтішці зсередини.
                 </div>
               </div>
-              <a href="https://www.linkedin.com/in/darya-savchenko/" className="w-fit font-bold text-[23px] text-green hover:underline flex items-center gap-1 mt-auto xl:text-[34px]">
+              <a href="https://www.linkedin.com/in/darya-savchenko/" onClick={() => handleClick('Dasha Computools', 'Linkedin_Click')} className="w-fit font-bold text-[23px] text-green hover:underline flex items-center gap-1 mt-auto xl:text-[34px]">
                 LinkedIn <ArrowUpRight className="w-6 h-6 sm:w-8 sm:h-8 xl:w-10 xl:h-10" />
               </a>
             </div>
@@ -87,7 +98,7 @@ const ConsultantsSection = () => {
                   <span className="font-bold">Супер-сила:</span> Досвід у психології, що дозволяє глибше зануритися в твої потреби.
                 </div>
               </div>
-              <a href="https://www.linkedin.com/in/moroz-viktoriia/" className="w-fit font-bold text-[23px] text-pink hover:underline flex items-center gap-1 mt-auto xl:text-[34px]">
+              <a href="https://www.linkedin.com/in/moroz-viktoriia/" onClick={() => handleClick('Viktoriia Tietoevry', 'Linkedin_Click')} className="w-fit font-bold text-[23px] text-pink hover:underline flex items-center gap-1 mt-auto xl:text-[34px]">
                 LinkedIn <ArrowUpRight className="w-6 h-6 sm:w-8 sm:h-8 xl:w-10 xl:h-10" />
               </a>
             </div>
@@ -96,7 +107,7 @@ const ConsultantsSection = () => {
         </div>
         <BigButton 
           text="обрати консультанта"
-          onClick={() => window.open('https://t.me/skelya_careers', '_blank')}
+          onClick={handleButtonClick}
         />
       </div>
     </section>
