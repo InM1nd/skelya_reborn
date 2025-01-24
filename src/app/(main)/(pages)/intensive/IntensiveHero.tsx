@@ -12,8 +12,6 @@ const IntensiveHero = () => {
     window.open('https://secure.wayforpay.com/button/b12436e04beaf', '_blank');
   };
 
-
-
   return(
     <>
       <section className="w-full flex flex-col items-center pb-2 px-2 pt-[20px] sm:pb-5 md:px-4 2xl:pt-[50px] lg:pb-5">
