@@ -14,8 +14,9 @@ const IntensiveProgram = () => {
       points: [
         "Як аналізувати ринок і типи компаній.",
         "Оцінка власної конкурентоспроможності.",
-        "Створення резюме: структура, найкращі практики."
-      ]
+        "Створення резюме: структура, найкращі практики.", 
+      ],
+      recorded:"+ Відеозапис вебінару."
     },
     {
       number: "2",
@@ -24,8 +25,9 @@ const IntensiveProgram = () => {
       points: [
         "Як писати супровідний лист.",
         "Оформлення LinkedIn для продуктивного нетворкінгу.",
-        "Канали пошуку роботи: спільноти, соцмережі, неочевидні можливості."
-      ]
+        "Канали пошуку роботи: спільноти, соцмережі, неочевидні можливості.", 
+      ],
+      recorded:"+ Відеозапис вебінару."
     },
     {
       number: "3",
@@ -33,8 +35,9 @@ const IntensiveProgram = () => {
       date: "<b>вебінар</b>/ 20 лютого / четвер / 19:00",
       points: [
         "Як ефективно презентувати себе на співбесіді.",
-        "Практика відповідей на поширені питання."
-      ]
+        "Практика відповідей на поширені питання.", 
+      ],
+      recorded:"+ Відеозапис вебінару."
     },
     {
       number: "4",
@@ -43,8 +46,9 @@ const IntensiveProgram = () => {
       points: [
         "Етапи найму та очікування роботодавців.",
         "Трекінг вакансій і оптимізація стратегії пошуку.",
-        "Типові помилки кандидатів і як їх уникати."
-      ]
+        "Типові помилки кандидатів і як їх уникати.", 
+      ],
+      recorded:"+ Відеозапис вебінару."
     },
     {
       number: "5",
@@ -52,8 +56,9 @@ const IntensiveProgram = () => {
       date: "<b>бонусний вебінар з <a href={https://www.linkedin.com/in/moroz-viktoriia/} class='underline'>Вікторією</a>, Tech Recruitment </br> Consultant з Tietoevry</b> / 6 березня / четвер / 19:00",
       points: [
         "Розгляд реальних кейсів.",
-        "Tips and Tricks які допоможуть пройти випробовувальний термін.",
+        "Tips and Tricks які допоможуть пройти випробовувальний термін.", 
       ],
+      recorded:"+ Відеозапис вебінару.",
       isBonus: true
     }
   ];
@@ -82,7 +87,7 @@ const IntensiveProgram = () => {
               }`}
               dangerouslySetInnerHTML={{ __html: program.date }}
             />
-            <ul className="space-y-2">
+            <ul className="space-y-2 mb-6 lg:mb-8">
               {program.points.map((point, pointIndex) => (
                 <li key={pointIndex} className="flex items-start text-[16px] lg:text-[28px]">
                   <span className="mr-2">•</span>
@@ -92,6 +97,7 @@ const IntensiveProgram = () => {
                 </li>
               ))}
             </ul>
+            <p className="flex items-start text-[16px] lg:text-[28px]">{program.recorded}</p>
           </div>
         ))}
         </div>

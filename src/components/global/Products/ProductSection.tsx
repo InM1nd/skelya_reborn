@@ -204,7 +204,12 @@ const ServicesSection: React.FC = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 mt-6 md:grid-cols-12 md:gap-8 sm:mt-12">
+        {/* Price */}
+        <div className="bg-pink text-black mt-6 p-4 sm:p-6 lg:p-8 text-left mb-4 sm:mb-6">
+          <p className="text-[18px] sm:text-[20px] lg:text-[32px] font-bold font-unbounded">ВАРТІСТЬ ІНТЕНСИВУ - 5200 ГРН</p>
+        </div>
+
+        <div className="grid grid-cols-1 mt-6 md:grid-cols-12 md:gap-8">
             <Link href="/intensive" onClick={handleIntensivePageClick} className="col-span-1 border-4 border-blue text-blue flex items-center justify-center gap-2 text-xl mb-4 font-semibold py-3 px-4 transition-colors md:col-span-7 md:mb-0 sm:py-4 sm:px-6 sm:text-2xl 2xl:text-[40px] duration-300 hover:border-purple-main hover:text-purple-main group hover:stroke-change">
                 ПРОГРАМА ІНТЕНСИВУ <ArrowUpRight className="w-6 h-6 sm:w-8 sm:h-8 2xl:w-12 2xl:h-12" />
             </Link>
