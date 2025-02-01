@@ -1,7 +1,5 @@
 'use client'
 
-import ContactFormModal from "@/components/global/modal";
-import { useModal } from '@/components/global/modal';
 import { usePathname } from 'next/navigation';
 import { ArrowUpRight } from 'lucide-react';
 import Link from "next/link";
@@ -14,7 +12,6 @@ interface NavItem {
 }
 
 export const Footer = () => {
-  const { isOpen, toggleModal } = useModal();
   const pathname = usePathname();
 
   const homeNavItems: NavItem[] = [
@@ -151,7 +148,6 @@ export const Footer = () => {
         <img src={"/svg/Hero_Words.svg"} alt='' className="w-full hidden lg:block" />
         
       </div>
-      <ContactFormModal isOpen={isOpen} toggleModal={toggleModal} />
     </section>
   )
 }

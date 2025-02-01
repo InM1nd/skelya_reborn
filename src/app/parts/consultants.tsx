@@ -46,7 +46,7 @@ const ConsultantsSection = () => {
       position: "Кар'єрна Консультантка",
       image: "/svg/Consultant_3.svg",
       achievement: "Провела більше 1000 співбесід.",
-      experience: "10+ років міжнародного досвіду в рекрутингу, кар’єрному консалтингу у сферах у ІТ та телекомунікаціях.",
+      experience: "10+ років міжнародного досвіду в рекрутингу, кар’єрному консалтингу у сферах ІТ.",
       superpower: "Досвід у психології, що дозволяє глибше зануритися в твої потреби.",
       linkedin: "https://www.linkedin.com/in/moroz-viktoriia/",
       accentColor: "text-pink",
@@ -123,7 +123,7 @@ const ConsultantsSection = () => {
       <div className="col-span-full justify-center block gap-4 md:flex lg:gap-8">
         <div className="md:w-1/3">
                     {/* Card 4 - Similar to Card 1 with different background */}
-                    <div className="bg-gray text-white h-full flex flex-col">
+          <div className="bg-gray text-white h-full flex flex-col">
             <div className="relative mb-4">
               <img src="/svg/Consultant_4.svg" alt="Consultant" className="object-cover h-auto w-full " />
             </div>            
