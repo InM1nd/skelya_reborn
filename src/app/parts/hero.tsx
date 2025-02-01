@@ -40,10 +40,9 @@ export const Hero = () => {
 
 
   useEffect(() => {
-    // Вычисляем высоту экрана только при загрузке и фиксируем её
     const initialVh = window.innerHeight;
     if (sectionRef.current) {
-      sectionRef.current.style.height = `${initialVh}px`; // Задаём фиксированную высоту
+      sectionRef.current.style.height = `${initialVh}px`; 
     }
   }, []);
 

@@ -11,6 +11,7 @@ interface ModalState {
 interface ContactFormModalProps {
   isOpen: boolean;
   toggleModal: () => void;
+  onClose: () => void;
 }
 
 export const useModal = (): ModalState => {
@@ -81,6 +82,7 @@ const ContactFormModal = ({ isOpen, toggleModal }: ContactFormModalProps) => {
                   placeholder="Ім'я"
                   id="name"
                   required 
+                  name="from_name"
                 />
                 <label
                   htmlFor="name"
@@ -98,6 +100,7 @@ const ContactFormModal = ({ isOpen, toggleModal }: ContactFormModalProps) => {
                   placeholder="Імейл"
                   id="email"
                   required
+                  name="user_email"
                 />
                 <label
                   htmlFor="email"
@@ -115,6 +118,7 @@ const ContactFormModal = ({ isOpen, toggleModal }: ContactFormModalProps) => {
                   rows={5}
                   id="request"
                   required
+                  name="message"
                 />
                 <label
                   htmlFor="request"
@@ -128,7 +132,7 @@ const ContactFormModal = ({ isOpen, toggleModal }: ContactFormModalProps) => {
                 type="submit"
                 className="w-full bg-[#6566F1] text-black py-6 px-14 text-3xl font-semibold mt-6 hover:bg-blue transition"
               >
-                ОТРИМАТИ КОНСУЛЬТАЦІЮ
+                Відправити
               </button>
             </form>
             <div className="absolute bg-[#6566F1] h-full w-full p-8 top-4 left-4 z-[-2]" />

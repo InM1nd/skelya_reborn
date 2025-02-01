@@ -2,17 +2,19 @@
 
 import Title from "@/components/global/title"
 import { ArrowUpRight } from 'lucide-react';
-import React from 'react';
+import React, { useState } from 'react';
 import { sendGAEvent } from '@next/third-parties/google';
-
+import ContactFormModal from '@/components/global/modal'
 
 const IntensiveCurator = () => {
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleRegisterClick = () => {
     sendGAEvent('event', 'Register_Button_Click', {
       location: 'intensive_curator'
     });
-    window.open('https://secure.wayforpay.com/button/b12436e04beaf', '_blank');
+    setIsModalOpen(true);
   };
 
   const handleLinkClick = (platform: string) => {
@@ -20,6 +22,10 @@ const IntensiveCurator = () => {
       platform: platform,
       location: 'intensive_curator'
     });
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
   };
 
   return(
@@ -93,6 +99,7 @@ const IntensiveCurator = () => {
               <span>ЗАРЕЄСТРУВАТИСЯ</span>
               <ArrowUpRight className="ml-2 w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
             </button>
+            <ContactFormModal isOpen={isModalOpen} onClose={handleCloseModal} toggleModal={() => setIsModalOpen(!isModalOpen)} />
         </div>
       </div>
 
