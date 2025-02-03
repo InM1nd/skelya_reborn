@@ -2,14 +2,22 @@
 
 import { ArrowUpRight } from "lucide-react";
 import { sendGAEvent } from '@next/third-parties/google';
+import ContactFormModal from "@/components/global/modal";
+import React, { useState } from 'react';
 
 const IntensiveHero = () => {
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleRegisterClick = () => {
     sendGAEvent('event', 'Register_Button_Click', {
       location: 'intensive_hero'
     });
-    window.open('https://secure.wayforpay.com/button/b12436e04beaf', '_blank');
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
   };
 
   return(
@@ -69,6 +77,7 @@ const IntensiveHero = () => {
         >
           зареєструватися <ArrowUpRight size={50} />
         </button>
+        <ContactFormModal isOpen={isModalOpen} onClose={handleCloseModal} toggleModal={() => setIsModalOpen(!isModalOpen)} />
       </section>
     </>
   )

@@ -11,6 +11,7 @@ interface ModalState {
 interface ContactFormModalProps {
   isOpen: boolean;
   toggleModal: () => void;
+  onClose: () => void;
 }
 
 export const useModal = (): ModalState => {
@@ -57,8 +58,9 @@ const ContactFormModal = ({ isOpen, toggleModal }: ContactFormModalProps) => {
       {isOpen && (
         <div className={`fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-center justify-center z-50
         ${isClosing ? 'animate-fade-out' : 'animate-fade-in'}`}>
-        <div className="relative bg-gray w-auto shadow-lg z-1 p-10 pb-[90px]"> 
-          <div className="px-10">  
+          
+        <div className="relative bg-gray w-auto shadow-lg z-1 p-4 pb-[30px] md:p-10 md:pb-[90px] min-w-[375px] md:min-w-[500px] "> 
+          <div className="px-6 md:px-10">  
             <div className="flex justify-end w-full pb-7">
               <button
                 onClick={handleClose}
@@ -68,8 +70,8 @@ const ContactFormModal = ({ isOpen, toggleModal }: ContactFormModalProps) => {
               </button>
             </div> 
             
-            <h2 className="text-5xl font-bold text-center text-white mb-9">
-              МАЄШ ПИТАННЯ?
+            <h2 className="text-2xl font-bold text-center text-white mb-9 md:text-5xl">
+              Хочу забронювати<br/> місце на інтенсиві!
             </h2>
         
             <form className="space-y-10" ref={form} onSubmit={sendEmail}>
@@ -81,10 +83,11 @@ const ContactFormModal = ({ isOpen, toggleModal }: ContactFormModalProps) => {
                   placeholder="Ім'я"
                   id="name"
                   required 
+                  name="from_name"
                 />
                 <label
                   htmlFor="name"
-                  className="absolute normal-case text-xl left-3 top-0 px-1 text-white bg-gray transition-all transform -translate-y-1/2 scale-100 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-[12px] peer-focus:scale-100 peer-focus:-translate-y-[22px] peer-focus:text-purple-main"
+                  className="absolute normal-case text-md left-3 top-0 px-1 text-white bg-gray transition-all transform -translate-y-1/2 scale-100 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-[12px] peer-focus:scale-100 peer-focus:-translate-y-[22px] peer-focus:text-purple-main md:text-xl"
                 >
                   Імя
                 </label>
@@ -98,12 +101,30 @@ const ContactFormModal = ({ isOpen, toggleModal }: ContactFormModalProps) => {
                   placeholder="Імейл"
                   id="email"
                   required
+                  name="user_email"
                 />
                 <label
                   htmlFor="email"
-                  className="absolute normal-case text-xl left-3 top-0 px-1 text-white bg-gray transition-all transform -translate-y-1/2 scale-100 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-[12px] peer-focus:scale-100 peer-focus:-translate-y-[22px] peer-focus:text-purple-main"
+                  className="absolute normal-case text-md left-3 top-0 px-1 text-white bg-gray transition-all transform -translate-y-1/2 scale-100 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-[12px] peer-focus:scale-100 peer-focus:-translate-y-[22px] peer-focus:text-purple-main md:text-xl"
                 >
                   Імейл
+                </label>
+              </div>
+
+              <div className="relative">
+                <input
+                  type="text"
+                  className="peer w-full border-[1px] border-white bg-transparent text-white outline-none py-3 px-4 placeholder-transparent focus:border-[#6566F1] transition"
+                  placeholder="Телеграм/Номер телефону"
+                  id="telegram"
+                  required
+                  name="message"
+                />
+                <label
+                  htmlFor="telegram"
+                  className="absolute normal-case text-md left-3 top-0 px-1 text-white bg-gray transition-all transform -translate-y-1/2 scale-100 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-[12px] peer-focus:scale-100 peer-focus:-translate-y-[22px] peer-focus:text-purple-main md:text-xl"
+                >
+                  Телеграм/Номер телефону
                 </label>
               </div>
         
@@ -111,24 +132,25 @@ const ContactFormModal = ({ isOpen, toggleModal }: ContactFormModalProps) => {
               <div className="relative">
                 <textarea
                   className="peer w-full border-[1px] border-white bg-transparent text-white outline-none py-3 px-4 placeholder-transparent focus:border-[#6566F1] transition"
-                  placeholder="Твій запит"
+                  placeholder="Додаткова інформація"
                   rows={5}
                   id="request"
                   required
+                  name="message"
                 />
                 <label
                   htmlFor="request"
-                  className="absolute normal-case text-xl left-3 top-0 px-1 text-white bg-gray transition-all transform -translate-y-1/2 scale-100 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-4 peer-focus:scale-100 peer-focus:-translate-y-[22px] peer-focus:text-purple-main"
+                  className="absolute normal-case text-md left-3 top-0 px-1 text-white bg-gray transition-all transform -translate-y-1/2 scale-100 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-4 peer-focus:scale-100 peer-focus:-translate-y-[22px] peer-focus:text-purple-main md:text-xl"
                 >
-                  Твій запит
+                  Додаткова інформація
                 </label>
               </div>
         
               <button
                 type="submit"
-                className="w-full bg-[#6566F1] text-black py-6 px-14 text-3xl font-semibold mt-6 hover:bg-blue transition"
+                className="w-full bg-[#6566F1] text-black py-6 px-14 text-xl font-semibold mt-6 hover:bg-blue transition md:text-3xl"
               >
-                ОТРИМАТИ КОНСУЛЬТАЦІЮ
+                Відправити
               </button>
             </form>
             <div className="absolute bg-[#6566F1] h-full w-full p-8 top-4 left-4 z-[-2]" />
@@ -136,7 +158,7 @@ const ContactFormModal = ({ isOpen, toggleModal }: ContactFormModalProps) => {
         </div> 
         {isSuccess && (
           <div className='absolute bg-opacity-50 backdrop-blur-sm h-full w-full flex flex-col justify-center items-center'>
-          <p className='text-3xl'>Повідомлення надіслано!</p> 
+          <p className='text-3xl bg-[#6566F1] text-white p-10'>Заявка надіслана!</p> 
           </div>
         )}
       </div>    

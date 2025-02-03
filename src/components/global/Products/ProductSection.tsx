@@ -4,6 +4,7 @@ import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 import { sendGAEvent } from '@next/third-parties/google';
+import ContactFormModal from "../modal";
 
 interface TabContent {
   title: string;
@@ -55,11 +56,17 @@ const ServicesSection: React.FC = () => {
     window.open(tabContent[activeTab].buyLink, '_blank');
   };
 
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const handleRegisterClick = () => {
     sendGAEvent('event', 'Register_Button_Click', {
       location: 'product_section'
     });
-    window.open('https://secure.wayforpay.com/button/b12436e04beaf', '_blank');
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
   };
 
   const handleIntensivePageClick = () => {
@@ -214,9 +221,10 @@ const ServicesSection: React.FC = () => {
                 ПРОГРАМА ІНТЕНСИВУ <ArrowUpRight className="w-6 h-6 sm:w-8 sm:h-8 2xl:w-12 2xl:h-12" />
             </Link>
           {/* Register Button */}
-            <a className="col-span-1 border-4 border-blue bg-blue text-black flex items-center justify-center gap-2 text-xl font-semibold py-3 px-4 md:col-span-5 sm:px-6 sm:py-4 2xl:text-[40px] sm:text-2xl transition-colors duration-300 hover:border-purple-main hover:text-purple-main hover:bg-black group hover:stroke-change " onClick={handleRegisterClick}>
+            <button className="col-span-1 border-4 border-blue bg-blue text-black flex items-center justify-center gap-2 text-xl font-semibold py-3 px-4 md:col-span-5 sm:px-6 sm:py-4 2xl:text-[40px] sm:text-2xl transition-colors duration-300 hover:border-purple-main hover:text-purple-main hover:bg-black group hover:stroke-change " onClick={handleRegisterClick}>
               ЗАРЕЄСТРУВАТИСЯ <ArrowUpRight className="w-6 h-6 sm:w-8 sm:h-8 2xl:w-12 2xl:h-12" />
-            </a>
+            </button>
+            <ContactFormModal isOpen={isModalOpen} onClose={handleCloseModal} toggleModal={() => setIsModalOpen(!isModalOpen)} />
         </div>
     </div>
   );
