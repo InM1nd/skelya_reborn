@@ -14,7 +14,7 @@ const ConsultantsSection = () => {
 
   const handleButtonClick = () => {
     sendGAEvent('event', 'Button_Click', { action: 'Choose_Consultant' });
-    window.open('https://t.me/skelya_careers', '_blank');
+    window.open('https://t.me/skelya_support', '_blank');
   };
 
   const consultants = [
@@ -70,8 +70,8 @@ const ConsultantsSection = () => {
       achievement: "Працювала з міжнародним IT ринком, могла бути радіофізиком.",
       experience: "7+ років у tech-рекрутингу, 4 роки в пошуку AI-талантів, зараз у Military.",
       superpower: "Знає, що таке Work-life balance.",
-      linkedin: "https://www.linkedin.com/in/maryana-kiverska/",
-      accentColor: "text-blue",
+      linkedin: "https://www.linkedin.com/in/marynashcher/",
+      accentColor: "#E57550",
     },
   ];
 
@@ -171,7 +171,7 @@ const ConsultantsSection = () => {
                   <span className="font-bold">Супер-сила:</span> Має технічну освіту, тож розуміє &quot;технарів&quot; як ніхто інший.
                 </div>
               </div>
-              <a href="https://www.linkedin.com/in/maryana-kiverska/" onClick={() => handleClick('Maryana IAMPM', 'Linkedin_Click')} className="w-fit font-bold text-[23px] text-[#E57550] hover:underline flex items-center gap-1 mt-auto xl:text-[34px]">
+              <a href="https://www.linkedin.com/in/marynashcher/" onClick={() => handleClick('Maryna BazaIT', 'Linkedin_Click')} className="w-fit font-bold text-[23px] text-[#E57550] hover:underline flex items-center gap-1 mt-auto xl:text-[34px]">
                 LinkedIn <ArrowUpRight className="w-6 h-6 sm:w-8 sm:h-8 xl:w-10 xl:h-10" />
               </a>
             </div>
