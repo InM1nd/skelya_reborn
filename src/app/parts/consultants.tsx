@@ -81,8 +81,8 @@ const ConsultantsSection = () => {
         <div className="w-full flex justify-center flex-col p-4 lg:p-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-8 mb-4">
       {/* First row - always show 3 cards */}
-      <div className="col-span-full grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 2xl:grid-rows-1 2xl:grid-cols-4 gap-4 lg:gap-8">
-        {consultants.slice(0, 5).map((consultant, index) => (
+      <div className="col-span-full grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 xl:grid-rows-1 xl:grid-cols-4 gap-4 lg:gap-8">
+        {consultants.slice(0, 4).map((consultant, index) => (
           <div key={index} className="bg-gray text-white h-full flex flex-col">
             <div className="relative mb-4">
               <img 
@@ -91,12 +91,12 @@ const ConsultantsSection = () => {
                 className="object-cover h-auto w-full"
               />
             </div>
-            <div className="text-[20px] flex flex-col flex-1 p-4 gap-4 lg:p-6 lg:gap-[35px] xl:text-[28px] 2xl:p-7">
-              <div className="text-[22px] xl:text-[34px]">
+            <div className="text-[20px] flex flex-col flex-1 p-4 gap-4 lg:gap-[20px] 2xl:gap-[35px] 2xl:text-[28px] 2xl:p-7">
+              <div className="text-[22px] 2xl:text-[34px]">
                 <h3 className="font-bold">{consultant.name}</h3>
                 <p>{consultant.position}</p>
               </div>
-              <div className="space-y-3">
+              <div className="space-y-3 lg:space-y-5">
                 <div>
                   <span className="font-bold">Ачівка:</span> {consultant.achievement}
                 </div>
@@ -110,7 +110,7 @@ const ConsultantsSection = () => {
               <a 
                 href={consultant.linkedin}
                 onClick={() => handleClick(consultant.name, 'Linkedin_Click')}
-                className={`w-fit font-bold text-[23px] ${consultant.accentColor} hover:underline flex items-center gap-1 mt-auto xl:text-[34px]`}
+                className={`w-fit font-bold text-[23px] ${consultant.accentColor} hover:underline flex items-center gap-1 mt-auto 2xl:text-[34px]`}
               >
                 LinkedIn <ArrowUpRight className="w-6 h-6 sm:w-8 sm:h-8 xl:w-10 xl:h-10" />
               </a>
