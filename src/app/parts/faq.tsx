@@ -64,7 +64,7 @@ export const Faq = () => {
             </button>
             
             <div className={`overflow-hidden transition-all duration-200 ${
-              openIndex === index ? 'max-h-[500px] p-4 sm:p-6 lg:p-[30px]' : 'max-h-0'
+              openIndex === index ? 'max-h-[500px] p-4 sm:p-6 lg:p-[35px]' : 'max-h-0'
             }`}>
               <p className="font-medium text-[16px] sm:text-xl lg:text-[26px]">{faq.answer}</p>
             </div>
