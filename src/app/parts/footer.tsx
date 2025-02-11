@@ -18,7 +18,7 @@ export const Footer = () => {
     { href: '#fishka', label: 'Трішки цифр' },
     { href: '#consultants', label: 'КОНСУЛЬТАНТИ' },
     { href: '#products', label: 'послуги' },
-    { href: '#intencive', label: 'Інтенсив', isHighlighted: true },
+    // { href: '#intencive', label: 'Інтенсив', isHighlighted: true },
     { href: '#reviews', label: 'історії успіху' },
     { href: '#Faq', label: 'ЧАСТІ ПИТАННЯ' },
   ];
