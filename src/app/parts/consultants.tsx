@@ -18,17 +18,17 @@ const ConsultantsSection = () => {
   };
 
   const consultants = [
-    {
-      id: 1,
-      name: "Марія зі Скеля",
-      position: "Кар'єрна Консультантка",
-      image: "/svg/Consultant_1.svg",
-      achievement: "Працевлаштувала 300+ людей в IT та Digital.",
-      experience: "Працювала в освітніх проектах Mate academy, Projector Institute та AI House.",
-      superpower: "Розуміє світчерів та початківців.",
-      linkedin: "https://www.linkedin.com/in/mariiaternovska/",
-      accentColor: "text-purple-light",
-    },
+    // {
+    //   id: 1,
+    //   name: "Марія зі Скеля",
+    //   position: "Кар'єрна Консультантка",
+    //   image: "/svg/Consultant_1.svg",
+    //   achievement: "Працевлаштувала 300+ людей в IT та Digital.",
+    //   experience: "Працювала в освітніх проектах Mate academy, Projector Institute та AI House.",
+    //   superpower: "Розуміє світчерів та початківців.",
+    //   linkedin: "https://www.linkedin.com/in/mariiaternovska/",
+    //   accentColor: "text-purple-light",
+    // },
     {
       id: 2,
       name: "Даша з Computools",
@@ -66,12 +66,12 @@ const ConsultantsSection = () => {
       id: 5,
       name: "Марина з BazaIT",
       position: "Senior Technical Recruiter",
-      image: "/svg/Consultant_4.svg",
+      image: "/svg/Consultant_5.svg",
       achievement: "Працювала з міжнародним IT ринком, могла бути радіофізиком.",
       experience: "7+ років у tech-рекрутингу, 4 роки в пошуку AI-талантів, зараз у Military.",
       superpower: "Знає, що таке Work-life balance.",
       linkedin: "https://www.linkedin.com/in/marynashcher/",
-      accentColor: "#E57550",
+      accentColor: "text-[#E57550]",
     },
   ];
 
@@ -81,8 +81,8 @@ const ConsultantsSection = () => {
         <div className="w-full flex justify-center flex-col p-4 lg:p-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-8 mb-4">
       {/* First row - always show 3 cards */}
-      <div className="col-span-full grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-8">
-        {consultants.slice(0, 3).map((consultant, index) => (
+      <div className="col-span-full grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 2xl:grid-rows-1 2xl:grid-cols-4 gap-4 lg:gap-8">
+        {consultants.slice(0, 5).map((consultant, index) => (
           <div key={index} className="bg-gray text-white h-full flex flex-col">
             <div className="relative mb-4">
               <img 
@@ -120,9 +120,8 @@ const ConsultantsSection = () => {
       </div>
 
       {/* Second row - last 2 cards centered */}
-      <div className="col-span-full justify-center block gap-4 md:flex lg:gap-8">
+      {/* <div className="col-span-full justify-center block gap-4 md:flex lg:gap-8">
         <div className="md:w-1/3">
-                    {/* Card 4 - Similar to Card 1 with different background */}
           <div className="bg-gray text-white h-full flex flex-col">
             <div className="relative mb-4">
               <img src="/svg/Consultant_4.svg" alt="Consultant" className="object-cover h-auto w-full " />
@@ -150,7 +149,6 @@ const ConsultantsSection = () => {
           </div>
         </div>
         <div className="md:w-1/3 mt-4 md:mt-0">
-           {/* Card 5 - Similar to Card 1 with different background */}
            <div className="bg-gray text-white h-full flex flex-col">
             <div className="relative mb-4">
               <img src="/svg/Consultant_5.svg" alt="Consultant" className="object-cover h-auto w-full " />
@@ -177,7 +175,7 @@ const ConsultantsSection = () => {
             </div>
         </div>
       </div>
-      </div>
+      </div> */}
           
         </div>
         <BigButton 
