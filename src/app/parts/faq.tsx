@@ -55,7 +55,7 @@ export const Faq = () => {
           <div key={index} className="border-4 border-gray hover:border-blue transition-colors duration-300">
             <button
               onClick={() => toggleAccordion(index)}
-              className={`w-full flex justify-between items-center text-left font-unbounded gap-5 p-4 sm:p-6 lg:p-[50px] ${
+              className={`w-full flex justify-between items-center text-left font-unbounded gap-5 p-4 sm:p-6 lg:p-[35px] ${
                 openIndex === index ? 'bg-gray' : ''
               }`}
             >
@@ -64,7 +64,7 @@ export const Faq = () => {
             </button>
             
             <div className={`overflow-hidden transition-all duration-200 ${
-              openIndex === index ? 'max-h-[500px] p-4 sm:p-6 lg:p-[50px]' : 'max-h-0'
+              openIndex === index ? 'max-h-[500px] p-4 sm:p-6 lg:p-[35px]' : 'max-h-0'
             }`}>
               <p className="font-medium text-[16px] sm:text-xl lg:text-[26px]">{faq.answer}</p>
             </div>

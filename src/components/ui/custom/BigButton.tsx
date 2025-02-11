@@ -22,13 +22,13 @@ export const BigButton: React.FC<BigButtonProps> = ({ text, onClick }) => {
   return (
     <div className="w-full flex items-center">
       <button
-        className="w-full flex bg-pink border-4 border-pink items-center justify-center text-black text-[18px] font-bold uppercase py-[20px]  md:pl-12 md:text-[28px] xl:text-[48px] group transition-colors duration-300 hover:border-purple-main hover:text-purple-main hover:bg-black group hover:stroke-change"
+        className="w-full flex bg-pink border-4 border-pink items-center justify-center text-black text-[18px] font-bold uppercase py-[20px]  md:pl-12 md:text-[28px] 2xl:text-[48px] group transition-colors duration-300 hover:border-purple-main hover:text-purple-main hover:bg-black group hover:stroke-change"
         // onMouseEnter={() => setIsHovered(true)} 
         // onMouseLeave={() => setIsHovered(false)}
         onClick={handleClick}
       >
         {text}
-        <ArrowUpRight className='ml-2 w-6 h-6 sm:w-8 sm:h-8 xl:w-16 xl:h-16'/>
+        <ArrowUpRight className='ml-2 w-6 h-6 sm:w-8 sm:h-8 2xl:w-16 2xl:h-16'/>
       </button>
     </div>
   );

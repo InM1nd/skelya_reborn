@@ -130,7 +130,7 @@ const Header = ({ }) => {
               <img src={'/svg/close_btn.svg'} alt='' className='h-[32px] md:h-[32px]'/>
             </button>
           </div>
-          <ul className="flex flex-col gap-3 uppercase pt-[40px] font-semibold text-[22px] 2xl:pt-[15%] 2xl:font-bold 2xl:text-[40px]">
+          <ul className="flex flex-col uppercase pt-[40px] font-semibold text-[22px] 2xl:pt-[15%] 2xl:font-bold 2xl:text-[40px]">
             {navItems.map((item, index) => (
               <li 
                 key={index} 
@@ -140,7 +140,7 @@ const Header = ({ }) => {
                 <a 
                   href={item.href} 
                   onClick={() => handleLinkClick(item.label)}
-                  className={`flex h-auto w-full px-4 pl-[40px] lg:pl-[50px] ${
+                  className={`flex h-auto w-full px-4 py-3 pl-[40px] lg:pl-[50px] ${
                     item.isHighlighted ? 'text-blue hover:text-black' : ''
                   }`}
                 >
@@ -152,16 +152,16 @@ const Header = ({ }) => {
 
           <ul className="flex flex-col gap-3 uppercase font-semibold text-[20px] pt-[32px] 2xl:text-[32px] 2xl:pt-[15%]">
             <li className="w-full hover:bg-white hover:text-black">
-              <a href="https://t.me/skelya_career_support" onClick={() => handleSocialClick('telegram')} className="flex h-auto w-full px-3 pl-[40px] lg:pl-[50px]"># telegram</a>
+              <a href="https://t.me/skelya_career_support" onClick={() => handleSocialClick('telegram')} className="flex h-auto w-full px-3 py-3 pl-[40px] lg:pl-[50px]"># telegram</a>
             </li>
             <li className="w-full hover:bg-white hover:text-black">
-              <a href="https://www.instagram.com/skelya.careers?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" onClick={() => handleSocialClick('instagram')} className="flex h-auto w-full px-3 pl-[40px] lg:pl-[50px]"># instagram</a>
+              <a href="https://www.instagram.com/skelya.careers?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" onClick={() => handleSocialClick('instagram')} className="flex h-auto w-full px-3 py-3 pl-[40px] lg:pl-[50px]"># instagram</a>
             </li>
             <li className="w-full hover:bg-white hover:text-black">
-              <a href="https://www.tiktok.com/@skelya.career?is_from_webapp=1&sender_device=pc" onClick={() => handleSocialClick('tiktok')} className="flex h-auto w-full px-3 pl-[40px] lg:pl-[50px]"># tiktok</a>
+              <a href="https://www.tiktok.com/@skelya.career?is_from_webapp=1&sender_device=pc" onClick={() => handleSocialClick('tiktok')} className="flex h-auto w-full px-3 py-3 pl-[40px] lg:pl-[50px]"># tiktok</a>
             </li>
             <li className="w-full hover:bg-white hover:text-black">
-              <a href="mailto:hi@skelya.careers" onClick={() => handleSocialClick('email')} className="flex h-auto w-full px-3 pl-[40px] lg:pl-[50px]"># email</a>
+              <a href="mailto:hi@skelya.careers" onClick={() => handleSocialClick('email')} className="flex h-auto w-full px-3 py-3 pl-[40px] lg:pl-[50px]"># email</a>
             </li>
           </ul>
 
