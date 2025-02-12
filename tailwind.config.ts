@@ -117,6 +117,7 @@ const config: Config = {
   		fontFamily: {
   			unbounded: ['var(--font-unbounded)'],
 				raleway: ['var(--font-raleway)'],
+				montserrat: ['var(--font-montserrat)'],
   		},
   		borderRadius: {
   			lg: 'var(--radius)',

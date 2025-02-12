@@ -78,7 +78,7 @@ const ConsultantsSection = () => {
   return (
     <section className="w-full pb-7 sm:pb-20" id="consultants"> 
       <Title>КОНСУЛЬТАНТИ</Title>
-        <div className="w-full flex justify-center flex-col p-4 lg:p-6">
+        <div className="w-full flex justify-center flex-col p-4 lg:p-6 xl:p-[50px]">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-8 mb-4">
       {/* First row - always show 3 cards */}
       <div className="col-span-full grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 xl:grid-rows-1 xl:grid-cols-4 gap-4 lg:gap-8">
@@ -112,7 +112,7 @@ const ConsultantsSection = () => {
                 onClick={() => handleClick(consultant.name, 'Linkedin_Click')}
                 className={`w-fit font-bold text-[23px] ${consultant.accentColor} hover:underline flex items-center gap-1 mt-auto 2xl:text-[34px]`}
               >
-                LinkedIn <ArrowUpRight className="w-6 h-6 sm:w-8 sm:h-8 xl:w-10 xl:h-10" />
+                LinkedIn <ArrowUpRight className="w-6 h-6 sm:w-8 sm:h-8 2xl:w-10 2xl:h-10" />
               </a>
             </div>
           </div>

@@ -28,13 +28,13 @@ const ServicesSection: React.FC = () => {
   const tabContent: TabContents = {
     once: {
       title: 'ОДНОРАЗОВА КОНСУЛЬТАЦІЯ',
-      price: '2400 грн',
+      price: '2400',
       description: 'Зустріч із кар\'єрним консультантом для вирішення твого запиту',
       buyLink: 'https://secure.wayforpay.com/button/b51358399b740',
     },
     bundle: {
       title: 'БАНДЛ КОНСУЛЬТАЦІЙ (x3)',
-      price: '6200 грн',
+      price: '6200',
       description: 'Зустріч із кар\'єрним консультантом для вирішення трьох запитів',
       buyLink: 'https://secure.wayforpay.com/button/b5b18008eb592'
     }
@@ -78,7 +78,7 @@ const ServicesSection: React.FC = () => {
   
 
   return (
-    <div className="bg-black p-4 lg:p-6 w-full ">
+    <div className="bg-black p-4 lg:px-6 xl:p-[50px] w-full ">
 
       {/* Main Content Area */}
       <div className="grid grid-cols-1 mb-4 sm:mb-6 lg:grid-cols-12 lg:gap-8 lg:mb-8">
@@ -93,7 +93,7 @@ const ServicesSection: React.FC = () => {
               ОДНОРАЗОВА
             </button>
             <button 
-              className={`px-4 w-full py-2 sm:py-3 sm:px-6 xl:px-10 ${activeTab === 'bundle' ? 'bg-green' : 'border-4 border-green text-green'} hover:bg-green hover:text-black transition-colors`}
+              className={`px-4 w-full py-2 sm:py-3 sm:px-6 xl:px-10 ${activeTab === 'bundle' ? 'bg-green' : 'border-4 border-green text-green hover:bg-green hover:text-black transition-colors'} ${activeTab !== 'bundle' ? 'blink' : ''}`}
               onClick={() => handleTabClick('bundle')}
             >
               БАНДЛ
@@ -102,8 +102,8 @@ const ServicesSection: React.FC = () => {
           <div className="w-full">
             <img src="/svg/Letter_К.svg" alt="Consultant" className="object-cover h-auto w-full "/>
           </div>
-          <button onClick={handleBuyClick} className="w-full bg-green border-4 border-green text-black text-xl font-semibold py-2 px-4 flex items-center justify-center gap-2 sm:text-2xl sm:py-3 sm:px-6 xl:py-4 2xl:text-[38px] transition-colors duration-300 hover:border-purple-main hover:text-purple-main hover:bg-black group hover:stroke-change">
-            {tabContent[activeTab].price} - КУПИТИ <ArrowUpRight className="w-6 h-6 sm:w-8 sm:h-8 2xl:w-12 2xl:h-12" />
+          <button onClick={handleBuyClick} className="w-full bg-green border-4 border-green text-black text-xl font-bold py-2 px-4 flex items-center justify-center gap-2 sm:text-2xl sm:py-3 sm:px-6 xl:py-4 2xl:text-[38px] transition-colors duration-300 hover:border-purple-main hover:text-purple-main hover:bg-black group hover:stroke-change">
+            <span className="font-montserrat font-semibold">{tabContent[activeTab].price}</span>ГРН - КУПИТИ <ArrowUpRight className="w-6 h-6 sm:w-8 sm:h-8 2xl:w-12 2xl:h-12" />
           </button>
         </div>
 

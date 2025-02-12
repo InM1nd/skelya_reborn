@@ -64,7 +64,7 @@ export const Footer = () => {
     };
 
   return (
-    <section className="w-full text-white flex justify-center p-4 lg:p-6 bg-gray">
+    <section className="w-full text-white flex justify-center p-4 lg:p-6 lg:px-6 xl:px-[50px] bg-gray">
       <div className="w-full flex-col uppercase">
       <a className="mt-[32px] w-full flex bg-pink text-black font-bold text-[18px] uppercase items-center justify-center py-5 px-6 lg:hidden hover:bg-blue transition-colors duration-300" href="https://t.me/skelya_support" onClick={handleContactClick}>
       поставити питання

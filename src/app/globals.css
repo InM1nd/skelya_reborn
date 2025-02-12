@@ -82,6 +82,16 @@ body {
   }
 }
 
+@keyframes blink {
+  0% { border-color: white; color: white; }
+  50% { border-color: #3FAD78; color: #3FAD78; }
+  100% { border-color: white; color: white; }
+}
+
+.blink {
+  animation: blink 2s infinite;
+}
+
 @keyframes modal-fade-in {
   from {
     opacity: 0;

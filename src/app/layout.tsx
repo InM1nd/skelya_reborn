@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Raleway, Unbounded } from "next/font/google";
+import { Raleway, Unbounded, Montserrat } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import { GoogleAnalytics, GoogleTagManager} from '@next/third-parties/google'
@@ -16,6 +16,13 @@ const raleway = Raleway({
 const unbounded = Unbounded({
   subsets: ["cyrillic", "latin"],
   variable: '--font-unbounded',
+  // weight: ['400', '500', '600', '700', '800', '900'],
+  display: "swap",
+});
+
+const montserrat = Montserrat({
+  subsets: ["cyrillic", "latin"],
+  variable: '--font-montserrat',
   // weight: ['400', '500', '600', '700', '800', '900'],
   display: "swap",
 });
@@ -54,7 +61,7 @@ export default function RootLayout({
       </head>
       <GoogleTagManager gtmId="GTM-MJPQTGFF" />
       <body
-        className={`${raleway.variable} ${unbounded.variable} antialiased`}
+        className={`${raleway.variable} ${unbounded.variable} ${montserrat.variable} antialiased`}
       >
         {children}
         <GoogleAnalytics gaId="G-SLW6C9CCYM" />

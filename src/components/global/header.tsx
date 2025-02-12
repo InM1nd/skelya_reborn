@@ -90,14 +90,14 @@ const Header = ({ }) => {
     <>
     {isOpen && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-30"
+          className="fixed inset-0 bg-black bg-opacity-80 z-30"
           onClick={toggleMenu}
         />
       )}
 
 
       <header
-        className={`w-full fixed bg-black z-10 top-0 flex justify-between transition-transform duration-300 px-4 py-3 lg:px-6 ${
+        className={`w-full fixed bg-black z-10 top-0 flex justify-between transition-transform duration-300 px-4 py-3 lg:px-6 xl:px-[50px] ${
           showHeader ? "translate-y-0" : "-translate-y-full"
         }`}
       >

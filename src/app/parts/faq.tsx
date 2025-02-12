@@ -50,7 +50,7 @@ export const Faq = () => {
   return(
     <section className="w-full h-full pb-7 sm:pb-14" id="Faq">
       <Title>ЧАСТІ ПИТАННЯ</Title>
-      <div className="w-full space-y-8 text-white px-4 py-6 xl:px-6 xl:py-[120px]">
+      <div className="w-full space-y-8 text-white px-4 py-6 lg:px-6 xl:px-[50px] xl:py-[120px]">
         {faqs.map((faq, index) => (
           <div key={index} className="border-4 border-gray hover:border-blue transition-colors duration-300">
             <button
